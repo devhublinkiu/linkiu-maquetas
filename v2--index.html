@@ -115,6 +115,10 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
  .final{margin:96px 12px 0;padding:72px 20px}.final h2{font-size:34px;line-height:38px}.fp{font-size:16px}
  footer .wrap{flex-direction:column;align-items:flex-start}
 }
+.vid{position:relative;aspect-ratio:16/9;background:#fbfbfc;display:grid;place-items:center}
+.vid .play{left:auto;top:auto;margin:0;width:88px;height:88px;position:relative}.vid .play:after{left:35px;top:29px;border-width:15px;border-left-width:23px}
+.vlabel{position:absolute;left:20px;bottom:18px;font-size:13px;font-weight:500;color:var(--mute);border:1px solid var(--line);background:#fff;border-radius:8px;padding:3px 10px}
+@media(max-width:900px){.vid .play{width:60px;height:60px}.vid .play:after{left:23px;top:18px;border-width:12px;border-left-width:17px}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head><body>
@@ -138,31 +142,8 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
   <div class="ribbon r1" data-drift="-1">Tus productos</div><div class="ribbon r2" data-drift="-1.4">Tu link</div>
   <div class="ribbon r3" data-drift="1">Pedido #128</div><div class="ribbon r4" data-drift="1.4">Domicilio</div>
   <div class="win" id="heroWin">
-   <div class="bar"><i></i><i></i><i></i><span>panel.linkiu.bio/pedidos</span></div>
-   <div class="app">
-    <div class="side"><div class="shop"><i></i>Tu negocio</div><span class="on">Pedidos <em>3</em></span><span>Productos</span><span>Clientes</span><span>Pagos</span><span>Envíos</span><span>Mi link</span><span>Kira IA</span></div>
-    <div class="main">
-     <div class="mt"><b>Pedidos de hoy</b><div class="seg"><span class="on">Tablero</span><span>Lista</span></div></div>
-     <div class="cols">
-      <div class="col"><h5>Nuevos · 2</h5>
-       <div class="ord sel"><b>#128 <span class="tag">Nuevo</span></b><p>3 productos</p><p>Domicilio · Transferencia</p><b>$ 56.000</b></div>
-       <div class="ord"><b>#127 <span class="tag">Nuevo</span></b><p>2 productos</p><p>Recoge · Efectivo</p><b>$ 28.000</b></div></div>
-      <div class="col"><h5>Preparando · 2</h5>
-       <div class="ord"><b>#126 <span class="tag p">Preparando</span></b><p>1 producto</p><p>Domicilio · QR</p><b>$ 48.000</b></div>
-       <div class="ord"><b>#125 <span class="tag p">Preparando</span></b><p>4 productos</p><p>Domicilio · Datáfono</p><b>$ 42.000</b></div></div>
-      <div class="col"><h5>En camino · 1</h5>
-       <div class="ord"><b>#124 <span class="tag g">En camino</span></b><p>2 productos</p><p>Domicilio · Efectivo</p><b>$ 76.000</b></div></div>
-     </div>
-     <!-- Video/demo: debe mostrar el panel abierto en pantalla. --><div class="play"></div>
-    </div>
-    <div class="detail"><h6><span>Pedido #128</span><span class="tag">Nuevo</span></h6>
-     <dl class="kv"><dt>Cliente</dt><dd>Laura M.</dd><dt>Entrega</dt><dd>Domicilio</dd><dt>Pago</dt><dd>Transferencia</dd><dt>Hora</dt><dd>12:41 p. m.</dd></dl>
-     <div class="line"><span>Producto A ×1</span><b>$ 38.000</b></div><div class="line"><span>Producto B ×2</span><b>$ 18.000</b></div><div class="line"><b>Total</b><b>$ 56.000</b></div>
-     <div class="wa-btn"><span>Imprimir</span><span class="k">Aceptar</span></div>
-    </div>
-   </div>
+   <div class="vid"><div class="play"></div><span class="vlabel" data-copy="hero-video-label">Video</span></div>
   </div>
-  <p class="demo">Video del panel · datos de demo</p>
  </div></div>
 </header>
 
@@ -238,7 +219,7 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
 <section class="s"><div class="wrap">
  <div class="shead rv"><h2 data-copy="steps-h2">Arrancas en<br>tres pasos.</h2><p></p></div>
  <div class="steps">
-  <div class="step rv"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18l3-10h30l3 10"/><path d="M6 18a6 6 0 0 0 12 0 6 6 0 0 0 12 0 6 6 0 0 0 12 0"/><path d="M9 24v16h30V24"/><path d="M20 40V30h8v10"/></svg><span class="n">1</span><h4 data-copy="s1-h">Sube lo que vendes.</h4><p data-copy="s1-p">Con fotos o a mano.</p><i class="pend">Pendiente: ¿Excel en gastronomía?</i></div>
+  <div class="step rv"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18l3-10h30l3 10"/><path d="M6 18a6 6 0 0 0 12 0 6 6 0 0 0 12 0 6 6 0 0 0 12 0"/><path d="M9 24v16h30V24"/><path d="M20 40V30h8v10"/></svg><span class="n">1</span><h4 data-copy="s1-h">Sube lo que vendes.</h4><p data-copy="s1-p">Con fotos o a mano. En tiendas, también desde Excel.</p></div>
   <div class="step rv" style="--d:.06s"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="34" cy="12" r="5"/><circle cx="14" cy="24" r="5"/><circle cx="34" cy="36" r="5"/><path d="M18.5 21.5l11-6M18.5 26.5l11 6"/></svg><span class="n">2</span><h4 data-copy="s2-h">Comparte tu link.</h4><p data-copy="s2-p">WhatsApp, Instagram o QR.</p></div>
   <div class="step rv" style="--d:.12s"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l18-9 18 9-18 9z"/><path d="M6 15v18l18 9 18-9V15M24 24v18"/></svg><span class="n">3</span><h4 data-copy="s3-h">Recibe y despacha.</h4><p data-copy="s3-p">Lo ves en tu panel y sale.</p></div>
  </div>
@@ -252,7 +233,7 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
   <div data-copy="ya-1">Lo agotado se marca solo.</div>
   <div data-copy="ya-3">Domicilios con tu propia gente.</div>
   <div data-copy="ya-4">Tu QR, para el mostrador, la mesa o un volante.</div>
-  <div data-copy="ya-7">Cupones para compartir en tus historias.<i class="pend">Confirmar en gastronomía</i></div>
+  <div data-copy="ya-7">Cupones para tus historias. En restaurantes se llaman Ofertas.</div>
   <div data-copy="ya-9">Tu cliente ve su pedido avanzar.</div>
   <div data-copy="ya-11">Tus clientes, guardados en un solo lugar.</div>
   <div data-copy="ya-12">Cobras en efectivo, datáfono, transferencia o QR.</div>
