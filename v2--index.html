@@ -55,9 +55,9 @@ h2{font-size:40px;line-height:48px;font-weight:500;letter-spacing:-.02em}
 h3{font-size:20px;line-height:28px;font-weight:500;letter-spacing:-.02em}h4{font-size:20px;line-height:28px;font-weight:500;letter-spacing:-.02em}
 .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .pcard{display:flex;flex-direction:column;align-items:flex-start;gap:12px;background:var(--card);border-radius:16px;padding:40px;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
-.pcard:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(13,15,18,.25)}.pcard:hover .btn.line{background:#fff;box-shadow:inset 0 0 0 1px var(--ink)}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(13,15,18,.25)}.pcard:hover .btn.pc{background:#c40009}
 .pic{width:88px;height:88px;border-radius:20px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);margin-bottom:12px}
-.pcard h3{font-size:28px;line-height:34px}.pcard p{color:var(--mute);max-width:440px}.pcard .btn.line{margin:8px 0 12px}
+.pcard h3{font-size:28px;line-height:34px}.pcard p{color:var(--mute);max-width:440px}.pcard .btn.pc{margin:8px 0 12px}
 .rubros{width:100%;border-top:1px solid #e3e5ea;padding-top:20px;margin-top:auto}.rubros small{font-size:12px;font-weight:500;color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
 .rrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.rrow span{font-size:14px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px}
 .gcard{background:var(--card);border-radius:16px}
@@ -119,6 +119,16 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
 .vid .play{left:auto;top:auto;margin:0;width:88px;height:88px;position:relative}.vid .play:after{left:35px;top:29px;border-width:15px;border-left-width:23px}
 .vlabel{position:absolute;left:20px;bottom:18px;font-size:13px;font-weight:500;color:var(--mute);border:1px solid var(--line);background:#fff;border-radius:8px;padding:3px 10px}
 @media(max-width:900px){.vid .play{width:60px;height:60px}.vid .play:after{left:23px;top:18px;border-width:12px;border-left-width:17px}}
+.btn.pc{height:44px;padding:0 20px;font-size:14px}
+.rubros{min-width:0;max-width:100%}.mq{overflow:hidden;margin-top:10px;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mqt{display:flex;width:max-content;animation:mq 40s linear infinite}.mq.rev .mqt{animation-duration:46s}.mq:hover .mqt{animation-play-state:paused}
+.mq .rrow{flex-wrap:nowrap;margin:0;padding-right:8px}.mq .rrow span{white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+.art.anim{height:auto;aspect-ratio:16/10;background:#fbfbfc}.art.anim .play{position:relative;left:auto;top:auto;margin:0;width:64px;height:64px;background:rgba(13,15,18,.8)}.art.anim .play:after{left:26px;top:21px;border-width:11px;border-left-width:16px}
+.bento .art{height:auto;aspect-ratio:16/10}
+@media(prefers-reduced-motion:reduce){.mq{-webkit-mask:none;mask:none}.mqt{animation:none!important;width:auto}.mq .rrow{flex-wrap:wrap}.mq .dup{display:none}}
+@media(max-width:900px){.bento .art{height:auto}}
+.pgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.pcard{min-width:0}.mq{width:100%}@media(max-width:900px){.pgrid{grid-template-columns:minmax(0,1fr)}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head><body>
@@ -155,15 +165,15 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
    <div class="pic"><svg class="ic" width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6v14a4 4 0 0 0 8 0V6M18 6v36"/><path d="M34 6c-4 2-5 8-5 14h5v22"/></svg></div>
    <h3 data-copy="path-gastro-h">Tu carta en un link y un QR en la mesa</h3>
    <p data-copy="path-gastro-p">Domicilios, para recoger y en la mesa. Menú del día, reservas y tus propios domis, todo en tu panel.</p>
-   <span class="btn line" data-copy="path-gastro-cta">Ver Linkiu para restaurantes →</span>
-   <div class="rubros"><small data-copy="rubros-gastro-label">Para gastronomía</small><div class="rrow" data-copy="rubros-gastro"><span>Restaurantes</span><span>Asaderos</span><span>Corrientazos</span><span>Comidas rápidas</span><span>Cafés</span><span>Panaderías</span><span>Pizzerías</span><span>Hamburgueserías</span></div></div>
+   <span class="btn pc" data-copy="path-gastro-cta">Ver Linkiu para restaurantes →</span>
+   <div class="rubros"><small data-copy="rubros-gastro-label">Para gastronomía</small><div class="mq"><div class="mqt"><div class="rrow" data-copy="rubros-gastro"><span>Restaurante</span><span>Cafetería</span><span>Comidas rápidas</span><span>Pizzería</span><span>Panadería y repostería</span><span>Bar y licores</span><span>Heladería</span><span>Food truck</span><span>Comida saludable</span><span>Domicilios / Dark kitchen</span><span>Asadero / Parrilla</span><span>Corrientazos</span><span>Hamburgueserías</span><span>Arepas</span><span>Fritos</span><span>Jugos</span><span>Comida de mar</span></div><div class="rrow dup" aria-hidden="true"><span>Restaurante</span><span>Cafetería</span><span>Comidas rápidas</span><span>Pizzería</span><span>Panadería y repostería</span><span>Bar y licores</span><span>Heladería</span><span>Food truck</span><span>Comida saludable</span><span>Domicilios / Dark kitchen</span><span>Asadero / Parrilla</span><span>Corrientazos</span><span>Hamburgueserías</span><span>Arepas</span><span>Fritos</span><span>Jugos</span><span>Comida de mar</span></div></div></div></div>
   </a>
   <a class="pcard rv" style="--d:.08s" href="/ecommerce">
    <div class="pic"><svg class="ic" width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16h28l-2 24H12z"/><path d="M18 16a6 6 0 0 1 12 0"/></svg></div>
    <h3 data-copy="path-ecom-h">Tu tienda con tallas, colores y envíos</h3>
    <p data-copy="path-ecom-p">Cada talla y color con su stock, envíos con fecha de llegada y contraentrega solo donde tú digas.</p>
-   <span class="btn line" data-copy="path-ecom-cta">Ver Linkiu para tiendas →</span>
-   <div class="rubros"><small data-copy="rubros-ecom-label">Para ecommerce</small><div class="rrow" data-copy="rubros-ecom"><span>Ropa</span><span>Calzado</span><span>Belleza</span><span>Accesorios</span><span>Bolsos</span><span>Joyería y bisutería</span><span>Ropa deportiva</span><span>Perfumes</span></div></div>
+   <span class="btn pc" data-copy="path-ecom-cta">Ver Linkiu para tiendas →</span>
+   <div class="rubros"><small data-copy="rubros-ecom-label">Para ecommerce</small><div class="mq rev"><div class="mqt"><div class="rrow" data-copy="rubros-ecom"><span>Ropa</span><span>Calzado</span><span>Accesorios</span><span>Hogar</span><span>Jean</span><span>Belleza</span><span>Bolsos</span><span>Joyería y bisutería</span><span>Perfumes</span><span>Ropa deportiva</span><span>Tecnología</span><span>Mascotas</span><span>Papelería</span><span>Juguetería</span><span>Ropa infantil</span><span>Lencería</span><span>Cuidado personal</span></div><div class="rrow dup" aria-hidden="true"><span>Ropa</span><span>Calzado</span><span>Accesorios</span><span>Hogar</span><span>Jean</span><span>Belleza</span><span>Bolsos</span><span>Joyería y bisutería</span><span>Perfumes</span><span>Ropa deportiva</span><span>Tecnología</span><span>Mascotas</span><span>Papelería</span><span>Juguetería</span><span>Ropa infantil</span><span>Lencería</span><span>Cuidado personal</span></div></div></div></div>
   </a>
  </div>
 </div></section>
@@ -193,11 +203,11 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
 <section class="s" id="kira"><div class="wrap">
  <div class="shead rv"><h2 data-copy="mods-h2">Lo del chat,<br>ahora en orden.</h2><p data-copy="mods-intro">Pedidos, link, productos y cobros. Lo que hoy haces a punta de chat, en un solo panel.</p></div>
  <div class="bento">
-  <article class="bc rv"><div class="art"><svg class="ic" width="88" height="88" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="5"/><path d="M15 15h18M15 22h18M15 29h11"/><circle cx="35" cy="35" r="7" fill="#fff"/><path d="M32 35l2 2 4-4" stroke="#e7000b"/></svg><span class="cap">Captura real del panel — PENDIENTE</span></div>
+  <article class="bc rv"><div class="art anim" id="ph-m1"><div class="play"></div><span class="cap">Animación — en producción</span></div>
    <h3><span class="num">01</span><span data-copy="m1-h3">Todos tus pedidos en un solo lugar</span></h3><p data-copy="m1-p">Se acabaron los audios y pantallazos. Cada pedido entra completo a tu panel y te suena si lo tienes abierto.</p></article>
-  <article class="bc rv" style="--d:.08s"><div class="art"><div class="biglink">linkiu.bio/<b>tunegocio</b></div><span class="cap">Captura real del panel — PENDIENTE</span></div>
+  <article class="bc rv" style="--d:.08s"><div class="art anim" id="ph-m2"><div class="play"></div><span class="cap">Animación — en producción</span></div>
    <h3><span class="num">02</span><span data-copy="m2-h3">Tu link, que se siente como app</span></h3><p data-copy="m2-p">linkiu.bio/tunegocio. Lo compartes en WhatsApp, Instagram o un QR. Tus clientes piden ahí, sin descargar nada.</p></article>
-  <article class="bc rv"><div class="art"><svg class="ic" width="88" height="88" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="24" height="22" rx="4"/><circle cx="18" cy="23" r="5"/><path d="M12 12l2-4h8l2 4"/><path d="M36 10l1.5 4 4 1.5-4 1.5L36 21l-1.5-4-4-1.5 4-1.5z" stroke="#e7000b"/><path d="M30 34h12M34 40h8"/></svg><span class="cap">Demo real de Kira IA — PENDIENTE</span></div>
+  <article class="bc rv"><div class="art anim" id="ph-m3"><div class="play"></div><span class="cap">Animación — en producción</span></div>
    <h3><span class="num">03</span><span data-copy="m3-h3">Sube fotos, Kira IA arma tu tienda</span></h3><p data-copy="m3-p">Tómale fotos a lo que vendes o a tu lista de precios y Kira IA te arma el borrador. Tú revisas y publicas.</p></article>
   <article class="bc rv" style="--d:.08s"><div class="art"><svg class="ic" width="88" height="88" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="12" width="38" height="24" rx="5"/><path d="M5 19h38"/><path d="M11 29h8"/><path d="M33 26l3 3 5-6" stroke="#e7000b"/></svg><div class="paywords"><span>Efectivo</span><span>Datáfono</span><span>Transferencia</span><span>QR</span><span>Contraentrega</span></div></div>
    <h3><span class="num">04</span><span data-copy="m4-h3">Cobra como ya te pagan</span></h3><p data-copy="m4-p">Efectivo, datáfono, transferencia o QR, y contraentrega si vendes con envío nacional. Confirmas cada pago en tu panel.</p></article>
