@@ -394,8 +394,41 @@ footer{padding:48px 0 56px;border-top:0}footer .wrap{display:flex;flex-wrap:wrap
 .prob2 .chx .bub:nth-of-type(n+5){display:none}
 }
 @media(max-width:900px){.prob2 .chh b{font-size:10px;letter-spacing:-.01em;overflow:visible;text-overflow:clip}.prob2 .chh{gap:4px}.prob2 .chx{padding:10px 6px}}
+/* v9.6 móvil: un solo chat rotando */
+@media(max-width:900px){
+.prob2 .stack{order:1;margin:0;height:196px}
+.prob2 .hub{order:2;margin:36px 0 36px}
+.prob2 .chats{order:3;display:block;width:100%}
+.prob2 .chx{display:none;width:100%;padding:14px 14px 16px;gap:8px;border-radius:0 0 16px 16px}
+.prob2 .chx.on{display:flex}
+.prob2 .chh b{font-size:14px}.prob2 .chh svg{width:16px;height:16px}.prob2 .chh{gap:8px;padding-bottom:10px}
+.prob2 .chx .bub{font-size:13px;line-height:18px;padding:7px 12px;max-width:85%;border-radius:14px 14px 14px 4px}.prob2 .chx .bub.me{border-radius:14px 14px 4px 14px}
+.prob2 .chx .bub:nth-of-type(n+5){display:flex}
+.prob2 .chx.on .bub{animation:bin9 .45s cubic-bezier(.2,.7,.3,1) both;animation-delay:calc(var(--i,0)*.55s + .15s)}
+.typ{display:none;align-self:flex-start;gap:4px;padding:10px 12px;background:#f1f5f9;border-radius:14px 14px 14px 4px}
+.prob2 .chx .typ{display:inline-flex}.typ i{width:5px;height:5px;border-radius:50%;background:#94a3b8;animation:typ9 1s infinite ease-in-out}.typ i:nth-child(2){animation-delay:.15s}.typ i:nth-child(3){animation-delay:.3s}
+.prob2 .chx.on .typ{animation:bin9 .45s both;animation-delay:2.9s}
+}
+@media(min-width:901px){.typ{display:none!important}}
+@keyframes bin9{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes typ9{0%,80%,100%{opacity:.35;transform:none}40%{opacity:1;transform:translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){.prob2 .chx .bub,.prob2 .chx .typ,.typ i{animation:none!important;opacity:1!important}}
+/* v9.6 logo oficial */
+.logo{display:inline-flex;align-items:center}.lgimg{height:30px;width:auto;display:block}footer .lgimg{height:28px}@media(max-width:900px){nav .lgimg{height:28px}}
+/* v9.6b móvil: 3 chats apilados con línea a la izquierda */
+@media(max-width:900px){
+.prob2{padding:24px 12px 28px 12px}
+.prob2 .chats{display:flex;flex-direction:column;gap:12px;width:calc(100% - 22px);margin-left:22px}
+.prob2 .chx{display:flex;width:100%;padding:10px 12px 12px;gap:6px}
+.prob2 .chx .bub{animation:none;font-size:12px;line-height:16px;padding:5px 10px}
+.prob2 .chx .bub:nth-of-type(n+4){display:none}
+.prob2 .chx .typ{display:none}
+.prob2 .chh{padding-bottom:6px}.prob2 .chh b{font-size:13px}
+}
+@media(max-width:900px){.prob2 .chats{gap:14px}.prob2 .chx+.chx{margin-top:0}}
+@media(max-width:420px){nav .lgimg{height:22px}nav{gap:10px!important}nav .btn,nav .btn.sm{padding:0 12px!important;font-size:13px!important}nav .in{font-size:13px}}
 </style></head><body>
-<div class="navw"><nav><a class="logo" href="/" data-copy="logo">linkiu<i>.</i></a><a class="in" href="#" data-copy="nav-login">Ingresar</a><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a></nav></div>
+<div class="navw"><nav><a class="logo" href="/" aria-label="Linkiu"><img class="lgimg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMTkyIDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMzAxXzIxOTEpIj4KPHBhdGggZD0iTTUzLjA1NjggMTMuMjIwMkg0MS4yMzE1TDQ3Ljc5ODMgNi42NDk4Mkw0MS4zMjc3IDAuMTc5ODM4TDM0Ljc2MDkgNi43NTAyVjBIMjUuNjE1VjYuNzUwMkwyMC44NDE1IDEuOTc4MjJMMTQuMzc1IDguNDQ4MkwxOS4xNDQ0IDEzLjIyMDJIMTIuMzk3OVYyMi4zNzUySDE5LjE0NDRMMCA0MS41M0w2LjQ3MDY0IDQ4TDI1LjYxNSAyOC44NDUyVjQ1Ljc2NjdIMzQuNzYwOVYyOC44NDUyTDQ0LjkyMjUgMzkuMDEyM0w1MS4zODg5IDMyLjUzODFMNDEuMjMxNSAyMi4zNzUySDUzLjA1NjhWMTMuMjIwMloiIGZpbGw9IiNFNzAwMEIiLz4KPHBhdGggZD0iTTczLjI0MiAyOC40MTQzSDg4LjAwNTdWMzYuMDAxSDY1LjA1MzNWMTAuNzA2NUg3My4yNDJWMjguNDEwMVYyOC40MTQzWiIgZmlsbD0iIzAyMDYxOCIvPgo8cGF0aCBkPSJNODkuNTczMiA0LjM5OTc2Qzg5LjU3MzIgMS45MTk2NyA5MS41NDYyIDAgOTQuMDIwOCAwQzk2LjQ5NTMgMCA5OC40MTgxIDEuOTIzODUgOTguNDE4MSA0LjM5OTc2Qzk4LjQxODEgNi44NzU2NyA5Ni40NDUyIDguODQ5NyA5NC4wMjA4IDguODQ5N0M5MS41OTY0IDguODQ5NyA4OS41NzMyIDYuODc1NjcgODkuNTczMiA0LjM5OTc2WiIgZmlsbD0iIzAyMDYxOCIvPgo8cGF0aCBkPSJNOTcuOTY2NyAxMC43MDY1SDkwLjE3OTNWMzYuMDAxSDk3Ljk2NjdWMTAuNzA2NVoiIGZpbGw9IiMwMjA2MTgiLz4KPHBhdGggZD0iTTEwMS44MDQgMzYuMDAxVjEwLjcwNjZIMTA5LjEzNkwxMDkuNjQxIDEzLjMzNzNDMTExLjIwOSAxMS4xNjI1IDExNC4wODkgOS44OTUyNiAxMTcuMzc5IDkuODk1MjZDMTIzLjM5NCA5Ljg5NTI2IDEyNi44ODQgMTMuNzM4OCAxMjYuODg0IDIwLjM2NzdWMzYuMDAxSDExOS4wOTdWMjIuMjQxM0MxMTkuMDk3IDE5LjA1NDUgMTE3LjMyOCAxNi45OCAxMTQuNjQ5IDE2Ljk4QzExMS41NjQgMTYuOTggMTA5LjU5MSAxOS4wMDQzIDEwOS41OTEgMjIuMTQxVjM2LjAwMUgxMDEuODA0WiIgZmlsbD0iIzAyMDYxOCIvPgo8cGF0aCBkPSJNMTMwLjQyIDM2LjAwMVYxMC43MDY1SDEzOC4yMDhWMTkuODExNEwxNDYuMzk2IDEwLjcwNjVIMTU2LjE1MkwxNDYuNjQ3IDIwLjcyMzFMMTU1Ljg0NyAzNi4wMDFIMTQ2Ljg0OEwxNDEuMTg0IDI2LjU0MDZMMTM4LjE5OSAyOS42Nzc0VjM2LjAwMUgxMzAuNDEySDEzMC40MloiIGZpbGw9IiMwMjA2MTgiLz4KPHBhdGggZD0iTTE1Ni43MDggNC4zOTk3NkMxNTYuNzA4IDEuOTE5NjcgMTU4LjY4MSAwIDE2MS4xNTYgMEMxNjMuNjMgMCAxNjUuNTUzIDEuOTIzODUgMTY1LjU1MyA0LjM5OTc2QzE2NS41NTMgNi44NzU2NyAxNjMuNTggOC44NDk3IDE2MS4xNTYgOC44NDk3QzE1OC43MzEgOC44NDk3IDE1Ni43MDggNi44NzU2NyAxNTYuNzA4IDQuMzk5NzZaIiBmaWxsPSIjMDIwNjE4Ii8+CjxwYXRoIGQ9Ik0xNjUuMTAyIDEwLjcwNjVIMTU3LjMxNFYzNi4wMDFIMTY1LjEwMlYxMC43MDY1WiIgZmlsbD0iIzAyMDYxOCIvPgo8cGF0aCBkPSJNMTkyIDEwLjcwNjVWMzYuMDAxSDE4NC42NjhMMTg0LjE2MiAzMy4xNjk2QzE4Mi41OTUgMzUuMjQ0IDE3OS40NiAzNi42NjE4IDE3Ni40MjUgMzYuNjYxOEMxNzAuNjYxIDM2LjY2MTggMTY3LjEyMSAzMi44MTgyIDE2Ny4xMjEgMjYuNTk1VjEwLjcwNjVIMTc0LjkwOFYyMy43NTk0QzE3NC45MDggMjcuOTA4MyAxNzYuMzI1IDI5LjcyNzUgMTc5LjUxIDI5LjcyNzVDMTgyLjY5NSAyOS43Mjc1IDE4NC4yMTMgMjguMDA4NiAxODQuMjEzIDIzLjg1OThWMTAuNzA2NUgxOTJaIiBmaWxsPSIjMDIwNjE4Ii8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMzAxXzIxOTEiPgo8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjQ4IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=" width="192" height="48" alt="Linkiu" data-copy="logo"></a><a class="in" href="#" data-copy="nav-login">Ingresar</a><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a></nav></div>
 
 <header class="hero"><div class="wrap">
  <span class="kpill rv" data-copy="hero-kicker">Linkiu para ecommerce</span>
@@ -487,7 +520,7 @@ footer{padding:48px 0 56px;border-top:0}footer .wrap{display:flex;flex-wrap:wrap
  <div class="ctastack"><a class="btn" href="#" data-copy="cta">Crea tu tienda gratis</a><a class="btn ghost" href="https://wa.me/573104594344?text=Hola%2C%20quiero%20que%20me%20armen%20mi%20tienda%20en%20Linkiu" data-copy="cta-assisted">Que me la armen</a>
   <div class="trust" data-copy="trust-short"><span>Crear tu tienda es gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div></div>
 </div></section>
-<footer><div class="wrap"><span class="logo" data-copy="logo">linkiu<i>.</i></span><a href="/gastronomia" data-copy="ft-gastro">Gastronomía</a><a href="/ecommerce" data-copy="ft-ecom">Ecommerce</a><a href="#" data-copy="ft-terms">Términos</a><a href="#" data-copy="ft-priv">Privacidad</a><a href="#" data-copy="ui-v9-ft-redes">Redes</a>
+<footer><div class="wrap"><span class="logo"><img class="lgimg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMTkyIDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMzAxXzIxOTEpIj4KPHBhdGggZD0iTTUzLjA1NjggMTMuMjIwMkg0MS4yMzE1TDQ3Ljc5ODMgNi42NDk4Mkw0MS4zMjc3IDAuMTc5ODM4TDM0Ljc2MDkgNi43NTAyVjBIMjUuNjE1VjYuNzUwMkwyMC44NDE1IDEuOTc4MjJMMTQuMzc1IDguNDQ4MkwxOS4xNDQ0IDEzLjIyMDJIMTIuMzk3OVYyMi4zNzUySDE5LjE0NDRMMCA0MS41M0w2LjQ3MDY0IDQ4TDI1LjYxNSAyOC44NDUyVjQ1Ljc2NjdIMzQuNzYwOVYyOC44NDUyTDQ0LjkyMjUgMzkuMDEyM0w1MS4zODg5IDMyLjUzODFMNDEuMjMxNSAyMi4zNzUySDUzLjA1NjhWMTMuMjIwMloiIGZpbGw9IiNFNzAwMEIiLz4KPHBhdGggZD0iTTczLjI0MiAyOC40MTQzSDg4LjAwNTdWMzYuMDAxSDY1LjA1MzNWMTAuNzA2NUg3My4yNDJWMjguNDEwMVYyOC40MTQzWiIgZmlsbD0iIzAyMDYxOCIvPgo8cGF0aCBkPSJNODkuNTczMiA0LjM5OTc2Qzg5LjU3MzIgMS45MTk2NyA5MS41NDYyIDAgOTQuMDIwOCAwQzk2LjQ5NTMgMCA5OC40MTgxIDEuOTIzODUgOTguNDE4MSA0LjM5OTc2Qzk4LjQxODEgNi44NzU2NyA5Ni40NDUyIDguODQ5NyA5NC4wMjA4IDguODQ5N0M5MS41OTY0IDguODQ5NyA4OS41NzMyIDYuODc1NjcgODkuNTczMiA0LjM5OTc2WiIgZmlsbD0iIzAyMDYxOCIvPgo8cGF0aCBkPSJNOTcuOTY2NyAxMC43MDY1SDkwLjE3OTNWMzYuMDAxSDk3Ljk2NjdWMTAuNzA2NVoiIGZpbGw9IiMwMjA2MTgiLz4KPHBhdGggZD0iTTEwMS44MDQgMzYuMDAxVjEwLjcwNjZIMTA5LjEzNkwxMDkuNjQxIDEzLjMzNzNDMTExLjIwOSAxMS4xNjI1IDExNC4wODkgOS44OTUyNiAxMTcuMzc5IDkuODk1MjZDMTIzLjM5NCA5Ljg5NTI2IDEyNi44ODQgMTMuNzM4OCAxMjYuODg0IDIwLjM2NzdWMzYuMDAxSDExOS4wOTdWMjIuMjQxM0MxMTkuMDk3IDE5LjA1NDUgMTE3LjMyOCAxNi45OCAxMTQuNjQ5IDE2Ljk4QzExMS41NjQgMTYuOTggMTA5LjU5MSAxOS4wMDQzIDEwOS41OTEgMjIuMTQxVjM2LjAwMUgxMDEuODA0WiIgZmlsbD0iIzAyMDYxOCIvPgo8cGF0aCBkPSJNMTMwLjQyIDM2LjAwMVYxMC43MDY1SDEzOC4yMDhWMTkuODExNEwxNDYuMzk2IDEwLjcwNjVIMTU2LjE1MkwxNDYuNjQ3IDIwLjcyMzFMMTU1Ljg0NyAzNi4wMDFIMTQ2Ljg0OEwxNDEuMTg0IDI2LjU0MDZMMTM4LjE5OSAyOS42Nzc0VjM2LjAwMUgxMzAuNDEySDEzMC40MloiIGZpbGw9IiMwMjA2MTgiLz4KPHBhdGggZD0iTTE1Ni43MDggNC4zOTk3NkMxNTYuNzA4IDEuOTE5NjcgMTU4LjY4MSAwIDE2MS4xNTYgMEMxNjMuNjMgMCAxNjUuNTUzIDEuOTIzODUgMTY1LjU1MyA0LjM5OTc2QzE2NS41NTMgNi44NzU2NyAxNjMuNTggOC44NDk3IDE2MS4xNTYgOC44NDk3QzE1OC43MzEgOC44NDk3IDE1Ni43MDggNi44NzU2NyAxNTYuNzA4IDQuMzk5NzZaIiBmaWxsPSIjMDIwNjE4Ii8+CjxwYXRoIGQ9Ik0xNjUuMTAyIDEwLjcwNjVIMTU3LjMxNFYzNi4wMDFIMTY1LjEwMlYxMC43MDY1WiIgZmlsbD0iIzAyMDYxOCIvPgo8cGF0aCBkPSJNMTkyIDEwLjcwNjVWMzYuMDAxSDE4NC42NjhMMTg0LjE2MiAzMy4xNjk2QzE4Mi41OTUgMzUuMjQ0IDE3OS40NiAzNi42NjE4IDE3Ni40MjUgMzYuNjYxOEMxNzAuNjYxIDM2LjY2MTggMTY3LjEyMSAzMi44MTgyIDE2Ny4xMjEgMjYuNTk1VjEwLjcwNjVIMTc0LjkwOFYyMy43NTk0QzE3NC45MDggMjcuOTA4MyAxNzYuMzI1IDI5LjcyNzUgMTc5LjUxIDI5LjcyNzVDMTgyLjY5NSAyOS43Mjc1IDE4NC4yMTMgMjguMDA4NiAxODQuMjEzIDIzLjg1OThWMTAuNzA2NUgxOTJaIiBmaWxsPSIjMDIwNjE4Ii8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMzAxXzIxOTEiPgo8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjQ4IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=" width="192" height="48" alt="Linkiu" data-copy="logo"></span><a href="/gastronomia" data-copy="ft-gastro">Gastronomía</a><a href="/ecommerce" data-copy="ft-ecom">Ecommerce</a><a href="#" data-copy="ft-terms">Términos</a><a href="#" data-copy="ft-priv">Privacidad</a><a href="#" data-copy="ui-v9-ft-redes">Redes</a>
  <a href="https://wa.me/573104594344" data-copy="footer-sales">WhatsApp ventas: 310 459 4344</a><a href="https://wa.me/573233332112" data-copy="footer-support">Soporte para clientes: 323 333 2112</a></div></footer>
 <script>(function(){var d=document,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;d.documentElement.classList.add('js');
 d.querySelectorAll('.stg').forEach(function(g){[].forEach.call(g.children,function(c,i){c.style.setProperty('--d',(i*0.1)+'s')})});
@@ -510,11 +543,13 @@ function box(e){var r=e.getBoundingClientRect(),p=P.getBoundingClientRect();retu
 var GN=0;function grad(c,o0,o1){var id='lg'+(GN++),lg=el('linearGradient',{id:id,gradientUnits:'userSpaceOnUse'});lg.appendChild(el('stop',{offset:'0','stop-color':c[0],'stop-opacity':o0}));lg.appendChild(el('stop',{offset:'1','stop-color':c[1],'stop-opacity':o1}));defs.appendChild(lg);return lg}
 function gset(lg,a,b){lg.setAttribute('x1',a.x);lg.setAttribute('y1',a.y);lg.setAttribute('x2',b.x+.01);lg.setAttribute('y2',b.y+.01)}
 function mk(d,k,rev){var p=el('path',{d:d});RT.appendChild(p);if(k<0){p.style.stroke='#cbd5e1';p.style.strokeOpacity=.7}else{var lg=grad(COL[k],.28,.28),L=p.getTotalLength(),a=p.getPointAtLength(0),b=p.getPointAtLength(L);gset(lg,a,b);p.style.stroke='url(#'+lg.id+')';p.style.strokeOpacity=1}return p}
+var curK=0,CH=[].slice.call(P.querySelectorAll('.chx'));CH.forEach(function(c){if(!c.querySelector('.typ')){var t=document.createElement('span');t.className='typ';t.setAttribute('aria-hidden','true');t.innerHTML='<i></i><i></i><i></i>';c.appendChild(t)}});
+function setChat(k){curK=k;CH.forEach(function(c,j){c.classList.remove('on');if(j===k){void c.offsetWidth;c.classList.add('on')}});up.forEach(function(u,j){u.style.opacity=j===k?1:0})}
 function build(){
  RT.innerHTML='';PK.innerHTML='';[].slice.call(defs.querySelectorAll('linearGradient')).forEach(function(g){g.remove()});GN=0;up=[];down=[];pkts=[];mob=innerWidth<=900;
  var H=box(hub),S=box(P.querySelector('.stack')),C=box(P.querySelector('.chats'));
  var F=box(cards.filter(function(c,k){return pos[k]===2})[0]);
- if(mob){P.querySelectorAll('.chx').forEach(function(c,k){var b=box(c),y0=b.b,y1=H.t,m=(y1-y0)*.55;up.push(mk('M'+b.cx+' '+y0+' C'+b.cx+' '+(y0+m)+' '+H.cx+' '+(y1-m)+' '+H.cx+' '+y1,k))});down.push(mk('M'+H.cx+' '+H.b+' L'+H.cx+' '+S.t,-1))}
+ if(mob){var sx=C.l-12,r=8;P.querySelectorAll('.chx').forEach(function(c,k){var b=box(c),y=b.t+22;up.push(mk('M'+b.l+' '+y+' L'+(sx+r)+' '+y+' Q'+sx+' '+y+' '+sx+' '+(y-r)+' L'+sx+' '+(H.cy+r)+' Q'+sx+' '+H.cy+' '+(sx+r)+' '+H.cy+' L'+H.l+' '+H.cy,k))});down.push(mk('M'+H.cx+' '+H.t+' L'+H.cx+' '+F.b,-1))}
  else{
   P.querySelectorAll('.chx').forEach(function(c,k){var b=box(c),y0=b.t,y1=H.b,m=(y0-y1)*.55;up.push(mk('M'+b.cx+' '+y0+' C'+b.cx+' '+(y0-m)+' '+H.cx+' '+(y1+m)+' '+H.cx+' '+y1,k))});
   [-1,0,1].forEach(function(d,k){var x0=H.cx+d*28,x1=H.cx+d*(F.w*.28),y0=H.t,y1=F.b,m=(y0-y1)*.5;down.push(mk(d?'M'+x0+' '+y0+' C'+x0+' '+(y0-m)+' '+x1+' '+(y1+m)+' '+x1+' '+y1:'M'+x0+' '+y0+' L'+x1+' '+y1,k))});
