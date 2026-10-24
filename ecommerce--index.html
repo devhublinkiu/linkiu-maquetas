@@ -354,12 +354,23 @@ footer{padding:40px 0;border-top:1px solid var(--line);font-size:14px;color:var(
 /* v9 coherencia */
 .where.stg,.steps.stg,.more.stg{gap:0!important;border-top:1px solid #e3e5ea;border-left:1px solid #e3e5ea}
 .where .wc,.steps .step,.more .mc{border:0!important;border-right:1px solid #e3e5ea!important;border-bottom:1px solid #e3e5ea!important;border-radius:0!important;box-shadow:none!important;background:#fff}
-.where .wc>.ic,.steps .step>.ic,.more .mc>.ic{box-sizing:content-box;padding:6px;border:1.5px solid var(--ink);border-radius:7px;box-shadow:2px 2px 0 var(--ink);background:#fff}
 .assist{border-radius:0!important;border:1px solid #e3e5ea!important;box-shadow:none!important;border-top:0!important}
 .prob2{border:1px solid #e3e5ea;border-radius:0!important}
-.final .wrap{border:1px solid #e3e5ea;background:#fafbfc radial-gradient(#dde0e6 1px,transparent 1px) 0 0/22px 22px;padding-top:56px;padding-bottom:56px}
 .m9{aspect-ratio:auto;min-height:440px}.m9i.dots{min-height:auto;padding:30px 26px 34px;overflow:hidden}
 .fx1,.fx5{right:-10px;bottom:-18px}.fx2,.fx6{right:-10px;top:-18px}.fx3,.fx4,.fx7{left:-10px;bottom:-18px}
+
+/* v9.2 eyebrow simple */
+.kpill{height:auto;padding:0;border:0;border-radius:0;background:none;box-shadow:none;font-size:14px;font-weight:500;color:var(--red)}
+
+/* v9.3 CTA final y footer = Home v2 */
+.final{margin:152px 24px 0;padding:120px 0;text-align:center;background:var(--ink);color:#fff;border-radius:24px;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px}
+.final h2{font-size:56px;line-height:58px;letter-spacing:-.035em;color:#fff}.fp{font-size:18px;line-height:26px;color:#b8bec8!important;margin:16px auto 0!important;max-width:440px}
+.ctastack{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+.ctastack .trust{flex-basis:100%;display:flex;flex-wrap:wrap;justify-content:center;gap:0;font-size:14px;margin-top:4px}
+.final .btn{height:48px;padding:0 24px;border-radius:999px;font-size:15px;font-weight:500}
+.final .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px #3a404a;border:0}.final .trust{color:#b8bec8}
+footer{padding:48px 0 56px;border-top:0}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;font-size:14px;color:var(--mute)}footer .logo{color:var(--ink);margin-right:auto}footer a:hover{color:var(--ink)}
+@media(max-width:900px){.ctastack .btn{flex:1 1 100%}.final{margin:96px 12px 0;padding:72px 20px}.final h2{font-size:34px;line-height:38px}.fp{font-size:16px}footer .wrap{flex-direction:column;align-items:flex-start}}
 </style></head><body>
 <div class="navw"><nav><a class="logo" href="/" data-copy="logo">linkiu<i>.</i></a><a class="in" href="#" data-copy="nav-login">Ingresar</a><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a></nav></div>
 
@@ -447,14 +458,14 @@ footer{padding:40px 0;border-top:1px solid var(--line);font-size:14px;color:var(
  <div class="faq rv"><details open><summary><span data-copy="faq1-q">¿De verdad es gratis?</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary><p data-copy="faq1-a">Sí. Crea tu tienda gratis, sin tarjeta, y pruébala. Y no cobramos comisión por pedido: lo que vendes es tuyo.</p></details><details><summary><span data-copy="faq5-q">¿Cómo me pagan mis clientes?</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary><p data-copy="faq5-a">Por transferencia o QR, y tu cliente sube la foto del pago. En efectivo o datáfono, al recoger en tu tienda o al recibir el domicilio. Si activas la contraentrega en Envíos, en envío nacional le paga a la transportadora, con recargo, en las zonas que elijas.</p></details><details><summary><span data-copy="faq7-q">¿Con qué transportadora despacho?</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary><p data-copy="faq7-a">Con la que ya usas: Servientrega, Coordinadora, Interrapidísimo, Envía, TCC u otra. Tú haces el despacho; al marcarlo como enviado pones la transportadora y la guía, y tu cliente la ve en su pedido.</p></details><details><summary><span data-copy="faq4-q">¿Sigo usando WhatsApp e Instagram?</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary><p data-copy="faq4-a">Sí. Ahí compartes tu link y te avisamos de cada pedido nuevo. El pedido completo queda en tu panel.</p></details><details><summary><span data-copy="faq6-q">¿Y si no tengo tiempo de armarla?</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></summary><p data-copy="faq6-a">Te la armamos gratis por ahora. Pídela por WhatsApp o desde tu panel y queda lista el mismo día, máximo en 24 horas.</p></details></div>
 </div></section>
 
-<section class="final"><div class="wrap">
- <h2 class="rv" data-copy="final-h2">Tu tienda te está esperando.</h2><p class="rv" data-copy="final-p">Crear tu tienda es gratis. Si prefieres, te la armamos nosotros.</p>
- <div class="ab rv"><a class="btn" href="#"><span data-copy="cta">Crea tu tienda gratis</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a><a class="btn ghost" href="https://wa.me/573104594344?text=Hola%2C%20quiero%20que%20me%20armen%20mi%20tienda%20en%20Linkiu"><span data-copy="cta-assisted">Que me la armen</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a></div><div class="trust" data-copy="trust-short"><span>Crear tu tienda es gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div>
+<section class="final"><div class="wrap rv">
+ <h2 data-copy="final-h2">Tu tienda te está esperando.</h2>
+ <p class="fp" data-copy="final-p">Crear tu tienda es gratis. Si prefieres, te la armamos nosotros.</p>
+ <div class="ctastack"><a class="btn" href="#" data-copy="cta">Crea tu tienda gratis</a><a class="btn ghost" href="https://wa.me/573104594344?text=Hola%2C%20quiero%20que%20me%20armen%20mi%20tienda%20en%20Linkiu" data-copy="cta-assisted">Que me la armen</a>
+  <div class="trust" data-copy="trust-short"><span>Crear tu tienda es gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div></div>
 </div></section>
-
-<footer><div class="wrap fw"><span class="logo" data-copy="logo">linkiu<i>.</i></span>
-<div class="fl"><a href="/gastronomia" data-copy="ft-gastro">Gastronomía</a><a href="/ecommerce" data-copy="ft-ecom">Ecommerce</a><a href="#" data-copy="ft-terms">Términos</a><a href="#" data-copy="ft-priv">Privacidad</a></div>
-<div class="fl"><a href="https://wa.me/573104594344" data-copy="ft-sales">Ventas: 310 459 4344</a><a href="https://wa.me/573233332112" data-copy="ft-support">Soporte: 323 333 2112</a><span data-copy="ft-made">Hecho en Colombia.</span></div></div></footer>
+<footer><div class="wrap"><span class="logo" data-copy="logo">linkiu<i>.</i></span><a href="/gastronomia" data-copy="ft-gastro">Gastronomía</a><a href="/ecommerce" data-copy="ft-ecom">Ecommerce</a><a href="#" data-copy="ft-terms">Términos</a><a href="#" data-copy="ft-priv">Privacidad</a><a href="#" data-copy="ui-v9-ft-redes">Redes</a>
+ <a href="https://wa.me/573104594344" data-copy="footer-sales">WhatsApp ventas: 310 459 4344</a><a href="https://wa.me/573233332112" data-copy="footer-support">Soporte para clientes: 323 333 2112</a></div></footer>
 <script>(function(){var d=document,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;d.documentElement.classList.add('js');
 d.querySelectorAll('.stg').forEach(function(g){[].forEach.call(g.children,function(c,i){c.style.setProperty('--d',(i*0.1)+'s')})});
 var rv=d.querySelectorAll('.rv');if(rm||!('IntersectionObserver' in window)){rv.forEach(function(e){e.classList.add('in')});return}
