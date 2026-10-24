@@ -94,14 +94,20 @@ details{border-bottom:1px solid var(--line);padding:20px 0}details:first-child{b
 .final .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px #3a404a}.final .trust{color:#b8bec8}.final .anote{color:#8a919c}
 footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;font-size:14px;color:var(--mute)}footer .logo{color:var(--ink);margin-right:auto}footer a:hover{color:var(--ink)}
 /* Reveal */
-.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease) var(--d,0s),transform .8s var(--ease) var(--d,0s)}
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity .6s cubic-bezier(0,0,.2,1) var(--d,0s),transform .6s cubic-bezier(0,0,.2,1) var(--d,0s)}
 .js .rv.in{opacity:1;transform:none}
-.js .chip{animation:pop .9s var(--ease) .35s both}@keyframes pop{from{transform:rotate(-12deg) scale(.6);opacity:0}to{transform:rotate(-2deg) scale(1);opacity:1}}
+/* Opción A: el chip se revela de izquierda a derecha y el ícono entra con giro leve */
+.js .chip{animation:chipA .75s cubic-bezier(.22,1,.36,1) .3s both}.js .chip svg{animation:icoA .7s cubic-bezier(.22,1,.36,1) .42s both}
+@keyframes chipA{from{clip-path:inset(0 100% 0 0 round 16px)}to{clip-path:inset(0 0 0 0 round 16px)}}
+@keyframes icoA{from{transform:rotate(-35deg);opacity:0}to{transform:none;opacity:1}}
+/* Opción B: blur a nítido con desplazamiento vertical */
+.js.anim-b .chip{animation:chipB .7s cubic-bezier(.22,1,.36,1) .3s both}.js.anim-b .chip svg{animation:none}
+@keyframes chipB{from{opacity:0;filter:blur(10px);transform:rotate(-2deg) translateY(12px)}to{opacity:1;filter:blur(0);transform:rotate(-2deg)}}
 @keyframes bob{50%{translate:0 -6px}}.js .ribbon{animation:bob 5s ease-in-out infinite}.js .r2{animation-delay:-1.5s}.js .r3{animation-delay:-3s}.js .r4{animation-delay:-4s}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .win{transform:none}.js .ribbon,.js .chip{animation:none}*{transition:none!important;scroll-behavior:auto!important}}
 .dk{display:inline}
 @media(max-width:900px){
- nav{gap:12px;padding:0 6px 0 16px}.navpaths,nav .in{display:none}nav .btn{margin-left:auto}
+ nav{gap:12px;padding:0 6px 0 16px}nav .in{margin-left:auto}nav .btn.sm{padding:0 14px}
  .hero{padding-top:56px}h1{font-size:32px;line-height:34px;letter-spacing:-.04em}.chip{height:36px;line-height:34px;padding:0 10px 2px 8px;border-radius:10px}.chip svg{width:20px;height:20px}.dk{display:none}
  .sub{font-size:16px;line-height:24px}.ctastack .btn{flex:1 1 100%}
  .stage{margin-top:40px}.stage .wrap{padding-top:28px}.app{grid-template-columns:1fr;min-height:0}.side,.detail{display:none}.cols{grid-template-columns:1fr 1fr}.cols .col:last-child{display:none}
@@ -129,18 +135,32 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
 @media(prefers-reduced-motion:reduce){.mq{-webkit-mask:none;mask:none}.mqt{animation:none!important;width:auto}.mq .rrow{flex-wrap:wrap}.mq .dup{display:none}}
 @media(max-width:900px){.bento .art{height:auto}}
 .pgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.pcard{min-width:0}.mq{width:100%}@media(max-width:900px){.pgrid{grid-template-columns:minmax(0,1fr)}}
+.hpaths{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:20px}
+.hpaths a{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:999px;background:var(--card);font-size:14px;font-weight:500;color:var(--ink2);transition:background .4s var(--ease),color .4s var(--ease)}
+.hpaths a:hover{background:#eef0f3;color:var(--ink)}.hpaths .ic{color:var(--mute)}
+@media(max-width:900px){.hpaths a{font-size:13px;padding:0 10px}}
+@media(prefers-reduced-motion:reduce){.js .chip,.js .chip svg{animation:none!important}}
+@media(max-width:900px){.hpaths{gap:6px}.hpaths a{font-size:12.5px;padding:0 10px;gap:4px}.hpaths .ic{width:15px;height:15px}}
+.mods3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.mods3 .bc{padding:16px 16px 28px}.mods3 .bc h3,.mods3 .bc p{padding:0 8px}
+.vbox{aspect-ratio:16/10;height:auto!important;padding:0;overflow:hidden;background:#fbfbfc;margin-bottom:24px}.vbox video{display:block;width:100%;height:100%;object-fit:cover}
+.cta-row{flex-wrap:wrap}.cta-meta{display:flex;flex-direction:column;gap:2px}.cta-meta .trust{justify-content:flex-start;margin:0}.cta-meta .anote{text-align:left}
+.chip{--lh:60px}.rot{display:inline-block;overflow:hidden;height:1.15em;line-height:1.15em;vertical-align:-.22em;white-space:nowrap}
+.rl{display:block}.rl>span,.rw{display:block;height:1.15em;line-height:1.15em}
+@media(max-width:900px){.chip{--lh:34px}.ribbon{display:none}.mods3{grid-template-columns:1fr;gap:16px}.cta-meta{align-items:center}.cta-meta .trust{justify-content:center}.cta-meta .anote{text-align:center}}
+@media(prefers-reduced-motion:reduce){.rot,.rl{transition:none!important}}
+.hero{overflow-x:clip}
 </style>
-<script>document.documentElement.classList.add('js')</script>
+<script>document.documentElement.classList.add('js');var m=location.search.match(/[?&]anim=([bc])/);if(m)document.documentElement.classList.add('anim-'+m[1])</script>
 </head><body>
 
 <div class="navw"><nav><a class="logo" href="#">linkiu<i>.</i></a>
- <div class="navpaths"><a href="/gastronomia" data-copy="nav-gastro">Gastronomía</a><a href="/ecommerce" data-copy="nav-ecom">Ecommerce</a></div>
  <a class="in" href="#" data-copy="nav-login">Ingresar</a><a class="btn sm" href="#registro" data-copy="cta">Crea tu tienda gratis</a></nav></div>
 
 <header class="hero"><div class="wrap">
  <a class="newpill rv" href="#kira" data-copy="hero-pill"><b>Nuevo</b> Kira IA arma tu tienda <span>→</span></a>
- <h1 class="rv" style="--d:.06s" data-copy="hero-h1">Vende con tu propio <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>link</span>.<br class="dk"> Sin pedidos regados en el chat.</h1>
+ <h1 class="rv" style="--d:.06s" data-copy="hero-h1">Vende con tu propio <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span class="rot" data-copy="hero-chip-words" data-words="link,QR,carta,tienda"><span class="rw">link</span></span></span>.<br class="dk"> Sin pedidos regados en el chat.</h1>
  <p class="sub rv" style="--d:.12s" data-copy="hero-sub">Tu tienda en línea, con tu propio link. Tus clientes piden solos desde el celular y tú ves todo ordenado en tu panel.</p>
+ <div class="hpaths rv" style="--d:.15s"><a href="/gastronomia" data-copy="hero-path-gastro"><svg class="ic" width="18" height="18" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6v14a4 4 0 0 0 8 0V6M18 6v36"/><path d="M34 6c-4 2-5 8-5 14h5v22"/></svg>Tengo un restaurante</a><a href="/ecommerce" data-copy="hero-path-ecom"><svg class="ic" width="18" height="18" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16h28l-2 24H12z"/><path d="M18 16a6 6 0 0 1 12 0"/></svg>Tengo una tienda</a></div>
  <div class="ctastack rv" style="--d:.18s">
   <a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a>
   <a class="btn ghost" href="https://wa.me/573104594344?text=Hola%2C%20quiero%20que%20me%20armen%20mi%20tienda%20en%20Linkiu" data-copy="cta-assisted">Que me la armen</a>
@@ -149,8 +169,8 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
  </div>
 </div>
  <div class="stage" aria-hidden="true"><div class="wrap">
-  <div class="ribbon r1" data-drift="-1">Tus productos</div><div class="ribbon r2" data-drift="-1.4">Tu link</div>
-  <div class="ribbon r3" data-drift="1">Pedido #128</div><div class="ribbon r4" data-drift="1.4">Domicilio</div>
+  <div class="ribbon r1" data-drift="-1" data-copy="hero-float-1">Domicilios</div><div class="ribbon r2" data-drift="-1.4" data-copy="hero-float-2">QR de mesa</div>
+  <div class="ribbon r3" data-drift="1" data-copy="hero-float-3">Pedidos</div><div class="ribbon r4" data-drift="1.4" data-copy="hero-float-4">Reservas</div>
   <div class="win" id="heroWin">
    <div class="vid"><div class="play"></div><span class="vlabel" data-copy="hero-video-label">Video</span></div>
   </div>
@@ -178,78 +198,33 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
  </div>
 </div></section>
 
-<!-- El problema: ilustración de línea (sin UI falsa) -->
-<section class="s"><div class="wrap">
- <div class="shead rv"><h2 data-copy="problem-h2">Si vendes por chat,<br>esto ya te pasó.</h2><p data-copy="problem-line">Sigues compartiendo en WhatsApp e Instagram. Pero cada pedido entra completo a tu panel: qué pidió, cómo paga y a dónde va.</p></div>
- <div class="gcard prob rv">
-  <div class="mess" aria-hidden="true">
-   <span class="bb" style="--r:-6deg;left:4%;top:6%"><i style="width:60%"></i></span>
-   <span class="bb" style="--r:4deg;left:38%;top:0"><i style="width:80%"></i><i style="width:40%"></i></span>
-   <span class="bb wave" style="--r:-2deg;left:12%;top:36%"><svg viewBox="0 0 80 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 10v0M14 6v8M22 3v14M30 7v6M38 4v12M46 8v4M54 5v10M62 9v2M70 6v8"/></svg></span>
-   <span class="bb" style="--r:7deg;left:50%;top:32%"><i style="width:50%"></i></span>
-   <span class="bb q" style="--r:-4deg;left:6%;top:66%">?</span>
-   <span class="bb q" style="--r:3deg;left:24%;top:70%">??</span>
-   <span class="bb" style="--r:-8deg;left:46%;top:64%"><i style="width:70%"></i><i style="width:30%"></i></span>
-  </div>
-  <div class="flowar" aria-hidden="true"><svg class="ic" width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h34M32 16l8 8-8 8"/></svg><span data-copy="problem-fix">Linkiu lo ordena.</span></div>
-  <div class="order" aria-hidden="true">
-   <div class="oh"><svg class="ic" width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="5"/><path d="M15 15h18M15 22h18M15 29h11"/><circle cx="35" cy="35" r="7" fill="#fff"/><path d="M32 35l2 2 4-4" stroke="#e7000b"/></svg><span>Pedido</span></div>
-   <div class="orow"><span>Qué pidió</span><i></i></div><div class="orow"><span>Cómo paga</span><i></i></div><div class="orow"><span>A dónde va</span><i></i></div>
-  </div>
- </div>
-</div></section>
 
-<!-- 4 protagonistas: bento 2x2 con íconos de línea grandes -->
+
+
+<!-- 3 módulos generales con los loops de Mateo -->
 <section class="s" id="kira"><div class="wrap">
- <div class="shead rv"><h2 data-copy="mods-h2">Lo del chat,<br>ahora en orden.</h2><p data-copy="mods-intro">Pedidos, link, productos y cobros. Lo que hoy haces a punta de chat, en un solo panel.</p></div>
- <div class="bento">
-  <article class="bc rv"><div class="art anim" id="ph-m1"><div class="play"></div><span class="cap">Animación — en producción</span></div>
-   <h3><span class="num">01</span><span data-copy="m1-h3">Todos tus pedidos en un solo lugar</span></h3><p data-copy="m1-p">Se acabaron los audios y pantallazos. Cada pedido entra completo a tu panel y te suena si lo tienes abierto.</p></article>
-  <article class="bc rv" style="--d:.08s"><div class="art anim" id="ph-m2"><div class="play"></div><span class="cap">Animación — en producción</span></div>
-   <h3><span class="num">02</span><span data-copy="m2-h3">Tu link, que se siente como app</span></h3><p data-copy="m2-p">linkiu.bio/tunegocio. Lo compartes en WhatsApp, Instagram o un QR. Tus clientes piden ahí, sin descargar nada.</p></article>
-  <article class="bc rv"><div class="art anim" id="ph-m3"><div class="play"></div><span class="cap">Animación — en producción</span></div>
+ <div class="shead rv"><h2 data-copy="mods-h2">Lo del chat,<br>ahora en orden.</h2><p data-copy="mods-intro">Tu link, tus pedidos y tus productos. Lo que hoy haces a punta de chat, en un solo panel.</p></div>
+ <div class="mods3 stg">
+  <article class="bc rv"><div class="art vbox"><video autoplay muted loop playsinline preload="metadata" poster="modulo-02-tu-link-poster.webp" aria-label="Animación: tu link"><source src="modulo-02-tu-link.webm" type="video/webm"><source src="modulo-02-tu-link.mp4" type="video/mp4"></video></div>
+   <h3><span class="num">01</span><span data-copy="m2-h3">Tu link, que se siente como app</span></h3><p data-copy="m2-p">linkiu.bio/tunegocio. Lo compartes en WhatsApp, Instagram o un QR. Tus clientes piden ahí, sin descargar nada.</p></article>
+  <article class="bc rv"><div class="art vbox"><video autoplay muted loop playsinline preload="metadata" poster="modulo-01-pedidos-poster.webp" aria-label="Animación: pedidos en el panel"><source src="modulo-01-pedidos.webm" type="video/webm"><source src="modulo-01-pedidos.mp4" type="video/mp4"></video></div>
+   <h3><span class="num">02</span><span data-copy="m1-h3">Todos tus pedidos en un solo lugar</span></h3><p data-copy="m1-p">Se acabaron los audios y pantallazos. Cada pedido entra completo a tu panel y te suena si lo tienes abierto.</p></article>
+  <article class="bc rv"><div class="art vbox"><video autoplay muted loop playsinline preload="metadata" poster="linkiu-modulo-03-kira-poster.webp" aria-label="Animación: Kira IA arma tu tienda"><source src="linkiu-modulo-03-kira.webm" type="video/webm"><source src="linkiu-modulo-03-kira.mp4" type="video/mp4"></video></div>
    <h3><span class="num">03</span><span data-copy="m3-h3">Sube fotos, Kira IA arma tu tienda</span></h3><p data-copy="m3-p">Tómale fotos a lo que vendes o a tu lista de precios y Kira IA te arma el borrador. Tú revisas y publicas.</p></article>
-  <article class="bc rv" style="--d:.08s"><div class="art"><svg class="ic" width="88" height="88" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="12" width="38" height="24" rx="5"/><path d="M5 19h38"/><path d="M11 29h8"/><path d="M33 26l3 3 5-6" stroke="#e7000b"/></svg><div class="paywords"><span>Efectivo</span><span>Datáfono</span><span>Transferencia</span><span>QR</span><span>Contraentrega</span></div></div>
-   <h3><span class="num">04</span><span data-copy="m4-h3">Cobra como ya te pagan</span></h3><p data-copy="m4-p">Efectivo, datáfono, transferencia o QR, y contraentrega si vendes con envío nacional. Confirmas cada pago en tu panel.</p></article>
- </div>
- <div class="cta-row rv"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div></div>
-</div></section>
-
-<!-- Tus pedidos, donde estés -->
-<section class="s"><div class="wrap">
- <div class="shead rv"><h2 data-copy="where-h2">Tus pedidos,<br>donde estés.</h2><p data-copy="where-p">Cada pedido entra a tu panel. Lo abres en el computador o en el celular, y con el panel abierto te suena cada pedido nuevo.</p></div>
- <div class="where">
-  <article class="bc rv"><div class="art sm"><svg class="ic" width="80" height="80" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="10" width="30" height="20" rx="3"/><path d="M4 36h40l-3 4H7z"/><path d="M15 17h10M15 23h18"/></svg></div><h3 data-copy="where-1-h">Computador</h3><p data-copy="where-1-p">Todo el tablero de pedidos, a la vista en el local o en la casa.</p></article>
-  <article class="bc rv" style="--d:.06s"><div class="art sm"><svg class="ic" width="80" height="80" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="5" width="20" height="38" rx="5"/><path d="M21 9h6"/><path d="M19 18h10M19 24h10M19 30h6"/></svg></div><h3 data-copy="where-2-h">Celular</h3><p data-copy="where-2-p">Te suena cada pedido nuevo con el panel abierto. Sin apps.</p></article>
-  <article class="bc rv" style="--d:.12s"><div class="art sm flow3"><svg class="ic" width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10h22a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H17l-7 6v-6H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4z"/><path d="M12 19h14"/></svg><span class="fa">→</span><svg class="ic" width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 27a7 7 0 0 0 10 .6l5-5a7 7 0 0 0-9.9-9.9l-2.6 2.6"/><path d="M27 21a7 7 0 0 0-10-.6l-5 5a7 7 0 0 0 9.9 9.9l2.6-2.6"/></svg><span class="fa">→</span><svg class="ic" width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="5"/><path d="M15 15h18M15 22h18M15 29h11"/><circle cx="35" cy="35" r="7" fill="#fff"/><path d="M32 35l2 2 4-4" stroke="#e7000b"/></svg><small><span>WhatsApp</span><span>tu link</span><span>tu panel</span></small></div><h3 data-copy="where-3-h">WhatsApp</h3><p data-copy="where-3-p">Compartes tu link y de ahí llegan tus clientes.</p></article>
  </div>
 </div></section>
 
 <!-- Tres pasos -->
 <section class="s"><div class="wrap">
  <div class="shead rv"><h2 data-copy="steps-h2">Arrancas en<br>tres pasos.</h2><p></p></div>
- <div class="steps">
+ <div class="steps stg">
   <div class="step rv"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18l3-10h30l3 10"/><path d="M6 18a6 6 0 0 0 12 0 6 6 0 0 0 12 0 6 6 0 0 0 12 0"/><path d="M9 24v16h30V24"/><path d="M20 40V30h8v10"/></svg><span class="n">1</span><h4 data-copy="s1-h">Sube lo que vendes.</h4><p data-copy="s1-p">Con fotos o a mano. En tiendas, también desde Excel.</p></div>
   <div class="step rv" style="--d:.06s"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="34" cy="12" r="5"/><circle cx="14" cy="24" r="5"/><circle cx="34" cy="36" r="5"/><path d="M18.5 21.5l11-6M18.5 26.5l11 6"/></svg><span class="n">2</span><h4 data-copy="s2-h">Comparte tu link.</h4><p data-copy="s2-p">WhatsApp, Instagram o QR.</p></div>
   <div class="step rv" style="--d:.12s"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l18-9 18 9-18 9z"/><path d="M6 15v18l18 9 18-9V15M24 24v18"/></svg><span class="n">3</span><h4 data-copy="s3-h">Recibe y despacha.</h4><p data-copy="s3-p">Lo ves en tu panel y sale.</p></div>
  </div>
- <div class="cta-row rv"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div></div>
+ <div class="cta-row rv"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><a class="btn ghost" href="https://wa.me/573104594344?text=Hola%2C%20quiero%20que%20me%20armen%20mi%20tienda%20en%20Linkiu" data-copy="cta-assisted">Que me la armen</a><div class="cta-meta"><div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div><p class="anote" data-copy="cta-assisted-note">Gratis por ahora. Pídela por WhatsApp o desde tu panel, y queda lista el mismo día.</p></div></div>
 </div></section>
 
-<!-- Y además (solo funciones de los dos rubros) -->
-<section class="s"><div class="wrap">
- <div class="shead rv"><h2 data-copy="more-h2">Y además</h2><p></p></div>
- <div class="ya rv">
-  <div data-copy="ya-1">Lo agotado se marca solo.</div>
-  <div data-copy="ya-3">Domicilios con tu propia gente.</div>
-  <div data-copy="ya-4">Tu QR, para el mostrador, la mesa o un volante.</div>
-  <div data-copy="ya-7">Cupones para tus historias. En restaurantes se llaman Ofertas.</div>
-  <div data-copy="ya-9">Tu cliente ve su pedido avanzar.</div>
-  <div data-copy="ya-11">Tus clientes, guardados en un solo lugar.</div>
-  <div data-copy="ya-12">Cobras en efectivo, datáfono, transferencia o QR.</div>
-  <div data-copy="ya-13">Lo que más se vende, adelante.</div>
- </div>
-</div></section>
 
 <!-- Clientes reales: OCULTA hasta tener datos reales (no usar tiendas demo como clientes)
 <section class="s"><div class="wrap"><h2 data-copy="clients-h2">Negocios de verdad, vendiendo con su link.</h2>
@@ -263,8 +238,6 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
   <details open><summary data-copy="faq1-q">¿De verdad es gratis?</summary><p data-copy="faq1-a">Sí. Regístrate gratis, sin tarjeta, y pruébalo.</p></details>
   <details><summary data-copy="faq2-q">¿Me cobran comisión por pedido?</summary><p data-copy="faq2-a">No. Lo que vendes es tuyo.</p></details>
   <details><summary data-copy="faq3-q">¿Tengo que descargar una app?</summary><p data-copy="faq3-a">No. Manejas tu tienda desde el navegador del celular o del computador. Con el panel abierto, te suena cada pedido nuevo.</p></details>
-  <details><summary data-copy="faq4-q">¿Sigo usando WhatsApp e Instagram?</summary><p data-copy="faq4-a">Sí, para compartir tu link. Tus clientes piden ahí y el pedido te entra al panel, no al chat.</p></details>
-  <details><summary data-copy="faq5-q">¿Cómo me pagan mis clientes?</summary><p data-copy="faq5-a">En efectivo, datáfono, transferencia o QR. Si vendes con envío nacional, también contraentrega.</p></details>
   <details><summary data-copy="faq6-q">¿Y si no tengo tiempo de armarla?</summary><p data-copy="faq6-a">Te la armamos gratis por ahora. Pídela por WhatsApp o desde tu panel y queda lista el mismo día, máximo en 24 horas.</p></details>
  </div>
 </div></section>
@@ -278,7 +251,18 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
 </div></section>
 <footer><div class="wrap"><span class="logo">linkiu<i>.</i></span><a href="/gastronomia">Gastronomía</a><a href="/ecommerce">Ecommerce</a><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Redes</a>
  <a href="https://wa.me/573104594344" data-copy="footer-sales">WhatsApp ventas: 310 459 4344</a><a href="https://wa.me/573233332112" data-copy="footer-support">Soporte para clientes: 323 333 2112</a></div></footer>
-<script>(function(){var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,d=document;
+<script>(function(){var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,d=document,H=d.documentElement;
+d.querySelectorAll('.stg').forEach(function(g){[].forEach.call(g.children,function(c,i){c.style.setProperty('--d',(i*0.1)+'s')})});
+if(rm)d.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.autoplay=false;v.pause();try{v.currentTime=0}catch(e){}});
+/* Opción C: palabra rotativa en el chip */
+var rot=d.querySelector('.rot');
+if(rot&&H.classList.contains('anim-c')&&!rm){var ws=rot.dataset.words.split(','),rl=d.createElement('span');rl.className='rl';
+ ws.concat(ws[0]).forEach(function(w){var s=d.createElement('span');s.textContent=w;rl.appendChild(s)});rot.innerHTML='';rot.appendChild(rl);
+ var cs=getComputedStyle(rot),mz=d.createElement('span');mz.style.cssText='position:absolute;left:-9999px;top:0;white-space:nowrap;font:'+cs.font+';letter-spacing:'+cs.letterSpacing;d.body.appendChild(mz);
+ var i=0,ez='cubic-bezier(.22,1,.36,1)',W=function(k){mz.textContent=(ws.concat(ws[0]))[k];return Math.ceil(mz.getBoundingClientRect().width)+2};
+ rot.style.transition='width .4s '+ez;rot.style.width=W(0)+'px';(d.fonts?d.fonts.ready:Promise.resolve()).then(function(){rot.style.width=W(i)+'px'});
+ setInterval(function(){i++;rl.style.transition='transform .4s '+ez;rl.style.transform='translateY('+(-i*1.15)+'em)';rot.style.width=W(i)+'px';
+  if(i===ws.length){setTimeout(function(){rl.style.transition='none';rl.style.transform='none';i=0},450)}},1900);}
 var els=d.querySelectorAll('.rv');
 if(rm||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
