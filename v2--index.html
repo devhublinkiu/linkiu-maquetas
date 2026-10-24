@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es-CO"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Linkiu · Home v2 (mockup, lenguaje visual jam.dev)</title>
-<!-- Mockup estático de diseño. Copy: copy-home-v2.md + copy-home-v2-piezas.md (Isabella). Textos con data-copy="id". Datos de las maquetas = demo. -->
+<title>Linkiu Â· Home v2 (mockup, lenguaje visual jam.dev)</title>
+<!-- Mockup estÃ¡tico de diseÃ±o. Copy: copy-home-v2.md + copy-home-v2-piezas.md (Isabella). Textos con data-copy="id". Datos de las maquetas = demo. -->
 <style>
 :root{--red:#e7000b;--ink:#020618;--ink2:#314158;--mute:#62748e;--bg:#f8fafc;--line:#e2e8f0;--card:#f6f7f9;--ok:#00bc7d}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -23,7 +23,7 @@ nav .in{margin-left:auto;height:40px;padding:0 18px;border:1px solid var(--line)
 nav .btn.sm{border-radius:12px}
 /* trust */
 .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;font-size:13px;color:var(--mute)}
-.trust span::before{content:"✓";color:var(--ok);font-weight:700;margin-right:4px}
+.trust span::before{content:"âœ“";color:var(--ok);font-weight:700;margin-right:4px}
 /* hero */
 .hero{text-align:center;padding:52px 0 0;position:relative}
 .newpill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:5px 12px 5px 6px;font-size:14px;font-weight:500;box-shadow:0 1px 2px rgba(2,6,24,.04)}
@@ -82,7 +82,7 @@ h1{font-size:70px;line-height:1.06;letter-spacing:-.045em;font-weight:650;margin
 .rubros{padding:8px 0 24px;text-align:center}
 .rubros p{font-size:13px;color:var(--mute);margin-bottom:16px}
 .rrow{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 44px;color:#9aa6b6;font-weight:700;font-size:19px;letter-spacing:-.02em}
-/* secciones patrón Jam */
+/* secciones patrÃ³n Jam */
 section.s{padding:120px 0 0}
 .shead{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-bottom:44px}
 h2{font-size:46px;line-height:1.08;letter-spacing:-.035em;font-weight:600}
@@ -134,7 +134,7 @@ h2{font-size:46px;line-height:1.08;letter-spacing:-.035em;font-weight:600}
 .step{background:var(--card);border:1px solid #eceef1;border-radius:24px;padding:28px}
 .step .n{width:34px;height:34px;border-radius:10px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-weight:700;font-size:14px;margin-bottom:40px}
 .step h4{font-size:18px;font-weight:600}.step p{color:var(--mute);margin-top:4px}
-/* y además */
+/* y ademÃ¡s */
 .ya{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden}
 .ya div{padding:22px 22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:15px;font-weight:500}
 .ya div:nth-child(5n){border-right:0}
@@ -152,10 +152,13 @@ details{border-bottom:1px solid var(--line);padding:18px 0}
 details:first-child{border-top:1px solid var(--line)}
 summary{font-weight:600;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
 summary::after{content:"+";color:var(--mute);font-weight:400;font-size:22px;line-height:1}
-details[open] summary::after{content:"–"}
+details[open] summary::after{content:"â€“"}
 details p{color:var(--ink2);margin-top:6px}
 .anote{font-size:12.5px;color:var(--mute);padding:0 6px 4px}.anote .pend{margin-top:2px}
 .wa .m.ex{border:1.5px dashed #f59e0b}.exl{display:table;margin:0 0 5px}
+.push{background:#fff;border:1px solid var(--line);box-shadow:0 8px 18px -8px rgba(2,6,24,.35);border-radius:10px;padding:7px 8px;margin:-8px -2px 10px;font-size:10.5px}.push b{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--mute)}.bell{width:12px;height:12px;border-radius:3px;background:var(--red);display:inline-block}
+.wa .lkc{margin-left:auto;max-width:90%;background:#fff;border-left:3px solid var(--red)}.wa .lkc span{display:block;color:var(--mute);font-size:11px}.wan{font-size:11px;color:var(--mute);text-align:center;margin-top:4px}
+.wa .pl{display:block;font-size:10px;color:var(--mute);margin-bottom:6px}.flow{font-size:11px;color:var(--mute);text-align:center;margin:6px 0}.pcard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;display:flex;align-items:center;gap:8px;box-shadow:0 4px 10px -6px rgba(2,6,24,.25)}.pcard .pl{font-size:10px;color:var(--mute);flex-basis:100%;margin-bottom:-6px}.pcard{flex-wrap:wrap;justify-content:space-between}
 .help{color:var(--ink2);margin-top:14px}
 /* final */
 .final{margin:120px 0 0;padding:110px 0 120px;text-align:center;border-top:1px solid var(--line);background-image:linear-gradient(#eef1f5 1px,transparent 1px),linear-gradient(90deg,#eef1f5 1px,transparent 1px);background-size:24px 24px}
@@ -164,7 +167,7 @@ details p{color:var(--ink2);margin-top:6px}
 footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
 footer .logo{color:var(--ink);font-size:18px;margin-right:auto}
-/* móvil */
+/* mÃ³vil */
 @media (max-width:820px){
  .wrap{padding:0 18px}
  nav{margin:0 10px;padding:0 8px 0 16px;height:56px}nav .in{display:none}nav .btn.sm{margin-left:auto}
@@ -193,20 +196,20 @@ footer .logo{color:var(--ink);font-size:18px;margin-right:auto}
 
 <!-- HERO centrado (titular A de Isabella; "link" resaltado en chip como "context" de Jam) -->
 <header class="hero"><div class="wrap">
- <a class="newpill" href="#kira" data-copy="hero-pill"><b>Nuevo</b> Kira IA arma tu carta <span>→</span></a>
+ <a class="newpill" href="#kira" data-copy="hero-pill"><b>Nuevo</b> Kira IA arma tu carta <span>â†’</span></a>
  <h1 data-copy="hero-h1">Vende con tu propio <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>link</span>.<br class="dk"> Sin pedidos regados en el chat.</h1>
- <p class="sub" data-copy="hero-sub">Tu tienda o tu carta en línea, lista hoy<span class="pend">Pendiente</span>. Tus clientes piden solos desde el celular y a ti te llega todo ordenado.</p>
+ <p class="sub" data-copy="hero-sub">Tu tienda o tu carta en lÃ­nea, lista hoy<span class="pend">Pendiente</span>. Tus clientes piden solos desde el celular y tÃº ves todo ordenado en tu panel.</p>
  <div class="ctastack">
   <a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a>
   <a class="btn ghost" href="#" data-copy="cta-assisted">Que me la armen</a>
   <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div>
-  <p class="anote" data-copy="cta-assisted-note">¿Sin tiempo? Te la montamos contigo por WhatsApp.<span class="pend">Costo, plazo y canal pendientes</span></p>
+  <p class="anote" data-copy="cta-assisted-note">Gratis por ahora. Te la dejamos lista el mismo dÃ­a.</p>
  </div>
 </div>
 
- <!-- Captura grande del panel sobre cuadrícula, con cintas -->
+ <!-- Captura grande del panel sobre cuadrÃ­cula, con cintas -->
  <div class="stage" aria-hidden="true"><div class="wrap">
-  <div class="ribbon r1">WhatsApp</div><div class="ribbon r2">Instagram</div>
+  <div class="ribbon r1">Tu link</div><div class="ribbon r2">QR de mesa</div>
   <div class="ribbon r3">Pedido #128</div><div class="ribbon r4">Domicilio</div>
   <div class="win">
    <div class="bar"><i></i><i></i><i></i><span>panel.linkiu.bio/pedidos</span></div>
@@ -215,21 +218,21 @@ footer .logo{color:var(--ink);font-size:18px;margin-right:auto}
     <div class="main">
      <div class="mt"><b>Pedidos de hoy</b><div class="seg"><span class="on">Tablero</span><span>Lista</span></div></div>
      <div class="cols">
-      <div class="col"><h5>Nuevos · 2</h5>
-       <div class="ord sel"><b>#128 <span class="tag">Nuevo</span></b><p>Pollo asado ×1, Limonada ×2</p><p>Domicilio · Nequi</p><b>$ 56.000</b></div>
-       <div class="ord"><b>#127 <span class="tag">Nuevo</span></b><p>Chicharrón ×2</p><p>Recoge en local</p><b>$ 28.000</b></div></div>
-      <div class="col"><h5>En preparación · 2</h5>
-       <div class="ord"><b>#126 <span class="tag s">Cocina</span></b><p>Corrientazo ×3</p><p>Mesa 4 · QR</p><b>$ 48.000</b></div>
-       <div class="ord"><b>#125 <span class="tag s">Cocina</span></b><p>Picada mixta ×1</p><p>Domicilio · Daviplata</p><b>$ 42.000</b></div></div>
-      <div class="col"><h5>En camino · 1</h5>
-       <div class="ord"><b>#124 <span class="tag g">En camino</span></b><p>Pollo asado ×2</p><p>Domi: Carlos · 12 min</p><b>$ 76.000</b></div></div>
+      <div class="col"><h5>Nuevos Â· 2</h5>
+       <div class="ord sel"><b>#128 <span class="tag">Nuevo</span></b><p>Pollo asado Ã—1, Limonada Ã—2</p><p>Domicilio Â· Nequi</p><b>$ 56.000</b></div>
+       <div class="ord"><b>#127 <span class="tag">Nuevo</span></b><p>ChicharrÃ³n Ã—2</p><p>Recoge en local</p><b>$ 28.000</b></div></div>
+      <div class="col"><h5>En preparaciÃ³n Â· 2</h5>
+       <div class="ord"><b>#126 <span class="tag s">Cocina</span></b><p>Corrientazo Ã—3</p><p>Mesa 4 Â· QR</p><b>$ 48.000</b></div>
+       <div class="ord"><b>#125 <span class="tag s">Cocina</span></b><p>Picada mixta Ã—1</p><p>Domicilio Â· Daviplata</p><b>$ 42.000</b></div></div>
+      <div class="col"><h5>En camino Â· 1</h5>
+       <div class="ord"><b>#124 <span class="tag g">En camino</span></b><p>Pollo asado Ã—2</p><p>Domi: Carlos Â· 12 min</p><b>$ 76.000</b></div></div>
      </div>
      <div class="play"></div>
     </div>
     <div class="detail"><h6><span>Pedido #128</span><span class="tag">Nuevo</span></h6>
-     <dl class="kv"><dt>Cliente</dt><dd>Laura M.</dd><dt>Entrega</dt><dd>Domicilio · Cra 3 #12-40</dd><dt>Pago</dt><dd>Nequi · por confirmar</dd><dt>Hora</dt><dd>12:41 p. m.</dd></dl>
-     <div class="line"><span>Pollo asado entero ×1</span><b>$ 38.000</b></div><div class="line"><span>Limonada de coco ×2</span><b>$ 18.000</b></div><div class="line"><b>Total</b><b>$ 56.000</b></div>
-     <div class="wa-btn"><span>WhatsApp</span><span class="k">Aceptar</span></div>
+     <dl class="kv"><dt>Cliente</dt><dd>Laura M.</dd><dt>Entrega</dt><dd>Domicilio Â· Cra 3 #12-40</dd><dt>Pago</dt><dd>Nequi Â· por confirmar</dd><dt>Hora</dt><dd>12:41 p. m.</dd></dl>
+     <div class="line"><span>Pollo asado entero Ã—1</span><b>$ 38.000</b></div><div class="line"><span>Limonada de coco Ã—2</span><b>$ 18.000</b></div><div class="line"><b>Total</b><b>$ 56.000</b></div>
+     <div class="wa-btn"><span>Imprimir</span><span class="k">Aceptar</span></div>
     </div>
    </div>
   </div>
@@ -240,17 +243,17 @@ footer .logo{color:var(--ink);font-size:18px;margin-right:auto}
 <!-- Franja de rubros (no son logos de clientes) -->
 <div class="rubros"><div class="wrap">
  <p data-copy="rubros-label">Para negocios que venden por chat <span class="pend">Pendiente: logos reales</span></p>
- <div class="rrow"><span>Restaurantes</span><span>Asaderos</span><span>Panaderías</span><span>Cafés</span><span>Tiendas de ropa</span><span>Calzado</span><span>Belleza</span></div>
+ <div class="rrow"><span>Restaurantes</span><span>Asaderos</span><span>PanaderÃ­as</span><span>CafÃ©s</span><span>Tiendas de ropa</span><span>Calzado</span><span>Belleza</span></div>
 </div></div>
 
 <!-- El problema -->
 <section class="s"><div class="wrap">
- <div class="shead"><h2 data-copy="problem-h2">Si vendes por chat,<br>esto ya te pasó.</h2><p data-copy="problem-line">Sigues en WhatsApp e Instagram. Pero cada pedido te llega completo: qué pidió, cómo paga y a dónde va.</p></div>
+ <div class="shead"><h2 data-copy="problem-h2">Si vendes por chat,<br>esto ya te pasÃ³.</h2><p data-copy="problem-line">Sigues compartiendo en WhatsApp e Instagram. Pero cada pedido entra completo a tu panel: quÃ© pidiÃ³, cÃ³mo paga y a dÃ³nde va.</p></div>
  <div class="gcard prob">
-  <div class="chat" aria-hidden="true"><span>precio?</span><span>la tienes en M?</span><span>▶ ▁▃▅▂▆▃▁ 0:24</span><span>me regalas la carta?</span><span class="me">ya va</span><span>ya salió?</span><span>ya salió??</span><span>hace 40 min pedí 😡</span></div>
+  <div class="chat" aria-hidden="true"><span>precio?</span><span>la tienes en M?</span><span>â–¶ â–â–ƒâ–…â–‚â–†â–ƒâ– 0:24</span><span>me regalas la carta?</span><span class="me">ya va</span><span>ya saliÃ³?</span><span>ya saliÃ³??</span><span>hace 40 min pedÃ­ ðŸ˜¡</span></div>
   <div class="arrowc"><svg width="40" height="20" viewBox="0 0 40 20" fill="none" stroke="#e7000b" stroke-width="2.4" stroke-linecap="round"><path d="M2 10h34M28 3l8 7-8 7"/></svg><span data-copy="problem-fix">Linkiu lo ordena.</span></div>
   <div class="okcard"><h4>Pedido #128 <span class="tag">Nuevo</span></h4>
-   <dl class="kv"><dt>Qué pidió</dt><dd>Pollo asado ×1, Limonada ×2</dd><dt>Cómo paga</dt><dd>Nequi</dd><dt>A dónde va</dt><dd>Cra 3 #12-40</dd></dl>
+   <dl class="kv"><dt>QuÃ© pidiÃ³</dt><dd>Pollo asado Ã—1, Limonada Ã—2</dd><dt>CÃ³mo paga</dt><dd>Nequi</dd><dt>A dÃ³nde va</dt><dd>Cra 3 #12-40</dd></dl>
    <div class="line"><b>Total</b><b>$ 56.000</b></div></div>
  </div>
 </div></section>
@@ -259,28 +262,28 @@ footer .logo{color:var(--ink);font-size:18px;margin-right:auto}
 <section class="s" id="kira"><div class="wrap">
  <div class="shead"><h2 data-copy="mods-h2">Lo del chat,<br>ahora en orden.</h2><p data-copy="mods-intro">Pedidos, link, carta y cobros. Lo que hoy haces a punta de chat, en un solo panel.</p></div>
  <div class="bento">
-  <article class="bc"><div class="mini"><div class="ui"><div class="uih"><span>Pedidos</span><span class="tag">2 nuevos</span></div><div class="uib"><div class="ord sel"><b>#128 <span>$ 56.000</span></b><p>Domicilio · Nequi</p></div><div class="ord"><b>#127 <span>$ 28.000</span></b><p>Recoge en local</p></div><div class="ord"><b>#126 <span class="tag s">Cocina</span></b><p>Mesa 4 · QR</p></div></div></div></div>
-   <h3><span class="num">01</span><span data-copy="m1-h3">Todos tus pedidos en un solo lugar</span></h3><p data-copy="m1-p">Se acabaron los audios y pantallazos. Cada pedido entra completo a tu panel y suena.</p></article>
-  <article class="bc"><div class="mini"><div class="ui"><div class="uih"><span>Mi link</span><span style="color:var(--mute);font-weight:500">Copiar</span></div><div class="uib"><div class="ord" style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600">linkiu.bio/<span style="color:var(--red)">tunegocio</span></span><span class="tag g">Activo</span></div></div><div class="pchips"><span>WhatsApp</span><span>Instagram</span><span>QR de mesa</span><span>Historias</span></div></div></div>
-   <h3><span class="num">02</span><span data-copy="m2-h3">Tu link, que se siente como app</span></h3><p data-copy="m2-p">linkiu.bio/tunegocio. Lo pegas en WhatsApp, en Instagram o en un QR, y tus clientes compran sin descargar nada.</p></article>
-  <article class="bc"><div class="mini"><div class="kirab"><div class="photo">MENÚ<br>Pollo asado .... 38<br>Corrientazo ..... 16<br>Chicharrón ...... 14<br>Limonada ........ 9</div><div class="ui"><div class="uih"><span class="kchip">Kira IA</span><span style="color:var(--mute);font-weight:500">Borrador</span></div><div class="uib"><div class="line" style="border:0"><span>Pollo asado</span><b>$ 38.000</b></div><div class="line"><span>Corrientazo</span><b>$ 16.000</b></div><div class="line"><span>Chicharrón</span><b>$ 14.000</b></div><div class="line"><span>Limonada</span><b>$ 9.000</b></div></div></div></div></div>
-   <h3><span class="num">03</span><span data-copy="m3-h3">Sube fotos, Kira IA arma tu tienda</span></h3><p data-copy="m3-p">Tómale fotos a tu carta o catálogo y Kira IA te arma el borrador. Sin diseñador: tú revisas y publicas.</p></article>
-  <article class="bc"><div class="mini"><div class="ui"><div class="uih"><span>Pago · #128</span><span class="tag s">Por confirmar</span></div><div class="pchips"><span>Nequi</span><span>Daviplata</span><span>Bre-B</span><span>Transferencia</span><span>Contraentrega</span></div><div class="uib" style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line)"><b>$ 56.000</b><span class="btn sm" style="height:32px;font-size:12px">Confirmar pago</span></div></div></div>
-   <h3><span class="num">04</span><span data-copy="m4-h3">Cobra como ya te pagan</span></h3><p data-copy="m4-p">Nequi, Daviplata, Bre-B, transferencia o contraentrega<span class="pend">Métodos pendientes</span>. Confirmas el pago en el panel, sin pantallazos.</p></article>
+  <article class="bc"><div class="mini"><div class="ui"><div class="uih"><span>Pedidos</span><span class="tag">2 nuevos</span></div><div class="uib"><div class="ord sel"><b>#128 <span>$ 56.000</span></b><p>Domicilio Â· Nequi</p></div><div class="ord"><b>#127 <span>$ 28.000</span></b><p>Recoge en local</p></div><div class="ord"><b>#126 <span class="tag s">Cocina</span></b><p>Mesa 4 Â· QR</p></div></div></div></div>
+   <h3><span class="num">01</span><span data-copy="m1-h3">Todos tus pedidos en un solo lugar</span></h3><p data-copy="m1-p">Se acabaron los audios y pantallazos. Cada pedido entra completo a tu panel, con aviso y sonido.</p></article>
+  <article class="bc"><div class="mini"><div class="ui"><div class="uih"><span>Mi link</span><span style="color:var(--mute);font-weight:500">Copiar</span></div><div class="uib"><div class="ord" style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600">linkiu.bio/<span style="color:var(--red)">tunegocio</span></span><span class="tag g">Activo</span></div></div><div class="pchips"><span style="border:0;background:none;box-shadow:none;color:var(--mute);font-weight:500;padding-left:0">CompÃ¡rtelo en:</span><span>WhatsApp</span><span>Instagram</span><span>QR de mesa</span><span>Historias</span></div></div></div>
+   <h3><span class="num">02</span><span data-copy="m2-h3">Tu link, que se siente como app</span></h3><p data-copy="m2-p">linkiu.bio/tunegocio. Lo compartes en WhatsApp, Instagram o un QR. Tus clientes piden ahÃ­, sin descargar nada.</p></article>
+  <article class="bc"><div class="mini"><div class="kirab"><div class="photo">MENÃš<br>Pollo asado .... 38<br>Corrientazo ..... 16<br>ChicharrÃ³n ...... 14<br>Limonada ........ 9</div><div class="ui"><div class="uih"><span class="kchip">Kira IA</span><span style="color:var(--mute);font-weight:500">Borrador</span></div><div class="uib"><div class="line" style="border:0"><span>Pollo asado</span><b>$ 38.000</b></div><div class="line"><span>Corrientazo</span><b>$ 16.000</b></div><div class="line"><span>ChicharrÃ³n</span><b>$ 14.000</b></div><div class="line"><span>Limonada</span><b>$ 9.000</b></div></div></div></div></div>
+   <h3><span class="num">03</span><span data-copy="m3-h3">Sube fotos, Kira IA arma tu tienda</span></h3><p data-copy="m3-p">TÃ³male fotos a tu carta o catÃ¡logo y Kira IA te arma el borrador. Sin diseÃ±ador: tÃº revisas y publicas.</p></article>
+  <article class="bc"><div class="mini"><div class="ui"><div class="uih"><span>Pago Â· #128</span><span class="tag s">Por confirmar</span></div><div class="pchips"><span>Nequi</span><span>Daviplata</span><span>Bre-B</span><span>Transferencia</span><span>Contraentrega</span></div><div class="uib" style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line)"><b>$ 56.000</b><span class="btn sm" style="height:32px;font-size:12px">Confirmar pago</span></div></div></div>
+   <h3><span class="num">04</span><span data-copy="m4-h3">Cobra como ya te pagan</span></h3><p data-copy="m4-p">Nequi, Daviplata, Bre-B, transferencia o contraentrega<span class="pend">MÃ©todos pendientes</span>. Confirmas el pago en el panel, sin pantallazos.</p></article>
  </div>
- <div class="cta-row"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust"><span>Gratis</span><span>Sin comisión por venta<i class="pend">Pendiente</i></span><span>Sin tarjeta<i class="pend">Pendiente</i></span></div></div>
+ <div class="cta-row"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust"><span>Gratis</span><span>Sin comisiÃ³n por venta<i class="pend">Pendiente</i></span><span>Sin tarjeta<i class="pend">Pendiente</i></span></div></div>
 </div></section>
 
-<!-- Recibe pedidos donde estés (copy: copy-home-v2-piezas.md) -->
+<!-- Recibe pedidos donde estÃ©s (copy: copy-home-v2-final-datos.md) -->
 <section class="s"><div class="wrap">
- <div class="shead"><h2 data-copy="where-h2">Recibe pedidos<br>donde estés.</h2><p data-copy="where-p">En el computador del local o en tu celular: el pedido entra completo y suena. Tú solo despachas.</p></div>
+ <div class="shead"><h2 data-copy="where-h2">Tus pedidos,<br>donde estÃ©s.</h2><p data-copy="where-p">Cada pedido entra a tu panel. Lo ves en el computador del local o en el celular, sin instalar nada.</p></div>
  <div class="where">
   <article class="bc"><div class="mini"><div style="width:100%;max-width:300px"><div class="lap"><div class="cols"><div><div class="ord sel"><b>#128</b><p>$ 56.000</p></div><div class="ord"><b>#127</b><p>$ 28.000</p></div></div><div><div class="ord"><b>#126</b><p>Cocina</p></div><div class="ord"><b>#124</b><p>En camino</p></div></div></div></div><div class="lapbase"></div></div></div>
-   <h3 data-copy="where-1-h">Computador</h3><p data-copy="where-1-p">Todos tus pedidos a la vista, en el local.</p></article>
-  <article class="bc"><div class="mini"><div class="ph"><div><div class="notif" style="font-size:10px;color:var(--mute)">panel.linkiu.bio</div><div class="notif"><b>#128 · Nuevo</b>$ 56.000 · Nequi</div><div class="notif"><b>#127 · Nuevo</b>$ 28.000 · Local</div><div class="notif"><b>#126 · Cocina</b>Mesa 4</div></div></div></div>
-   <h3 data-copy="where-2-h">Celular</h3><p data-copy="where-2-p">Atiende desde donde estés, sin descargar nada.<span class="pend">Confirmar panel en celular</span></p></article>
-  <article class="bc"><div class="mini"><div class="wa"><div class="m o">Hola, quiero hacer un pedido 👉 linkiu.bio/asaderolaesquina</div><div class="m ex"><span class="pend exl">Ejemplo · pendiente de confirmar</span>Pedido #128 recibido. Total $ 56.000. Pago: Nequi.</div></div></div>
-   <h3 data-copy="where-3-h">WhatsApp</h3><p data-copy="where-3-p">Tus clientes llegan desde tu link en WhatsApp.</p></article>
+   <h3 data-copy="where-1-h">Computador</h3><p data-copy="where-1-p">Todo el tablero de pedidos, a la vista en el local.</p></article>
+  <article class="bc"><div class="mini"><div class="ph"><div><div class="push"><b><i class="bell"></i>Linkiu Â· ahora</b>Nuevo pedido #128 Â· $ 56.000</div><div class="notif" style="font-size:10px;color:var(--mute)">panel.linkiu.bio</div><div class="notif"><b>#128 Â· Nuevo</b>$ 56.000 Â· Domicilio</div><div class="notif"><b>#127 Â· Nuevo</b>$ 28.000 Â· Local</div></div></div></div>
+   <h3 data-copy="where-2-h">Celular</h3><p data-copy="where-2-p">Te suena cada pedido nuevo. Sin descargar ninguna app.<span class="pend">Confirmar push en iPhone/Safari</span></p></article>
+  <article class="bc"><div class="mini"><div style="width:100%;max-width:260px"><div class="wa"><span class="pl">Tu chat de WhatsApp</span><div class="m o" style="margin-bottom:0">Hola ðŸ‘‹ aquÃ­ puedes pedir: <b>linkiu.bio/asaderolaesquina</b></div></div><div class="flow">â†“ tu cliente pide en tu link Â· el pedido entra a tu panel</div><div class="pcard"><span class="pl">Panel Linkiu</span><b>Nuevo pedido #128</b><span class="tag">Nuevo</span></div></div></div>
+   <h3 data-copy="where-3-h">WhatsApp</h3><p data-copy="where-3-p">Compartes tu link y de ahÃ­ llegan tus clientes.</p></article>
  </div>
 </div></section>
 
@@ -288,55 +291,55 @@ footer .logo{color:var(--ink);font-size:18px;margin-right:auto}
 <section class="s"><div class="wrap">
  <div class="shead"><h2 data-copy="steps-h2">Arrancas en<br>tres pasos.</h2><p></p></div>
  <div class="steps">
-  <div class="step"><span class="n">1</span><h4 data-copy="s1-h">Sube tu carta o catálogo.</h4><p data-copy="s1-p">Fotos, Excel o a mano.</p></div>
+  <div class="step"><span class="n">1</span><h4 data-copy="s1-h">Sube tu carta o catÃ¡logo.</h4><p data-copy="s1-p">Fotos, Excel o a mano.</p></div>
   <div class="step"><span class="n">2</span><h4 data-copy="s2-h">Comparte tu link.</h4><p data-copy="s2-p">WhatsApp, Instagram o QR.</p></div>
   <div class="step"><span class="n">3</span><h4 data-copy="s3-h">Recibe y despacha.</h4><p data-copy="s3-p">Suena el pedido y sale.</p></div>
  </div>
  <div class="cta-row"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div></div>
 </div></section>
 
-<!-- Y además -->
+<!-- Y ademÃ¡s -->
 <section class="s"><div class="wrap">
- <div class="shead"><h2 data-copy="more-h2">Y además</h2><p></p></div>
+ <div class="shead"><h2 data-copy="more-h2">Y ademÃ¡s</h2><p></p></div>
  <div class="ya">
-  <div data-copy="ya-1"><small>Operación</small>Lo agotado se marca solo.</div>
-  <div data-copy="ya-2"><small>Operación</small>Tallas y colores, cada uno con su stock.</div>
-  <div data-copy="ya-3"><small>Operación</small>Domicilios con tus propios domis.</div>
-  <div data-copy="ya-4"><small>Operación</small>QR para la mesa o el mostrador.</div>
-  <div data-copy="ya-5"><small>Ventas</small>Menú del día listo para tus historias.</div>
-  <div data-copy="ya-6"><small>Ventas</small>Envíos a todo el país, con fecha de llegada.</div>
+  <div data-copy="ya-1"><small>OperaciÃ³n</small>Lo agotado se marca solo.</div>
+  <div data-copy="ya-2"><small>OperaciÃ³n</small>Tallas y colores, cada uno con su stock.</div>
+  <div data-copy="ya-3"><small>OperaciÃ³n</small>Domicilios con tus propios domis.</div>
+  <div data-copy="ya-4"><small>OperaciÃ³n</small>QR para la mesa o el mostrador.</div>
+  <div data-copy="ya-5"><small>Ventas</small>MenÃº del dÃ­a listo para tus historias.</div>
+  <div data-copy="ya-6"><small>Ventas</small>EnvÃ­os a todo el paÃ­s, con fecha de llegada.</div>
   <div data-copy="ya-7"><small>Ventas</small>Cupones para compartir en tus historias.<i class="pend">Pendiente</i></div>
-  <div data-copy="ya-8"><small>Ventas</small>Contraentrega solo donde tú digas.</div>
+  <div data-copy="ya-8"><small>Ventas</small>Contraentrega solo donde tÃº digas.</div>
   <div data-copy="ya-9"><small>Clientes</small>Tu cliente ve su pedido avanzar.</div>
-  <div data-copy="ya-10"><small>Clientes</small>Reservas con recordatorio por WhatsApp.</div>
+  <div data-copy="ya-10"><small>Clientes</small>Reservas con recordatorio por WhatsApp.<i class="pend">Confirmar vigencia</i></div>
  </div>
 </div></section>
 
 <!-- Clientes reales: OCULTA hasta tener datos reales (no usar tiendas demo como clientes)
 <section class="s"><div class="wrap"><h2 data-copy="clients-h2">Negocios de verdad, vendiendo con su link.</h2>
- 3 tarjetas: [PENDIENTE: foto, nombre, negocio, ciudad, frase real ≤20 palabras, enlace linkiu.bio/…]</div></section>
+ 3 tarjetas: [PENDIENTE: foto, nombre, negocio, ciudad, frase real â‰¤20 palabras, enlace linkiu.bio/â€¦]</div></section>
 -->
 
 <!-- Planes -->
 <section class="s"><div class="wrap">
  <div class="shead"><h2 data-copy="plans-h2">Empieza gratis.<br>Paga solo si lo necesitas.</h2><p><span class="pend">Planes y precios pendientes</span></p></div>
  <div class="plans">
-  <div class="plan free"><h4>Gratis</h4><div class="price">$ 0</div><div class="pendbox"><b>PENDIENTE:</b> qué incluye el plan gratis y sus límites.</div><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a></div>
-  <div class="plan"><h4>Plan pago<span class="pend">Pendiente</span></h4><div class="price" style="color:#9aa6b6">$ — /mes</div><div class="pendbox"><b>PENDIENTE:</b> nombre, precio en COP/mes y qué incluye.</div></div>
+  <div class="plan free"><h4>Gratis</h4><div class="price">$ 0</div><div class="pendbox"><b>PENDIENTE:</b> quÃ© incluye el plan gratis y sus lÃ­mites.</div><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a></div>
+  <div class="plan"><h4>Plan pago<span class="pend">Pendiente</span></h4><div class="price" style="color:#9aa6b6">$ â€” /mes</div><div class="pendbox"><b>PENDIENTE:</b> nombre, precio en COP/mes y quÃ© incluye.</div></div>
  </div>
- <div class="cta-row" style="margin-top:20px"><div class="trust" data-copy="trust-full"><span>Gratis</span><span>Sin comisión por venta<i class="pend">Pendiente</i></span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div></div>
+ <div class="cta-row" style="margin-top:20px"><div class="trust" data-copy="trust-full"><span>Gratis</span><span>Sin comisiÃ³n por venta<i class="pend">Pendiente</i></span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div></div>
 </div></section>
 
 <!-- FAQ -->
 <section class="s"><div class="wrap faqw">
- <div><h2 data-copy="faq-h2">Preguntas<br>frecuentes.</h2><p class="help" data-copy="faq-help">¿Otra duda? <u>Escríbenos por WhatsApp ▸</u><span class="pend">Número pendiente</span></p></div>
+ <div><h2 data-copy="faq-h2">Preguntas<br>frecuentes.</h2><p class="help" data-copy="faq-help">Â¿Otra duda? <u>EscrÃ­benos por WhatsApp â–¸</u><span class="pend">NÃºmero pendiente</span></p></div>
  <div>
-  <details open><summary data-copy="faq1-q">¿De verdad es gratis?</summary><p data-copy="faq1-a">Sí. Creas tu tienda y recibes pedidos sin pagar.<span class="pend">Límites pendientes</span></p></details>
-  <details><summary data-copy="faq2-q">¿Me cobran comisión por pedido?</summary><p data-copy="faq2-a">No. Lo que vendes es tuyo.<span class="pend">Pendiente</span></p></details>
-  <details><summary data-copy="faq3-q">¿Necesito página web o diseñador?</summary><p data-copy="faq3-a">No. Tu tienda vive en tu link y la armas desde el celular.</p></details>
-  <details><summary data-copy="faq4-q">¿Sigo usando WhatsApp e Instagram?</summary><p data-copy="faq4-a">Sí. Pegas tu link ahí y los pedidos te llegan completos al panel.</p></details>
-  <details><summary data-copy="faq5-q">¿Hay contrato? ¿Puedo cancelar?</summary><p data-copy="faq5-a">No hay contrato. Lo dejas cuando quieras.<span class="pend">Pendiente</span></p></details>
-  <details><summary data-copy="faq6-q">¿Y si no tengo tiempo de armarla?</summary><p data-copy="faq6-a">Te la armamos. Déjanos tu WhatsApp.<span class="pend">Costo y plazo pendientes</span></p></details>
+  <details open><summary data-copy="faq1-q">Â¿De verdad es gratis?</summary><p data-copy="faq1-a">SÃ­. Creas tu tienda y recibes pedidos sin pagar.<span class="pend">LÃ­mites pendientes</span></p></details>
+  <details><summary data-copy="faq2-q">Â¿Me cobran comisiÃ³n por pedido?</summary><p data-copy="faq2-a">No. Lo que vendes es tuyo.<span class="pend">Pendiente</span></p></details>
+  <details><summary data-copy="faq3-q">Â¿Tengo que descargar una app?</summary><p data-copy="faq3-a">No. Manejas tu tienda desde el navegador del celular o del computador, y te avisa con sonido cada pedido.</p></details>
+  <details><summary data-copy="faq4-q">Â¿Sigo usando WhatsApp e Instagram?</summary><p data-copy="faq4-a">SÃ­, para compartir tu link. Tus clientes piden ahÃ­ y el pedido te entra al panel, no al chat.</p></details>
+  <details><summary data-copy="faq5-q">Â¿Hay contrato? Â¿Puedo cancelar?</summary><p data-copy="faq5-a">No hay contrato. Lo dejas cuando quieras.<span class="pend">Pendiente</span></p></details>
+  <details><summary data-copy="faq6-q">Â¿Y si no tengo tiempo de armarla?</summary><p data-copy="faq6-a">Te la armamos gratis por ahora. Queda lista el mismo dÃ­a, mÃ¡ximo en 24 horas.</p></details>
  </div>
 </div></section>
 
@@ -344,7 +347,7 @@ footer .logo{color:var(--ink);font-size:18px;margin-right:auto}
 <section class="final" id="registro"><div class="wrap">
  <h2 data-copy="final-h2">Tu link puede estar vendiendo hoy.</h2>
  <div class="ctastack"><a class="btn" href="#" data-copy="cta">Crea tu tienda gratis</a><a class="btn ghost" href="#" data-copy="cta-assisted">Que me la armen</a>
-  <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div><p class="anote" data-copy="cta-assisted-note">¿Sin tiempo? Te la montamos contigo por WhatsApp.<span class="pend">Costo, plazo y canal pendientes</span></p></div>
+  <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div><p class="anote" data-copy="cta-assisted-note">Gratis por ahora. Te la dejamos lista el mismo dÃ­a.</p></div>
 </div></section>
-<footer><div class="wrap"><span class="logo">linkiu<i style="color:var(--red);font-style:normal">.</i></span><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Redes</a><span>WhatsApp<i class="pend">Pendiente</i></span><span>Razón social / NIT<i class="pend">Pendiente</i></span></div></footer>
+<footer><div class="wrap"><span class="logo">linkiu<i style="color:var(--red);font-style:normal">.</i></span><a href="#">TÃ©rminos</a><a href="#">Privacidad</a><a href="#">Redes</a><span>WhatsApp<i class="pend">Pendiente</i></span><span>RazÃ³n social / NIT<i class="pend">Pendiente</i></span></div></footer>
 </body></html>
