@@ -96,19 +96,12 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
 /* Reveal */
 .js .rv{opacity:0;transform:translateY(40px);transition:opacity .6s cubic-bezier(0,0,.2,1) var(--d,0s),transform .6s cubic-bezier(0,0,.2,1) var(--d,0s)}
 .js .rv.in{opacity:1;transform:none}
-/* Opción A: el chip se revela de izquierda a derecha y el ícono entra con giro leve */
-.js .chip{animation:chipA .75s cubic-bezier(.22,1,.36,1) .3s both}.js .chip svg{animation:icoA .7s cubic-bezier(.22,1,.36,1) .42s both}
-@keyframes chipA{from{clip-path:inset(0 100% 0 0 round 16px)}to{clip-path:inset(0 0 0 0 round 16px)}}
-@keyframes icoA{from{transform:rotate(-35deg);opacity:0}to{transform:none;opacity:1}}
-/* Opción B: blur a nítido con desplazamiento vertical */
-.js.anim-b .chip{animation:chipB .7s cubic-bezier(.22,1,.36,1) .3s both}.js.anim-b .chip svg{animation:none}
-@keyframes chipB{from{opacity:0;filter:blur(10px);transform:rotate(-2deg) translateY(12px)}to{opacity:1;filter:blur(0);transform:rotate(-2deg)}}
 @keyframes bob{50%{translate:0 -6px}}.js .ribbon{animation:bob 5s ease-in-out infinite}.js .r2{animation-delay:-1.5s}.js .r3{animation-delay:-3s}.js .r4{animation-delay:-4s}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .win{transform:none}.js .ribbon,.js .chip{animation:none}*{transition:none!important;scroll-behavior:auto!important}}
 .dk{display:inline}
 @media(max-width:900px){
  nav{gap:12px;padding:0 6px 0 16px}nav .in{margin-left:auto}nav .btn.sm{padding:0 14px}
- .hero{padding-top:56px}h1{font-size:32px;line-height:34px;letter-spacing:-.04em}.chip{height:36px;line-height:34px;padding:0 10px 2px 8px;border-radius:10px}.chip svg{width:20px;height:20px}.dk{display:none}
+ .hero{padding-top:56px}h1{font-size:32px;line-height:34px;letter-spacing:-.04em}.dk{display:none}
  .sub{font-size:16px;line-height:24px}.ctastack .btn{flex:1 1 100%}
  .stage{margin-top:40px}.stage .wrap{padding-top:28px}.app{grid-template-columns:1fr;min-height:0}.side,.detail{display:none}.cols{grid-template-columns:1fr 1fr}.cols .col:last-child{display:none}
  .ribbon{font-size:12px;padding:5px 10px}.r1{left:4px;top:6px}.r2{display:none}.r3{right:4px;top:0}.r4{display:none}
@@ -139,18 +132,28 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
 .hpaths a{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:999px;background:var(--card);font-size:14px;font-weight:500;color:var(--ink2);transition:background .4s var(--ease),color .4s var(--ease)}
 .hpaths a:hover{background:#eef0f3;color:var(--ink)}.hpaths .ic{color:var(--mute)}
 @media(max-width:900px){.hpaths a{font-size:13px;padding:0 10px}}
-@media(prefers-reduced-motion:reduce){.js .chip,.js .chip svg{animation:none!important}}
 @media(max-width:900px){.hpaths{gap:6px}.hpaths a{font-size:12.5px;padding:0 10px;gap:4px}.hpaths .ic{width:15px;height:15px}}
 .mods3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.mods3 .bc{padding:16px 16px 28px}.mods3 .bc h3,.mods3 .bc p{padding:0 8px}
 .vbox{aspect-ratio:16/10;height:auto!important;padding:0;overflow:hidden;background:#fbfbfc;margin-bottom:24px}.vbox video{display:block;width:100%;height:100%;object-fit:cover}
 .cta-row{flex-wrap:wrap}.cta-meta{display:flex;flex-direction:column;gap:2px}.cta-meta .trust{justify-content:flex-start;margin:0}.cta-meta .anote{text-align:left}
-.chip{--lh:60px}.rot{display:inline-block;overflow:hidden;height:1.15em;line-height:1.15em;vertical-align:-.22em;white-space:nowrap}
+.rot{display:inline-block;overflow:hidden;height:1.15em;line-height:1.15em;vertical-align:-.22em;white-space:nowrap}
 .rl{display:block}.rl>span,.rw{display:block;height:1.15em;line-height:1.15em}
-@media(max-width:900px){.chip{--lh:34px}.ribbon{display:none}.mods3{grid-template-columns:1fr;gap:16px}.cta-meta{align-items:center}.cta-meta .trust{justify-content:center}.cta-meta .anote{text-align:center}}
+@media(max-width:900px){.ribbon{display:none}.mods3{grid-template-columns:1fr;gap:16px}.cta-meta{align-items:center}.cta-meta .trust{justify-content:center}.cta-meta .anote{text-align:center}}
 @media(prefers-reduced-motion:reduce){.rot,.rl{transition:none!important}}
 .hero{overflow-x:clip}
+/* Chip "link" (proporción de jam.dev; ver decisiones.md) */
+.chip{font-size:.875em;line-height:1;height:1.143em;padding:0 .3em 0 .22em;gap:.14em;border-radius:.26em;vertical-align:.04em;--lh:auto}
+.chip svg{width:.56em;height:.56em;margin:0}
+.rot{height:1.15em;line-height:1.15em;vertical-align:-.2em}
+/* Hero: verticales primero */
+.hgo{display:flex;justify-content:center;gap:12px;margin-top:32px}
+.btn.big{height:56px;padding:0 28px;font-size:17px;gap:10px;min-width:200px}.btn.big .ic{color:#fff}
+.btn.dark{background:var(--ink)}.btn.dark:hover{background:#2a2f37;box-shadow:0 6px 18px -6px rgba(13,15,18,.45)}
+.ctastack.sec{margin-top:16px;align-items:center}.ctastack.sec .btn.ghost{height:40px;font-size:14px;padding:0 16px}
+.tlink{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:underline;text-underline-offset:4px;text-decoration-color:#cfd3da;padding:0 8px;line-height:40px}.tlink:hover{text-decoration-color:var(--ink)}
+@media(max-width:900px){.hgo{flex-direction:column;gap:10px;margin-top:24px}.btn.big{width:100%;height:52px}.ctastack.sec .btn.ghost{flex:0 0 auto}.chip{height:1.2em}}
 </style>
-<script>document.documentElement.classList.add('js');var m=location.search.match(/[?&]anim=([bc])/);if(m)document.documentElement.classList.add('anim-'+m[1])</script>
+<script>document.documentElement.classList.add('js')</script>
 </head><body>
 
 <div class="navw"><nav><a class="logo" href="#">linkiu<i>.</i></a>
@@ -160,10 +163,13 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
  <a class="newpill rv" href="#kira" data-copy="hero-pill"><b>Nuevo</b> Kira IA arma tu tienda <span>→</span></a>
  <h1 class="rv" style="--d:.06s" data-copy="hero-h1">Vende con tu propio <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span class="rot" data-copy="hero-chip-words" data-words="link,QR,carta,tienda"><span class="rw">link</span></span></span>.<br class="dk"> Sin pedidos regados en el chat.</h1>
  <p class="sub rv" style="--d:.12s" data-copy="hero-sub">Tu tienda en línea, con tu propio link. Tus clientes piden solos desde el celular y tú ves todo ordenado en tu panel.</p>
- <div class="hpaths rv" style="--d:.15s"><a href="/gastronomia" data-copy="hero-path-gastro"><svg class="ic" width="18" height="18" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6v14a4 4 0 0 0 8 0V6M18 6v36"/><path d="M34 6c-4 2-5 8-5 14h5v22"/></svg>Tengo un restaurante</a><a href="/ecommerce" data-copy="hero-path-ecom"><svg class="ic" width="18" height="18" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16h28l-2 24H12z"/><path d="M18 16a6 6 0 0 1 12 0"/></svg>Tengo una tienda</a></div>
- <div class="ctastack rv" style="--d:.18s">
-  <a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a>
-  <a class="btn ghost" href="https://wa.me/573104594344?text=Hola%2C%20quiero%20que%20me%20armen%20mi%20tienda%20en%20Linkiu" data-copy="cta-assisted">Que me la armen</a>
+ <div class="hgo rv" style="--d:.15s">
+  <a class="btn big" href="/gastronomia" data-copy="hero-go-gastro"><svg class="ic" width="22" height="22" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6v14a4 4 0 0 0 8 0V6M18 6v36"/><path d="M34 6c-4 2-5 8-5 14h5v22"/></svg>Gastronomía</a>
+  <a class="btn big dark" href="/ecommerce" data-copy="hero-go-ecom"><svg class="ic" width="22" height="22" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16h28l-2 24H12z"/><path d="M18 16a6 6 0 0 1 12 0"/></svg>Ecommerce</a>
+ </div>
+ <div class="ctastack sec rv" style="--d:.2s">
+  <a class="btn ghost" href="#registro" data-copy="cta">Crea tu tienda gratis</a>
+  <a class="tlink" href="https://wa.me/573104594344?text=Hola%2C%20quiero%20que%20me%20armen%20mi%20tienda%20en%20Linkiu" data-copy="cta-assisted">Que me la armen →</a>
   <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div>
   <p class="anote" data-copy="cta-assisted-note">Gratis por ahora. Pídela por WhatsApp o desde tu panel, y queda lista el mismo día.</p>
  </div>
@@ -185,14 +191,14 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
    <div class="pic"><svg class="ic" width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6v14a4 4 0 0 0 8 0V6M18 6v36"/><path d="M34 6c-4 2-5 8-5 14h5v22"/></svg></div>
    <h3 data-copy="path-gastro-h">Tu carta en un link y un QR en la mesa</h3>
    <p data-copy="path-gastro-p">Domicilios, para recoger y en la mesa. Menú del día, reservas y tus propios domis, todo en tu panel.</p>
-   <span class="btn pc" data-copy="path-gastro-cta">Ver Linkiu para restaurantes →</span>
+   <span class="btn pc" data-copy="path-gastro-cta">Ver Linkiu para gastronomía →</span>
    <div class="rubros"><small data-copy="rubros-gastro-label">Para gastronomía</small><div class="mq"><div class="mqt"><div class="rrow" data-copy="rubros-gastro"><span>Restaurante</span><span>Cafetería</span><span>Comidas rápidas</span><span>Pizzería</span><span>Panadería y repostería</span><span>Bar y licores</span><span>Heladería</span><span>Food truck</span><span>Comida saludable</span><span>Domicilios / Dark kitchen</span><span>Asadero / Parrilla</span><span>Corrientazos</span><span>Hamburgueserías</span><span>Arepas</span><span>Fritos</span><span>Jugos</span><span>Comida de mar</span></div><div class="rrow dup" aria-hidden="true"><span>Restaurante</span><span>Cafetería</span><span>Comidas rápidas</span><span>Pizzería</span><span>Panadería y repostería</span><span>Bar y licores</span><span>Heladería</span><span>Food truck</span><span>Comida saludable</span><span>Domicilios / Dark kitchen</span><span>Asadero / Parrilla</span><span>Corrientazos</span><span>Hamburgueserías</span><span>Arepas</span><span>Fritos</span><span>Jugos</span><span>Comida de mar</span></div></div></div></div>
   </a>
   <a class="pcard rv" style="--d:.08s" href="/ecommerce">
    <div class="pic"><svg class="ic" width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16h28l-2 24H12z"/><path d="M18 16a6 6 0 0 1 12 0"/></svg></div>
    <h3 data-copy="path-ecom-h">Tu tienda con tallas, colores y envíos</h3>
    <p data-copy="path-ecom-p">Cada talla y color con su stock, envíos con fecha de llegada y contraentrega solo donde tú digas.</p>
-   <span class="btn pc" data-copy="path-ecom-cta">Ver Linkiu para tiendas →</span>
+   <span class="btn pc" data-copy="path-ecom-cta">Ver Linkiu para ecommerce →</span>
    <div class="rubros"><small data-copy="rubros-ecom-label">Para ecommerce</small><div class="mq rev"><div class="mqt"><div class="rrow" data-copy="rubros-ecom"><span>Ropa</span><span>Calzado</span><span>Accesorios</span><span>Hogar</span><span>Jean</span><span>Belleza</span><span>Bolsos</span><span>Joyería y bisutería</span><span>Perfumes</span><span>Ropa deportiva</span><span>Tecnología</span><span>Mascotas</span><span>Papelería</span><span>Juguetería</span><span>Ropa infantil</span><span>Lencería</span><span>Cuidado personal</span></div><div class="rrow dup" aria-hidden="true"><span>Ropa</span><span>Calzado</span><span>Accesorios</span><span>Hogar</span><span>Jean</span><span>Belleza</span><span>Bolsos</span><span>Joyería y bisutería</span><span>Perfumes</span><span>Ropa deportiva</span><span>Tecnología</span><span>Mascotas</span><span>Papelería</span><span>Juguetería</span><span>Ropa infantil</span><span>Lencería</span><span>Cuidado personal</span></div></div></div></div>
   </a>
  </div>
@@ -218,7 +224,7 @@ footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24p
 <section class="s"><div class="wrap">
  <div class="shead rv"><h2 data-copy="steps-h2">Arrancas en<br>tres pasos.</h2><p></p></div>
  <div class="steps stg">
-  <div class="step rv"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18l3-10h30l3 10"/><path d="M6 18a6 6 0 0 0 12 0 6 6 0 0 0 12 0 6 6 0 0 0 12 0"/><path d="M9 24v16h30V24"/><path d="M20 40V30h8v10"/></svg><span class="n">1</span><h4 data-copy="s1-h">Sube lo que vendes.</h4><p data-copy="s1-p">Con fotos o a mano. En tiendas, también desde Excel.</p></div>
+  <div class="step rv"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18l3-10h30l3 10"/><path d="M6 18a6 6 0 0 0 12 0 6 6 0 0 0 12 0 6 6 0 0 0 12 0"/><path d="M9 24v16h30V24"/><path d="M20 40V30h8v10"/></svg><span class="n">1</span><h4 data-copy="s1-h">Sube lo que vendes.</h4><p data-copy="s1-p">Con fotos o a mano. En ecommerce, también desde Excel.</p></div>
   <div class="step rv" style="--d:.06s"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="34" cy="12" r="5"/><circle cx="14" cy="24" r="5"/><circle cx="34" cy="36" r="5"/><path d="M18.5 21.5l11-6M18.5 26.5l11 6"/></svg><span class="n">2</span><h4 data-copy="s2-h">Comparte tu link.</h4><p data-copy="s2-p">WhatsApp, Instagram o QR.</p></div>
   <div class="step rv" style="--d:.12s"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l18-9 18 9-18 9z"/><path d="M6 15v18l18 9 18-9V15M24 24v18"/></svg><span class="n">3</span><h4 data-copy="s3-h">Recibe y despacha.</h4><p data-copy="s3-p">Lo ves en tu panel y sale.</p></div>
  </div>
@@ -256,7 +262,7 @@ d.querySelectorAll('.stg').forEach(function(g){[].forEach.call(g.children,functi
 if(rm)d.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.autoplay=false;v.pause();try{v.currentTime=0}catch(e){}});
 /* Opción C: palabra rotativa en el chip */
 var rot=d.querySelector('.rot');
-if(rot&&H.classList.contains('anim-c')&&!rm){var ws=rot.dataset.words.split(','),rl=d.createElement('span');rl.className='rl';
+if(rot&&!rm){var ws=rot.dataset.words.split(','),rl=d.createElement('span');rl.className='rl';
  ws.concat(ws[0]).forEach(function(w){var s=d.createElement('span');s.textContent=w;rl.appendChild(s)});rot.innerHTML='';rot.appendChild(rl);
  var cs=getComputedStyle(rot),mz=d.createElement('span');mz.style.cssText='position:absolute;left:-9999px;top:0;white-space:nowrap;font:'+cs.font+';letter-spacing:'+cs.letterSpacing;d.body.appendChild(mz);
  var i=0,ez='cubic-bezier(.22,1,.36,1)',W=function(k){mz.textContent=(ws.concat(ws[0]))[k];return Math.ceil(mz.getBoundingClientRect().width)+2};
