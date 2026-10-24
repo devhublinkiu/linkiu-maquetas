@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es-CO"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linkiu · Home v1 (mockup de diseño)</title>
+<!-- Mockup estático. Copy: copy-home-v2.md (Isabella). Cada texto lleva data-copy="id" para reemplazo. -->
+<style>
+:root{--red:#e7000b;--ink:#020618;--ink2:#314158;--mute:#62748e;--bg:#f8fafc;--line:#e2e8f0;--ok:#00bc7d;--pend:#b45309}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden}
+.wrap>*,.mod>*,.panel>*,.txt>*{min-width:0}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;border-radius:999px;background:var(--red);color:#fff;font-weight:600;font-size:16px;text-decoration:none;border:0;white-space:nowrap}
+.btn.sm{height:40px;padding:0 18px;font-size:14px}
+.pend{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;color:var(--pend);background:#fffbeb;border:1px dashed #f59e0b;border-radius:4px;padding:1px 5px;vertical-align:middle;margin-left:4px;text-transform:uppercase;line-height:1.5}
+.pendbox{border:1.5px dashed #f59e0b;background:#fffbeb;border-radius:12px;color:var(--pend);font-size:13px;padding:14px 16px}
+.eyebrow{font-size:13px;font-weight:600;color:var(--mute);letter-spacing:.02em}
+h2{font-size:44px;line-height:1.08;letter-spacing:-.025em;font-weight:700}
+.sub{color:var(--ink2);font-size:18px}
+/* trust */
+.trustbar{background:var(--ink);color:#cbd5e1;font-size:13px;text-align:center;padding:8px 16px}
+.trustbar b{color:#fff;font-weight:600}
+.trust{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--ink2);align-items:center}
+.trust span::before{content:"";display:inline-block;width:14px;height:14px;margin-right:5px;vertical-align:-2px;background:no-repeat center/14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300bc7d' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E")}
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:rgba(248,250,252,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;height:64px;gap:20px}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.04em;text-decoration:none}
+.logo i{color:var(--red);font-style:normal}
+nav .in{margin-left:auto;font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none}
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+h1{font-size:64px;line-height:1.02;letter-spacing:-.035em;font-weight:750}
+h1 em{font-style:normal;color:var(--mute)}
+.hero .sub{margin:22px 0 30px;max-width:520px;font-size:19px}
+.ctarow{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.textlink{font-weight:600;font-size:15px;text-decoration:none;border-bottom:1.5px solid var(--line);padding-bottom:2px}
+.hero .trust{margin-top:18px}
+.proof{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+/* phone */
+.stage{position:relative;height:540px}
+.phone{position:absolute;left:50%;top:0;transform:translateX(-50%);width:270px;height:540px;border-radius:40px;background:var(--ink);padding:10px;box-shadow:0 30px 60px -30px rgba(2,6,24,.45)}
+.screen{background:#fff;border-radius:31px;height:100%;overflow:hidden;font-size:12px}
+.sh{padding:30px 16px 12px;border-bottom:1px solid var(--line)}
+.sh .url{font-size:10px;color:var(--mute);background:var(--bg);border-radius:99px;padding:4px 10px;display:inline-block;margin-bottom:12px}
+.sh b{font-size:16px;display:block}
+.sh small{color:var(--mute)}
+.chips{display:flex;gap:6px;padding:10px 16px}
+.chips span{border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-size:11px}
+.chips span:first-child{background:var(--ink);color:#fff;border-color:var(--ink)}
+.item{display:flex;gap:10px;padding:10px 16px;align-items:center}
+.ph{width:52px;height:52px;border-radius:10px;flex:none;background:#f1f5f9;border:1px solid var(--line)}
+.ph.a{background:#fde68a}.ph.b{background:#fecaca}.ph.c{background:#d9f99d}.ph.d{background:#fed7aa}
+.item div{flex:1}.item p{color:var(--mute);font-size:11px}
+.add{width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:700}
+.cartbar{margin:14px 16px;background:var(--ink);color:#fff;border-radius:99px;padding:11px 16px;display:flex;justify-content:space-between;font-weight:600}
+.toast{position:absolute;right:-30px;top:380px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;width:228px;box-shadow:0 18px 40px -20px rgba(2,6,24,.35);font-size:13px}
+.toast .t{display:flex;align-items:center;gap:8px;font-weight:700}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.toast p{color:var(--mute);font-size:12px;margin-top:3px}
+.demo-tag{position:absolute;left:0;bottom:6px;font-size:11px;color:var(--mute);font-family:ui-monospace,monospace}
+/* problem */
+.problem{padding:88px 0;border-top:1px solid var(--line)}
+.problem .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.chat{background:#0b1220;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:8px;font-size:14px}
+.chat span{background:#1e293b;color:#e2e8f0;padding:8px 12px;border-radius:14px 14px 14px 4px;align-self:flex-start;max-width:70%}
+.chat span.me{align-self:flex-end;background:#334155;border-radius:14px 14px 4px 14px}
+.chat .au{font-family:ui-monospace,monospace;font-size:12px}
+.fix{margin-top:28px;font-size:28px;font-weight:700;letter-spacing:-.02em}
+.fix i{font-style:normal;color:var(--red)}
+.problem .sub{margin-top:10px}
+/* modules */
+.mods{padding:96px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.modhead{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px}
+.modhead p{max-width:380px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-bottom:28px}
+.tabs div{padding:14px 16px 0 0;font-size:14px;color:var(--mute);border-top:2px solid transparent;margin-top:-1px}
+.tabs div.on{border-color:var(--red);color:var(--ink);font-weight:600}
+.tabs b{font-family:ui-monospace,monospace;font-weight:500;margin-right:6px}
+.mod{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;padding:40px 0;border-bottom:1px solid var(--line)}
+.mod:last-of-type{border-bottom:0}
+.mod.big{grid-template-columns:1fr;padding-top:0}
+.mod.big .txt{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:end;margin-bottom:28px}
+.num{font-family:ui-monospace,monospace;font-size:13px;color:var(--red);font-weight:600}
+h3{font-size:30px;line-height:1.12;letter-spacing:-.02em;margin-top:8px}
+.mod.big h3{font-size:40px}
+.mod p.d{color:var(--ink2);font-size:17px;margin-top:12px;max-width:440px}
+.panel{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:18px;font-size:13px}
+/* demo 01 panel */
+.dash{display:grid;grid-template-columns:180px 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.side{background:var(--bg);border-right:1px solid var(--line);padding:14px;display:flex;flex-direction:column;gap:6px;color:var(--ink2)}
+.side span{padding:6px 10px;border-radius:8px}.side span.on{background:#fff;border:1px solid var(--line);color:var(--ink);font-weight:600}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:14px}
+.col h5{font-size:12px;color:var(--mute);font-weight:600;margin-bottom:8px;display:flex;justify-content:space-between}
+.ord{border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:8px;background:#fff}
+.ord.new{border-color:var(--red);box-shadow:0 0 0 3px #e7000b14}
+.ord b{display:flex;justify-content:space-between;font-size:13px}
+.ord p{color:var(--mute);font-size:12px}
+.pill{font-size:10px;font-weight:700;border-radius:99px;padding:2px 7px;background:#fee2e2;color:var(--red)}
+.pill.g{background:#d1fae5;color:#047857}.pill.s{background:#f1f5f9;color:var(--ink2)}
+/* demo 02 */
+.share{display:grid;grid-template-columns:1fr 150px;gap:16px;align-items:center}
+.wa{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.bub{background:#dcfce7;border-radius:10px;padding:9px 11px;margin-left:auto;max-width:85%}
+.lk{display:block;margin-top:6px;background:#fff;border-radius:8px;padding:8px;border:1px solid var(--line)}
+.lk b{display:block}.lk u{word-break:break-all;color:#2563eb;text-decoration:none;font-size:12px}
+.qr{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:11px;color:var(--mute)}
+.qr svg{width:100%;height:auto;display:block;margin-bottom:6px}
+/* demo 03 */
+.kira{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center;gap:10px}
+.photo{background:#fef3c7;border:1px solid #fde68a;border-radius:10px;padding:14px;transform:rotate(-2deg);font-family:"Comic Sans MS","Bradley Hand",cursive;color:#78350f;line-height:1.7;font-size:13px}
+.arrow{text-align:center;color:var(--mute);font-size:22px}
+.draft{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px}
+.draft h6{font-size:11px;color:var(--mute);font-weight:600;margin-bottom:8px;display:flex;justify-content:space-between}
+.row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border:0}
+/* demo 04 */
+.pays{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.pays span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-weight:600;font-size:13px}
+.confirm{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.confirm .ok{height:36px;padding:0 16px;border-radius:99px;background:var(--ink);color:#fff;font-weight:600;display:inline-flex;align-items:center;font-size:13px}
+.modcta{margin-top:40px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+/* steps */
+.steps{padding:96px 0}
+.steprow{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border-top:1px solid var(--ink)}
+.step{padding:22px 28px 0 0}
+.step .n{font-size:56px;font-weight:300;letter-spacing:-.04em;color:var(--mute);line-height:1}
+.step h4{font-size:20px;margin:14px 0 4px}
+.step p{color:var(--ink2)}
+.steps .modcta{margin-top:48px}
+/* more */
+.more{padding:88px 0;border-top:1px solid var(--line)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:36px}
+.grp h5{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);padding-bottom:10px;border-bottom:1px solid var(--line)}
+.grp li{list-style:none;padding:13px 0 13px 16px;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink2);position:relative}
+.grp li::before{content:"";position:absolute;left:0;top:21px;width:6px;height:6px;border-radius:2px;background:var(--ink)}
+/* plans */
+.plans{padding:96px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.plangrid{display:grid;grid-template-columns:1.15fr 1fr;gap:20px;margin-top:40px;max-width:860px}
+.plan{border:1px solid var(--line);border-radius:20px;padding:28px;background:var(--bg)}
+.plan.free{background:#fff;border:2px solid var(--ink)}
+.plan h4{font-size:20px}.plan .price{font-size:40px;font-weight:700;letter-spacing:-.03em;margin:8px 0 16px}
+.plan .pendbox{margin-bottom:20px}
+.plans .trust{margin-top:22px}
+/* faq */
+.faq{padding:96px 0}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{font-weight:600;font-size:18px;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--mute);font-weight:400;font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--ink2);margin-top:8px;max-width:560px}
+.faq .help{margin-top:20px;font-size:15px;color:var(--ink2)}
+/* final */
+.final{background:var(--ink);color:#fff;padding:104px 0;text-align:center}
+.final h2{font-size:56px;max-width:760px;margin:0 auto}
+.final .ctarow{justify-content:center;margin-top:34px}
+.final .textlink{border-color:#334155;color:#cbd5e1}
+.final .trust{justify-content:center;color:#cbd5e1;margin-top:20px}
+footer{background:var(--ink);color:#94a3b8;border-top:1px solid #1e293b;font-size:13px;padding:28px 0}
+footer .wrap{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+footer .logo{color:#fff;font-size:18px;margin-right:auto}
+/* mobile */
+@media (max-width:820px){
+ .wrap{padding:0 20px}
+ h1{font-size:40px}h2{font-size:32px}.final h2{font-size:36px}
+ .hero{padding:40px 0}.hero .wrap,.problem .wrap,.faq .wrap{grid-template-columns:1fr;gap:36px}
+ .hero .sub{font-size:17px}
+ .stage{height:500px}.phone{width:250px;height:500px;left:0;transform:none}.toast{right:0;top:410px;width:190px}
+ .confirm{flex-wrap:wrap}
+ nav .in{display:none}nav .btn{margin-left:auto}
+ .modhead{flex-direction:column;align-items:start;gap:12px}
+ .tabs{display:none}
+ .mod,.mod.big .txt{grid-template-columns:1fr;gap:20px}.mod.big h3,h3{font-size:28px}
+ .dash{grid-template-columns:1fr}.side{display:none}.cols{grid-template-columns:1fr}.cols .col:nth-child(n+2){display:none}
+ .share{grid-template-columns:1fr 110px}
+ .kira{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}
+ .steprow,.grid3,.plangrid{grid-template-columns:1fr}.grid3{gap:28px}
+ .step{padding:22px 0;border-bottom:1px solid var(--line)}
+ .mods,.steps,.more,.plans,.faq,.problem{padding:64px 0}.final{padding:72px 0}
+ .btn{width:100%}nav .btn{width:auto}
+ .trustbar{font-size:12px}
+}
+</style></head>
+<body>
+
+<!-- 1. Franja de confianza -->
+<div class="trustbar" data-copy="trust-bar"><b>Gratis</b> · Sin comisión por venta<span class="pend">Pendiente</span> · Sin tarjeta<span class="pend">Pendiente</span> · Sin contrato<span class="pend">Pendiente</span></div>
+
+<nav><div class="wrap"><a class="logo" href="#">linkiu<i>.</i></a><a class="in" href="#" data-copy="nav-login">Ingresar</a><a class="btn sm" href="#registro" data-copy="cta">Crea tu tienda gratis</a></div></nav>
+
+<!-- 2. Hero (titular A; B y C en decisiones.md) -->
+<header class="hero"><div class="wrap">
+ <div>
+  <h1 data-copy="hero-h1">Vende con tu propio link. <em>Sin pedidos regados en el chat.</em></h1>
+  <p class="sub" data-copy="hero-sub">Tu tienda o tu carta en línea, lista hoy<span class="pend" title="Tiempo real de montaje">Pendiente</span>. Tus clientes piden solos desde el celular y a ti te llega todo ordenado.</p>
+  <div class="ctarow"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><a class="textlink" href="#" data-copy="cta-assisted">Que me la armen ▸</a></div>
+  <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta <i class="pend">Pendiente</i></span><span>Sin contrato <i class="pend">Pendiente</i></span></div>
+  <p class="proof" data-copy="hero-proof"><span class="pend">Pendiente</span> Cifra real: “[N] negocios ya venden con su link”. Si no hay dato, se omite esta línea.</p>
+ </div>
+ <div class="stage" aria-hidden="true">
+  <div class="phone"><div class="screen">
+   <div class="sh"><span class="url">linkiu.bio/asaderolaesquina</span><b>Asadero La Esquina</b><small>Abierto · Domicilio 30–40 min</small></div>
+   <div class="chips"><span>Asados</span><span>Corrientazo</span><span>Bebidas</span></div>
+   <div class="item"><span class="ph a"></span><div><b>Pollo asado entero</b><p>Con papa y arepa</p><b>$ 38.000</b></div><span class="add">+</span></div>
+   <div class="item"><span class="ph b"></span><div><b>Corrientazo del día</b><p>Sopa, seco y jugo</p><b>$ 16.000</b></div><span class="add">+</span></div>
+   <div class="item"><span class="ph c"></span><div><b>Limonada de coco</b><p>500 ml</p><b>$ 9.000</b></div><span class="add">+</span></div>
+   <div class="item"><span class="ph d"></span><div><b>Chicharrón</b><p>250 g</p><b>$ 14.000</b></div><span class="add">+</span></div>
+   <div class="cartbar"><span>Ver pedido · 3</span><span>$ 63.000</span></div>
+  </div></div>
+  <div class="toast"><div class="t"><span class="dot"></span>Nuevo pedido #1043</div><p>Domicilio · Nequi · $ 63.000</p></div>
+  <span class="demo-tag">Datos de demo</span>
+ </div>
+</div></header>
+
+<!-- 3. El problema -->
+<section class="problem"><div class="wrap">
+ <div class="chat" aria-hidden="true"><span>precio?</span><span>la tienes en M?</span><span class="au">▶ ▁▃▅▂▆▃▁ 0:24</span><span>me regalas la carta?</span><span class="me">ya va</span><span>ya salió?</span><span>ya salió??</span><span>hace 40 min pedí 😡</span></div>
+ <div><h2 data-copy="problem-h2">Si vendes por chat, esto ya te pasó.</h2>
+ <p class="fix" data-copy="problem-fix">Linkiu lo <i>ordena</i>.</p>
+ <p class="sub" data-copy="problem-line">Sigues en WhatsApp e Instagram. Pero cada pedido te llega completo: qué pidió, cómo paga y a dónde va.</p></div>
+</div></section>
+
+<!-- 4. Cuatro protagonistas -->
+<section class="mods"><div class="wrap">
+ <div class="modhead"><h2 data-copy="mods-h2">Todo tu negocio,<br>en un solo link.</h2><p class="sub eyebrow">01 — 04 · lo que más vas a usar</p></div>
+ <div class="tabs" aria-hidden="true"><div class="on"><b>01</b>Pedidos</div><div><b>02</b>Tu link</div><div><b>03</b>Kira IA</div><div><b>04</b>Pagos</div></div>
+
+ <article class="mod big">
+  <div class="txt"><div><span class="num">01</span><h3 data-copy="m1-h3">Todos tus pedidos en un solo lugar</h3></div><p class="d" data-copy="m1-p">Se acabaron los audios y pantallazos. Cada pedido entra completo a tu panel y suena.</p></div>
+  <div class="panel"><div class="dash">
+   <div class="side"><span class="on">Pedidos</span><span>Productos</span><span>Clientes</span><span>Pagos</span><span>Mi link</span></div>
+   <div class="cols">
+    <div class="col"><h5>Nuevos <span>2</span></h5>
+     <div class="ord new"><b>#1043 <span class="pill">Nuevo</span></b><p>Pollo asado ×1, Corrientazo ×1, Limonada ×1</p><p>Domicilio · Barrio Centro · Nequi</p><b>$ 63.000</b></div>
+     <div class="ord"><b>#1042 <span class="pill">Nuevo</span></b><p>Chicharrón ×2</p><p>Recoge en local · Efectivo</p><b>$ 28.000</b></div></div>
+    <div class="col"><h5>En preparación <span>1</span></h5>
+     <div class="ord"><b>#1040 <span class="pill s">Cocina</span></b><p>Corrientazo ×3</p><p>Mesa 4 · QR</p><b>$ 48.000</b></div></div>
+    <div class="col"><h5>Enviados <span>1</span></h5>
+     <div class="ord"><b>#1038 <span class="pill g">En camino</span></b><p>Pollo asado ×2</p><p>Domi: Carlos · 12 min</p><b>$ 76.000</b></div></div>
+   </div></div></div>
+ </article>
+
+ <article class="mod">
+  <div><span class="num">02</span><h3 data-copy="m2-h3">Tu link, que se siente como app</h3><p class="d" data-copy="m2-p">linkiu.bio/tunegocio. Lo pegas en WhatsApp, en Instagram o en un QR, y tus clientes compran sin descargar nada.</p></div>
+  <div class="panel share">
+   <div class="wa"><div class="bub">Hola! Aquí puedes pedir directo 👇<span class="lk"><b>Asadero La Esquina</b><u>linkiu.bio/asaderolaesquina</u></span></div></div>
+   <div class="qr"><svg viewBox="0 0 21 21" shape-rendering="crispEdges"><path fill="#020618" d="M0 0h7v7H0zM14 0h7v7h-7zM0 14h7v7H0z"/><path fill="#fff" d="M1 1h5v5H1zM15 1h5v5h-5zM1 15h5v5H1z"/><path fill="#020618" d="M2 2h3v3H2zM16 2h3v3h-3zM2 16h3v3H2zM8 1h1v2H8zM10 0h2v1h-2zM9 4h3v1H9zM8 8h2v2H8zM11 7h1v4h-1zM13 9h3v1h-3zM17 8h3v2h-3zM8 12h2v1H8zM12 12h2v2h-2zM15 11h1v4h-1zM17 12h2v1h-2zM8 15h1v3H8zM10 14h2v1h-2zM10 17h3v1h-3zM14 16h2v2h-2zM17 15h3v1h-3zM18 18h2v2h-2zM8 19h4v1H8zM1 8h3v1H1zM4 10h2v2H4zM0 11h2v1H0z"/></svg>QR para la mesa</div>
+  </div>
+ </article>
+
+ <article class="mod">
+  <div><span class="num">03</span><h3 data-copy="m3-h3">Sube fotos, Kira IA arma tu tienda</h3><p class="d" data-copy="m3-p">Tómale fotos a tu carta o catálogo y Kira IA te arma el borrador. Sin diseñador: tú revisas y publicas.</p></div>
+  <div class="panel kira">
+   <div class="photo">MENÚ<br>Pollo asado ...... 38<br>Corrientazo ....... 16<br>Chicharrón ........ 14<br>Limonada coco ... 9</div>
+   <div class="arrow">→</div>
+   <div class="draft"><h6><span>Borrador de Kira</span><span>4 productos</span></h6>
+    <div class="row"><span>Pollo asado entero</span><b>$ 38.000</b></div><div class="row"><span>Corrientazo del día</span><b>$ 16.000</b></div><div class="row"><span>Chicharrón 250 g</span><b>$ 14.000</b></div><div class="row"><span>Limonada de coco</span><b>$ 9.000</b></div></div>
+  </div>
+ </article>
+
+ <article class="mod">
+  <div><span class="num">04</span><h3 data-copy="m4-h3">Cobra como ya te pagan</h3><p class="d" data-copy="m4-p">Nequi, Daviplata, Bre-B, transferencia o contraentrega<span class="pend">Pendiente</span>. Confirmas el pago en el panel, sin pantallazos.</p></div>
+  <div class="panel">
+   <div class="pays"><span>Nequi</span><span>Daviplata</span><span>Bre-B</span><span>Transferencia</span><span>Contraentrega</span><i class="pend">Métodos pendientes de confirmar</i></div>
+   <div class="confirm"><div><b>#1043 · $ 63.000</b><p style="color:var(--mute)">Pago por Nequi · por confirmar</p></div><span class="ok">Confirmar pago</span></div>
+  </div>
+ </article>
+
+ <div class="modcta"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust"><span>Gratis</span><span>Sin tarjeta <i class="pend">Pendiente</i></span></div></div>
+</div></section>
+
+<!-- 6. Tres pasos (va antes de "Y además" por indicación) -->
+<section class="steps"><div class="wrap">
+ <h2 data-copy="steps-h2">Arrancas en tres pasos.</h2>
+ <div class="steprow">
+  <div class="step"><span class="n">1</span><h4 data-copy="s1-h">Sube tu carta o catálogo.</h4><p data-copy="s1-p">Fotos, Excel o a mano.</p></div>
+  <div class="step"><span class="n">2</span><h4 data-copy="s2-h">Comparte tu link.</h4><p data-copy="s2-p">WhatsApp, Instagram o QR.</p></div>
+  <div class="step"><span class="n">3</span><h4 data-copy="s3-h">Recibe y despacha.</h4><p data-copy="s3-p">Suena el pedido y sale.</p></div>
+ </div>
+ <div class="modcta"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta <i class="pend">Pendiente</i></span><span>Sin contrato <i class="pend">Pendiente</i></span></div></div>
+</div></section>
+
+<!-- 5. Y además -->
+<section class="more"><div class="wrap">
+ <h2 data-copy="more-h2">Y además</h2>
+ <div class="grid3">
+  <div class="grp"><h5>Operación</h5><ul><li data-copy="ya-1">Lo agotado se marca solo.</li><li data-copy="ya-2">Tallas y colores, cada uno con su stock.</li><li data-copy="ya-3">Domicilios con tus propios domis.</li><li data-copy="ya-4">QR para la mesa o el mostrador.</li></ul></div>
+  <div class="grp"><h5>Ventas</h5><ul><li data-copy="ya-5">Menú del día listo para tus historias.</li><li data-copy="ya-6">Envíos a todo el país, con fecha de llegada.</li><li data-copy="ya-7">Cupones para compartir en tus historias. <i class="pend">Pendiente</i></li><li data-copy="ya-8">Contraentrega solo donde tú digas.</li></ul></div>
+  <div class="grp"><h5>Clientes</h5><ul><li data-copy="ya-9">Tu cliente ve su pedido avanzar.</li><li data-copy="ya-10">Reservas con recordatorio por WhatsApp.</li></ul></div>
+ </div>
+</div></section>
+
+<!-- 7. Clientes reales: OCULTA hasta tener datos reales (no usar tiendas demo como clientes)
+<section class="clients"><div class="wrap">
+ <h2 data-copy="clients-h2">Negocios de verdad, vendiendo con su link.</h2>
+ 3 tarjetas: [PENDIENTE: foto, nombre, negocio, ciudad, frase real ≤20 palabras, enlace linkiu.bio/…]
+</div></section>
+-->
+
+<!-- 8. Planes -->
+<section class="plans"><div class="wrap">
+ <h2 data-copy="plans-h2">Empieza gratis.<br>Paga solo si lo necesitas.</h2>
+ <div class="plangrid">
+  <div class="plan free"><h4>Gratis</h4><div class="price">$ 0</div><div class="pendbox"><b>PENDIENTE:</b> qué incluye el plan gratis y sus límites.</div><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a></div>
+  <div class="plan"><h4>Plan pago <span class="pend">Pendiente</span></h4><div class="price" style="color:var(--mute)">$ — /mes</div><div class="pendbox"><b>PENDIENTE:</b> nombre, precio en COP/mes y qué incluye.</div></div>
+ </div>
+ <div class="trust" data-copy="trust-full"><span>Gratis</span><span>Sin comisión por venta <i class="pend">Pendiente</i></span><span>Sin tarjeta <i class="pend">Pendiente</i></span><span>Sin contrato <i class="pend">Pendiente</i></span></div>
+</div></section>
+
+<!-- 9. FAQ -->
+<section class="faq"><div class="wrap">
+ <div><h2 data-copy="faq-h2">Preguntas frecuentes</h2><p class="help" data-copy="faq-help">¿Otra duda? <a href="#">Escríbenos por WhatsApp ▸</a> <span class="pend">Número pendiente</span></p></div>
+ <div>
+  <details open><summary data-copy="faq1-q">¿De verdad es gratis?</summary><p data-copy="faq1-a">Sí. Creas tu tienda y recibes pedidos sin pagar. <span class="pend">Límites pendientes</span></p></details>
+  <details open><summary data-copy="faq2-q">¿Me cobran comisión por pedido?</summary><p data-copy="faq2-a">No. Lo que vendes es tuyo. <span class="pend">Pendiente</span></p></details>
+  <details><summary data-copy="faq3-q">¿Necesito página web o diseñador?</summary><p data-copy="faq3-a">No. Tu tienda vive en tu link y la armas desde el celular.</p></details>
+  <details><summary data-copy="faq4-q">¿Sigo usando WhatsApp e Instagram?</summary><p data-copy="faq4-a">Sí. Pegas tu link ahí y los pedidos te llegan completos al panel.</p></details>
+  <details><summary data-copy="faq5-q">¿Hay contrato? ¿Puedo cancelar?</summary><p data-copy="faq5-a">No hay contrato. Lo dejas cuando quieras. <span class="pend">Pendiente</span></p></details>
+  <details><summary data-copy="faq6-q">¿Y si no tengo tiempo de armarla?</summary><p data-copy="faq6-a">Te la armamos. Déjanos tu WhatsApp. <span class="pend">Costo y plazo pendientes</span></p></details>
+ </div>
+</div></section>
+
+<!-- 10. CTA final -->
+<section class="final" id="registro"><div class="wrap">
+ <h2 data-copy="final-h2">Tu link puede estar vendiendo hoy.</h2>
+ <div class="ctarow"><a class="btn" href="#" data-copy="cta">Crea tu tienda gratis</a><a class="textlink" href="#" data-copy="cta-assisted">Que me la armen ▸</a></div>
+ <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta <i class="pend">Pendiente</i></span><span>Sin contrato <i class="pend">Pendiente</i></span></div>
+</div></section>
+<footer><div class="wrap"><span class="logo">linkiu<i style="color:var(--red);font-style:normal">.</i></span><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Redes</a><span>WhatsApp <i class="pend">Pendiente</i></span><span>Razón social / NIT <i class="pend">Pendiente</i></span></div></footer>
+</body></html>
