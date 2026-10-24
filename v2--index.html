@@ -1,352 +1,301 @@
 <!doctype html>
 <html lang="es-CO"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Linkiu · Home v2 (mockup, lenguaje visual jam.dev)</title>
-<!-- Mockup estático de diseño. Copy: copy-home-v2.md + copy-home-v2-piezas.md (Isabella). Textos con data-copy="id". Datos de las maquetas = demo. -->
-<style>
-:root{--red:#e7000b;--ink:#020618;--ink2:#314158;--mute:#62748e;--bg:#f8fafc;--line:#e2e8f0;--card:#f6f7f9;--ok:#00bc7d}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{overflow-x:hidden}
-body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-.005em}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
-.wrap>*,.bento>*,.where>*{min-width:0}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 30px;border-radius:999px;background:var(--red);color:#fff;font-weight:600;font-size:16px;border:1px solid #c80009;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 1px 2px rgba(2,6,24,.12)}
-.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 1px 2px rgba(2,6,24,.05)}
-.btn.sm{height:40px;padding:0 18px;font-size:14px}
-.pend{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;color:#b45309;background:#fffbeb;border:1px dashed #f59e0b;border-radius:4px;padding:1px 5px;vertical-align:middle;margin-left:4px;text-transform:uppercase;line-height:1.5;font-style:normal}
-.pendbox{border:1.5px dashed #f59e0b;background:#fffbeb;border-radius:12px;color:#b45309;font-size:13px;padding:12px 14px}
-/* nav (caja flotante como Jam) */
-.navw{padding:10px 0 0}
-nav{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:10px;height:62px;padding:0 10px 0 22px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 1px 3px rgba(2,6,24,.04)}
-.logo{font-weight:800;font-size:22px;letter-spacing:-.05em}.logo i{color:var(--red);font-style:normal}
-nav .in{margin-left:auto;height:40px;padding:0 18px;border:1px solid var(--line);border-radius:12px;display:inline-flex;align-items:center;font-size:14px;font-weight:500}
-nav .btn.sm{border-radius:12px}
-/* trust */
-.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;font-size:13px;color:var(--mute)}
-.trust span::before{content:"✓";color:var(--ok);font-weight:700;margin-right:4px}
-/* hero */
-.hero{text-align:center;padding:52px 0 0;position:relative}
-.newpill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:5px 12px 5px 6px;font-size:14px;font-weight:500;box-shadow:0 1px 2px rgba(2,6,24,.04)}
-.newpill b{background:var(--ink);color:#fff;border-radius:6px;font-size:11px;padding:2px 7px;font-weight:600}
-.newpill span{color:var(--mute)}
-h1{font-size:70px;line-height:1.06;letter-spacing:-.045em;font-weight:650;margin:22px auto 0;max-width:1120px}
-.chip{display:inline-flex;align-items:center;gap:10px;background:#ffe4e5;color:var(--red);border-radius:18px;padding:0 18px 4px 10px;line-height:1.1;vertical-align:baseline;box-shadow:inset 0 0 0 1.5px #ffc9cb}
-.chip svg{width:52px;height:52px;background:var(--red);border-radius:12px;padding:10px;margin-top:6px;flex:none}
-.hero .sub{color:var(--ink2);font-size:19px;max-width:560px;margin:22px auto 0}
-.ctastack{display:inline-flex;flex-direction:column;gap:8px;margin-top:28px;padding:8px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 1px 3px rgba(2,6,24,.05);min-width:300px}
-.ctastack .trust{padding:4px 0 2px;font-size:12px}
-/* stage */
-.stage{position:relative;margin-top:56px;padding:0 0 80px;background-image:linear-gradient(#eef1f5 1px,transparent 1px),linear-gradient(90deg,#eef1f5 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 85%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 85%,transparent)}
+<title>Linkiu · Home v2 (mockup de diseño)</title>
+<!-- Mockup estático. Copy: copy-home-v4-datos-darwin.md + v3-caminos + v2 (Isabella). Textos con data-copy="id". -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&display=swap" rel="stylesheet">
+<style>:root{--red:#e7000b;--ink:#0d0f12;--ink2:#2a2f37;--mute:#626a75;--bg:#fff;--line:#e7e9ee;--card:#f8f9fa;--ease:cubic-bezier(.44,0,.56,1);--f:"Google Sans Flex",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--f);color:var(--ink);background:var(--bg);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:0 auto;padding:0 24px;min-width:0}@media(min-width:1229px){.wrap{padding:0}}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;border-radius:999px;background:var(--red);color:#fff;font-size:15px;font-weight:500;white-space:nowrap;transition:transform .4s var(--ease),background .4s var(--ease),box-shadow .4s var(--ease)}
+.btn:hover{background:#c40009;transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(231,0,11,.45)}
+.btn.sm{height:40px;padding:0 16px;font-size:14px}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}.btn.ghost:hover{background:var(--card);box-shadow:inset 0 0 0 1px #cfd3da}
+.btn.line{background:transparent;color:var(--ink);height:40px;padding:0 16px;font-size:14px;box-shadow:inset 0 0 0 1px #cfd3da}
+.navw{position:sticky;top:12px;z-index:20;padding:0 16px}
+nav{max-width:1180px;margin:12px auto 0;height:56px;display:flex;align-items:center;gap:20px;padding:0 8px 0 20px;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:16px}
+.logo{font-weight:700;font-size:22px;letter-spacing:-.04em}.logo i{color:var(--red);font-style:normal}
+.navpaths{display:flex;gap:4px;margin-left:12px}.navpaths a{font-size:14px;font-weight:500;color:var(--ink2);padding:8px 12px;border-radius:10px;transition:background .4s var(--ease)}.navpaths a:hover{background:var(--card)}
+nav .in{margin-left:auto;font-size:14px;font-weight:500}
+.hero{padding:88px 0 0;text-align:center}
+.newpill{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 10px 0 4px;border:1px solid var(--line);border-radius:12px;font-size:14px;font-weight:500;color:var(--ink2);transition:border-color .4s var(--ease)}
+.newpill b{background:var(--ink);color:#fff;font-weight:500;font-size:12px;padding:2px 8px;border-radius:8px}.newpill span{transition:transform .4s var(--ease)}.newpill:hover span{transform:translateX(3px)}.newpill:hover{border-color:#cfd3da}
+h1{font-size:64px;line-height:64px;font-weight:500;letter-spacing:-.04em;margin:24px auto 0;max-width:900px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;border-radius:16px;padding:0 16px 4px 12px;transform:rotate(-2deg);vertical-align:2px;line-height:60px;height:60px}
+.chip svg{width:34px;height:34px;margin-top:4px}
+.sub{font-size:18px;line-height:26px;color:var(--mute);max-width:560px;margin:20px auto 0}
+.ctastack{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+.trust{flex-basis:100%;display:flex;flex-wrap:wrap;justify-content:center;gap:0;font-size:14px;color:var(--mute);margin-top:4px}.trust span+span:before{content:"·";margin:0 8px}
+.anote{flex-basis:100%;font-size:13px;line-height:18px;color:#8a919c}
+.stage{position:relative;margin-top:56px;padding:0 0 32px;background-image:radial-gradient(#dde0e6 1px,transparent 1px);background-size:22px 22px;perspective:1600px}
 .stage .wrap{position:relative;padding-top:40px}
-.ribbon{position:absolute;z-index:1;height:58px;padding:0 34px;box-shadow:inset 0 -3px 0 rgba(2,6,24,.08);display:flex;align-items:center;font-size:24px;font-weight:600;letter-spacing:-.02em;border-radius:14px;color:var(--ink);white-space:nowrap}
-.r1{left:-150px;top:250px;padding-right:120px;background:#fda4af;transform:rotate(14deg)}
-.r2{left:-110px;top:350px;padding-right:120px;background:#93c5fd;transform:rotate(-8deg)}
-.r3{right:-150px;top:230px;padding-left:120px;background:#86efac;transform:rotate(-14deg)}
-.r4{right:-110px;top:335px;padding-left:120px;background:#fda4af;transform:rotate(9deg)}
-.win{position:relative;z-index:2;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 70px -30px rgba(2,6,24,.28),0 2px 6px rgba(2,6,24,.04);overflow:hidden;max-width:980px;margin:0 auto;text-align:left}
-.bar{height:38px;display:flex;align-items:center;gap:7px;padding:0 16px;background:#f3f4f6;border-bottom:1px solid var(--line)}
-.bar i{width:11px;height:11px;border-radius:50%;background:#d9dde3}
-.bar span{margin:0 auto;font-size:12px;color:var(--mute);background:#fff;border-radius:7px;padding:3px 40px;border:1px solid var(--line)}
-.app{display:grid;grid-template-columns:190px 1fr 290px;min-height:500px;font-size:13px}
-.side{border-right:1px solid var(--line);padding:16px 12px;display:flex;flex-direction:column;gap:4px;color:var(--ink2)}
-.side .shop{display:flex;gap:8px;align-items:center;font-weight:700;color:var(--ink);margin-bottom:12px}
-.side .shop i{width:26px;height:26px;border-radius:8px;background:#fde68a}
-.side span{padding:7px 10px;border-radius:8px;display:flex;justify-content:space-between}
-.side span.on{background:var(--card);color:var(--ink);font-weight:600}
-.side em{font-style:normal;background:var(--red);color:#fff;border-radius:99px;font-size:10px;padding:0 6px;font-weight:700}
-.main{padding:16px;position:relative;background:#fcfcfd}
-.mt{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.mt b{font-size:16px}
-.seg{display:flex;gap:4px;background:var(--card);border-radius:10px;padding:3px;font-size:12px}
-.seg span{padding:4px 10px;border-radius:8px}.seg .on{background:#fff;box-shadow:0 1px 2px rgba(2,6,24,.08);font-weight:600}
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.col h5{font-size:12px;color:var(--mute);font-weight:600;margin-bottom:8px}
-.ord{border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:8px;background:#fff;box-shadow:0 1px 2px rgba(2,6,24,.03)}
-.ord.sel{box-shadow:0 0 0 2px var(--red)}
-.ord b{display:flex;justify-content:space-between;font-size:13px}
-.ord p{color:var(--mute);font-size:12px}
-.tag{font-size:10px;font-weight:700;border-radius:99px;padding:2px 7px;background:#fee2e2;color:var(--red)}
-.tag.g{background:#d1fae5;color:#047857}.tag.s{background:#eef2f6;color:var(--ink2)}
-.play{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:rgba(2,6,24,.88);display:grid;place-items:center;box-shadow:0 10px 30px rgba(2,6,24,.3)}
-.play::after{content:"";border-left:22px solid #fff;border-top:14px solid transparent;border-bottom:14px solid transparent;margin-left:6px}
-.detail{border-left:1px solid var(--line);padding:16px}
-.detail h6{font-size:12px;color:var(--mute);font-weight:600;display:flex;justify-content:space-between;margin-bottom:10px}
-.kv{display:grid;grid-template-columns:90px 1fr;gap:8px 10px;font-size:12px;margin-bottom:14px}
-.kv dt{color:var(--mute)}.kv dd{font-weight:500}
-.line{display:flex;justify-content:space-between;padding:6px 0;border-top:1px solid var(--line);font-size:12px}
-.wa-btn{margin-top:14px;display:flex;gap:6px}
-.wa-btn span{flex:1;text-align:center;border:1px solid var(--line);border-radius:10px;padding:7px;font-weight:600;font-size:12px}
-.wa-btn span.k{background:var(--ink);color:#fff;border-color:var(--ink)}
-.demo{font-size:11px;color:var(--mute);text-align:center;margin-top:12px;font-family:ui-monospace,monospace}
-/* rubros */
-.rubros{padding:8px 0 24px;text-align:center}
-.rubros p{font-size:13px;color:var(--mute);margin-bottom:16px}
-.rrow{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 44px;color:#9aa6b6;font-weight:700;font-size:19px;letter-spacing:-.02em}
-/* secciones patrón Jam */
-section.s{padding:120px 0 0}
-.shead{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-bottom:44px}
-h2{font-size:46px;line-height:1.08;letter-spacing:-.035em;font-weight:600}
-.shead p{color:var(--ink2);font-size:16px;max-width:420px;justify-self:end;padding-top:6px}
-.gcard{background:var(--card);border:1px solid #eceef1;border-radius:24px;padding:48px;overflow:hidden}
-/* problema */
-.prob{display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;gap:8px}
-.chat{background:#0b1220;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:7px;font-size:14px;box-shadow:0 20px 40px -24px rgba(2,6,24,.5)}
-.chat span{background:#1e293b;color:#e2e8f0;padding:7px 12px;border-radius:14px 14px 14px 4px;align-self:flex-start}
-.chat span.me{align-self:flex-end;background:#334155}
-.arrowc{text-align:center;font-weight:700;font-size:13px;color:var(--red)}
-.arrowc svg{display:block;margin:0 auto 4px}
-.okcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 20px 40px -28px rgba(2,6,24,.3)}
-.okcard h4{display:flex;justify-content:space-between;font-size:16px;margin-bottom:12px}
-/* bento */
-.bento{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.bc{background:var(--card);border:1px solid #eceef1;border-radius:24px;padding:28px 32px 30px;display:flex;flex-direction:column}
-.mini{height:290px;display:grid;place-items:center;margin-bottom:26px}
-.ui{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 30px -18px rgba(2,6,24,.25);font-size:12px;width:100%;max-width:340px}
-.uih{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line);font-weight:600}
-.uib{padding:10px 12px}
-.num{font-family:ui-monospace,monospace;font-size:12px;color:var(--red);font-weight:600;margin-right:8px}
-.bc h3{font-size:18px;font-weight:600;letter-spacing:-.015em}
-.bc p{color:var(--mute);font-size:15px;margin-top:6px;max-width:440px}
-.pchips{display:flex;flex-wrap:wrap;gap:6px;padding:12px}
-.pchips span{border:1px solid var(--line);border-radius:99px;padding:4px 10px;font-weight:600;background:#fff;box-shadow:0 1px 2px rgba(2,6,24,.04)}
-.photo{background:#fef3c7;border:1px solid #fde68a;border-radius:10px;padding:12px 14px;transform:rotate(-3deg);font-family:"Bradley Hand","Comic Sans MS",cursive;color:#78350f;line-height:1.7;font-size:12px;width:178px;white-space:nowrap;box-shadow:0 10px 20px -12px rgba(120,53,15,.4)}
-.kirab{display:flex;align-items:center;gap:14px}
-.kirab .ui{max-width:200px}
-.kchip{display:inline-flex;align-items:center;gap:5px;background:#ffe4e5;color:var(--red);border-radius:99px;font-size:11px;font-weight:700;padding:2px 8px}
-.cta-row{text-align:center;margin-top:40px}
-.cta-row .trust{margin-top:12px}
-/* where */
-.where{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:20px}
-.where .bc .mini{height:290px}
-.lap{width:100%;max-width:300px;background:#fff;border:1px solid var(--line);border-radius:12px 12px 4px 4px;box-shadow:0 12px 30px -18px rgba(2,6,24,.25);padding:10px}
-.lap .cols{grid-template-columns:1fr 1fr;gap:6px}
-.lap .ord{padding:7px;margin-bottom:6px}
-.lapbase{height:10px;background:#e5e7eb;border-radius:0 0 12px 12px;width:115%;margin-left:-7.5%}
-.ph{width:170px;height:270px;overflow:hidden;background:var(--ink);border-radius:28px;padding:7px;box-shadow:0 14px 30px -16px rgba(2,6,24,.5)}
-.ph>div{background:#fff;border-radius:22px;height:100%;padding:24px 10px 10px;font-size:11px}
-.pitem{background:var(--card);border-radius:10px;padding:8px;margin-bottom:6px}
-.pitem b{display:block;font-size:11px}
-.wa{width:100%;max-width:260px;background:#efeae2;border-radius:14px;padding:12px;font-size:12px;box-shadow:0 12px 30px -18px rgba(2,6,24,.25)}
-.wa .m{background:#fff;border-radius:10px;padding:8px 10px;margin-bottom:6px;max-width:90%}
-.wa .m.o{background:#d9fdd3;margin-left:auto}
-/* pasos */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.step{background:var(--card);border:1px solid #eceef1;border-radius:24px;padding:28px}
-.step .n{width:34px;height:34px;border-radius:10px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-weight:700;font-size:14px;margin-bottom:40px}
-.step h4{font-size:18px;font-weight:600}.step p{color:var(--mute);margin-top:4px}
-/* y además */
-.ya{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden}
-.ya div{padding:22px 22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:15px;font-weight:500}
-.ya div:nth-child(5n){border-right:0}
-.ya div:nth-last-child(-n+5){border-bottom:0}
-.ya small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);font-weight:600;margin-bottom:8px}
-/* planes */
-.plans{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.plan{border-radius:24px;padding:32px;background:var(--card);border:1px solid #eceef1}
-.plan.free{background:#fff;border:1px solid var(--line);box-shadow:0 20px 50px -30px rgba(2,6,24,.3)}
-.plan h4{font-size:18px}.price{font-size:48px;font-weight:650;letter-spacing:-.04em;margin:6px 0 16px}
-.plan .pendbox{margin-bottom:22px}
-/* faq */
-.faqw{display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
-details{border-bottom:1px solid var(--line);padding:18px 0}
-details:first-child{border-top:1px solid var(--line)}
-summary{font-weight:600;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
-summary::after{content:"+";color:var(--mute);font-weight:400;font-size:22px;line-height:1}
-details[open] summary::after{content:"–"}
-details p{color:var(--ink2);margin-top:6px}
-.anote{font-size:12.5px;color:var(--mute);padding:0 6px 4px}.anote .pend{margin-top:2px}
-.wa .m.ex{border:1.5px dashed #f59e0b}.exl{display:table;margin:0 0 5px}
-.wa .lkc{margin-left:auto;max-width:90%;background:#fff;border-left:3px solid var(--red)}.wa .lkc span{display:block;color:var(--mute);font-size:11px}.wan{font-size:11px;color:var(--mute);text-align:center;margin-top:4px}
-.wa .pl{display:block;font-size:10px;color:var(--mute);margin-bottom:6px}.flow{font-size:11px;color:var(--mute);text-align:center;margin:6px 0}.pcard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;display:flex;align-items:center;gap:8px;box-shadow:0 4px 10px -6px rgba(2,6,24,.25)}.pcard .pl{font-size:10px;color:var(--mute);flex-basis:100%;margin-bottom:-6px}.pcard{flex-wrap:wrap;justify-content:space-between}
-.help{color:var(--ink2);margin-top:14px}
-/* final */
-.final{margin:120px 0 0;padding:110px 0 120px;text-align:center;border-top:1px solid var(--line);background-image:linear-gradient(#eef1f5 1px,transparent 1px),linear-gradient(90deg,#eef1f5 1px,transparent 1px);background-size:24px 24px}
-.final h2{font-size:60px;max-width:760px;margin:0 auto}
-.final .ctastack{margin-top:32px}
-footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--mute)}
-footer .wrap{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
-footer .logo{color:var(--ink);font-size:18px;margin-right:auto}
-/* móvil */
-@media (max-width:820px){
- .wrap{padding:0 18px}
- nav{margin:0 10px;padding:0 8px 0 16px;height:56px}nav .in{display:none}nav .btn.sm{margin-left:auto}
- h1{font-size:40px;letter-spacing:-.04em}.chip{border-radius:12px;padding:0 10px 3px 6px;gap:6px}.chip svg{width:30px;height:30px;padding:6px;border-radius:8px;margin-top:4px}
- .hero .sub{font-size:17px}.ctastack{display:flex;min-width:0}
- .stage{margin-top:36px;padding-bottom:40px}.ribbon{height:38px;font-size:15px;padding:0 18px;border-radius:10px}
- .r1{left:-40px;top:6px}.r3{right:-30px;top:10px}.r2,.r4{display:none}.stage .wrap{padding-top:56px}
- .app{grid-template-columns:1fr;min-height:0}.side,.detail{display:none}.cols{grid-template-columns:1fr}.cols .col:nth-child(n+2){display:none}
- .bar span{padding:3px 12px}
- .rrow{gap:8px 22px;font-size:15px}
- section.s{padding-top:80px}.shead{grid-template-columns:1fr;gap:12px;margin-bottom:28px}.shead p{justify-self:start}
- h2{font-size:32px}.final h2{font-size:38px}
- .gcard{padding:20px;border-radius:20px}.prob{grid-template-columns:1fr}.arrowc svg{transform:rotate(90deg)}
- .bento,.where,.steps,.plans,.faqw{grid-template-columns:1fr}.faqw{gap:20px}
- .bc{padding:20px}.mini,.where .bc .mini{height:auto;min-height:200px;margin-bottom:20px}
- .kirab{flex-direction:column}
- .ya{grid-template-columns:1fr 1fr}.ya div:nth-child(n){border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.ya div:nth-child(2n){border-right:0}.ya div:nth-last-child(-n+2){border-bottom:0}
- .dk{display:none}
- .r1{left:-14px;top:36px;padding:0 16px}.r3{right:-14px;top:30px;padding:0 16px}.stage .wrap{padding-top:84px}
- .final{margin-top:80px;padding:72px 0}
+.win{position:relative;z-index:2;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 30px 80px -30px rgba(13,15,18,.25);text-align:left;transform-origin:50% 0;transition:transform .2s linear}
+.js .win{transform:rotateX(14deg) scale(.95)}
+.bar{display:flex;align-items:center;gap:6px;height:40px;padding:0 14px;border-bottom:1px solid var(--line);background:#fbfbfc}.bar i{width:10px;height:10px;border-radius:50%;background:#dfe2e7}.bar span{margin:0 auto;font-size:12px;color:var(--mute);background:#f1f2f4;padding:3px 14px;border-radius:8px}
+.app{display:grid;grid-template-columns:190px 1fr 280px;min-height:500px}
+.side{border-right:1px solid var(--line);padding:16px 10px;display:flex;flex-direction:column;gap:2px;font-size:14px;color:var(--ink2)}.side span{padding:8px 10px;border-radius:8px}.side .on{background:var(--card);font-weight:500;display:flex;justify-content:space-between}.side em{font-style:normal;background:var(--red);color:#fff;font-size:11px;border-radius:9px;padding:0 7px}
+.shop{display:flex;align-items:center;gap:8px;font-weight:600;padding:4px 10px 14px}.shop i{width:24px;height:24px;border-radius:7px;background:var(--ink)}
+.main{padding:18px;position:relative;background:#fcfcfd}.mt{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.seg{display:flex;background:#f0f1f3;border-radius:9px;padding:3px;font-size:12px}.seg span{padding:4px 10px;border-radius:7px}.seg .on{background:#fff}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.col h5{font-size:12px;font-weight:500;color:var(--mute);margin-bottom:8px}
+.ord{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:10px;font-size:13px;line-height:19px}.ord b{display:flex;justify-content:space-between;font-weight:600}.ord p{color:var(--mute)}.ord.sel{border-color:var(--ink)}
+.tag{font-size:11px;font-weight:500;padding:0 7px;border-radius:6px;background:#fdecec;color:var(--red)}.tag.p{background:#f1f2f4;color:var(--ink2)}.tag.g{background:#e9f6ee;color:#167a3e}
+.play{position:absolute;left:50%;top:55%;width:76px;height:76px;margin:-38px;border-radius:50%;background:rgba(13,15,18,.86);box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .4s var(--ease)}.play:after{content:"";position:absolute;left:31px;top:25px;border:13px solid transparent;border-left:20px solid #fff;border-right:0}.win:hover .play{transform:scale(1.08)}
+.detail{border-left:1px solid var(--line);padding:18px;font-size:13px}.detail h6{display:flex;justify-content:space-between;font-size:15px;font-weight:600;margin-bottom:12px}
+.kv{display:grid;grid-template-columns:70px 1fr;gap:6px;margin-bottom:14px}.kv dt{color:var(--mute)}
+.line{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid var(--line)}
+.wa-btn{display:flex;gap:8px;margin-top:14px}.wa-btn span{flex:1;text-align:center;border:1px solid var(--line);border-radius:9px;padding:7px}.wa-btn .k{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ribbon{position:absolute;z-index:3;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 14px;font-size:14px;font-weight:500;box-shadow:0 10px 24px -12px rgba(13,15,18,.3);will-change:transform}
+.r1{left:-28px;top:120px;--rot:-6deg}.r2{left:-10px;top:330px;--rot:4deg;background:var(--ink);color:#fff;border-color:var(--ink)}.r3{right:-30px;top:90px;--rot:5deg}.r4{right:-14px;top:360px;--rot:-4deg;color:var(--red)}
+.ribbon{transform:rotate(var(--rot))}
+.demo{font-size:12px;color:#8a919c;text-align:center;margin-top:12px}
+.s{padding:136px 0 0}
+.shead{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:48px}
+h2{font-size:40px;line-height:48px;font-weight:500;letter-spacing:-.02em}
+.shead p{font-size:18px;line-height:26px;color:var(--mute);max-width:470px}
+h3{font-size:20px;line-height:28px;font-weight:500;letter-spacing:-.02em}h4{font-size:20px;line-height:28px;font-weight:500;letter-spacing:-.02em}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pcard{display:flex;flex-direction:column;align-items:flex-start;gap:12px;background:var(--card);border-radius:16px;padding:40px;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(13,15,18,.25)}.pcard:hover .btn.line{background:#fff;box-shadow:inset 0 0 0 1px var(--ink)}
+.pic{width:88px;height:88px;border-radius:20px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);margin-bottom:12px}
+.pcard h3{font-size:28px;line-height:34px}.pcard p{color:var(--mute);max-width:440px}.pcard .btn.line{margin:8px 0 12px}
+.rubros{width:100%;border-top:1px solid #e3e5ea;padding-top:20px;margin-top:auto}.rubros small{font-size:12px;font-weight:500;color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
+.rrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.rrow span{font-size:14px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px}
+.gcard{background:var(--card);border-radius:16px}
+.prob{display:grid;grid-template-columns:1.2fr auto 1fr;align-items:center;gap:32px;padding:56px}
+.mess{position:relative;height:300px}
+.bb{position:absolute;display:flex;flex-direction:column;gap:7px;width:42%;padding:14px 16px;border:1.6px solid #b9bec7;border-radius:16px 16px 16px 4px;background:#fff;transform:rotate(var(--r))}
+.bb i{display:block;height:6px;border-radius:3px;background:#dfe2e7}.bb.wave{color:#b9bec7;width:36%}.bb.wave svg{width:100%;height:22px}
+.bb.q{width:auto;font-size:22px;font-weight:600;color:#9aa1ab;padding:8px 16px}
+.flowar{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--red);font-size:14px;font-weight:500}
+.order{background:#fff;border:1.6px solid var(--ink);border-radius:16px;padding:20px}.oh{display:flex;align-items:center;gap:10px;font-weight:600;margin-bottom:8px}
+.orow{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:15px}.orow span{width:100px;color:var(--mute)}.orow i{flex:1;height:8px;border-radius:4px;background:#e9ebef}
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.bc{background:var(--card);border-radius:16px;padding:32px;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}.bc:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(13,15,18,.22)}
+.art{position:relative;height:300px;border-radius:12px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:var(--ink);margin-bottom:28px;background-image:radial-gradient(#e6e8ec 1px,transparent 1px);background-size:18px 18px}
+.art .ic{transition:transform .6s var(--ease)}.bc:hover .art .ic{transform:translateY(-4px) rotate(-3deg)}
+.cap{position:absolute;bottom:14px;font-size:12px;color:#8a919c;border:1px dashed #cfd3da;border-radius:8px;padding:3px 10px;background:#fff}
+.biglink{font-size:26px;letter-spacing:-.02em;background:#fff;border:1.6px solid var(--ink);border-radius:999px;padding:12px 26px}.biglink b{color:var(--red);font-weight:600}
+.paywords{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:360px}.paywords span{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:3px 11px;background:#fff}
+.num{display:inline-block;font-size:14px;color:var(--red);margin-right:10px;font-weight:500}
+.bc h3{margin-bottom:8px}.bc p{color:var(--mute);max-width:460px}
+.cta-row{display:flex;align-items:center;gap:20px;margin-top:40px}.cta-row .trust{flex-basis:auto;margin:0}
+.where{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.art.sm{height:220px}
+.flow3{flex-direction:row!important;gap:10px!important}.flow3 .fa{color:var(--red);font-size:20px}.flow3 small{position:absolute;bottom:22px;left:0;right:0;display:flex;justify-content:space-around;font-size:12px;color:var(--mute)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.step{position:relative;border-top:1px solid var(--ink);padding-top:28px}.step .ic{color:var(--ink);margin-bottom:20px}.step .n{position:absolute;right:0;top:24px;font-size:14px;color:var(--red);font-weight:500}.step p{color:var(--mute);margin-top:4px}
+.pend{display:inline-block;font-style:normal;font-size:11px;font-weight:500;color:#9a5b00;background:#fff4dc;border:1px dashed #e0b25c;border-radius:6px;padding:1px 7px;margin-top:8px}
+.ya{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.ya div{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:16px;line-height:24px;min-height:120px;transition:background .4s var(--ease)}.ya div:hover{background:var(--card)}
+.ya div:before{content:"";display:block;width:8px;height:8px;border-radius:2px;background:var(--red);margin-bottom:16px}
+.faqw{display:grid;grid-template-columns:1fr 1fr;gap:24px}.help{margin-top:20px;color:var(--mute)}
+details{border-bottom:1px solid var(--line);padding:20px 0}details:first-child{border-top:1px solid var(--line)}summary{list-style:none;cursor:pointer;font-size:18px;font-weight:500;display:flex;justify-content:space-between}summary:after{content:"+";color:var(--mute);transition:transform .4s var(--ease)}details[open] summary:after{transform:rotate(45deg)}details p{color:var(--mute);margin-top:8px;max-width:520px}
+.final{margin:152px 24px 0;padding:120px 0;text-align:center;background:var(--ink);color:#fff;border-radius:24px;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px}
+.final h2{font-size:56px;line-height:58px;letter-spacing:-.035em}.fp{font-size:18px;line-height:26px;color:#b8bec8;margin:16px auto 0;max-width:440px}
+.final .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px #3a404a}.final .trust{color:#b8bec8}.final .anote{color:#8a919c}
+footer{padding:48px 0 56px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;font-size:14px;color:var(--mute)}footer .logo{color:var(--ink);margin-right:auto}footer a:hover{color:var(--ink)}
+/* Reveal */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease) var(--d,0s),transform .8s var(--ease) var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .chip{animation:pop .9s var(--ease) .35s both}@keyframes pop{from{transform:rotate(-12deg) scale(.6);opacity:0}to{transform:rotate(-2deg) scale(1);opacity:1}}
+@keyframes bob{50%{translate:0 -6px}}.js .ribbon{animation:bob 5s ease-in-out infinite}.js .r2{animation-delay:-1.5s}.js .r3{animation-delay:-3s}.js .r4{animation-delay:-4s}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .win{transform:none}.js .ribbon,.js .chip{animation:none}*{transition:none!important;scroll-behavior:auto!important}}
+.dk{display:inline}
+@media(max-width:900px){
+ nav{gap:12px;padding:0 6px 0 16px}.navpaths,nav .in{display:none}nav .btn{margin-left:auto}
+ .hero{padding-top:56px}h1{font-size:32px;line-height:34px;letter-spacing:-.04em}.chip{height:36px;line-height:34px;padding:0 10px 2px 8px;border-radius:10px}.chip svg{width:20px;height:20px}.dk{display:none}
+ .sub{font-size:16px;line-height:24px}.ctastack .btn{flex:1 1 100%}
+ .stage{margin-top:40px}.stage .wrap{padding-top:28px}.app{grid-template-columns:1fr;min-height:0}.side,.detail{display:none}.cols{grid-template-columns:1fr 1fr}.cols .col:last-child{display:none}
+ .ribbon{font-size:12px;padding:5px 10px}.r1{left:4px;top:6px}.r2{display:none}.r3{right:4px;top:0}.r4{display:none}
+ .s{padding-top:80px}.shead{grid-template-columns:1fr;gap:12px;margin-bottom:28px}h2{font-size:28px;line-height:33.6px;letter-spacing:-.02em}.shead p{font-size:16px;line-height:24px}
+ h3,h4{font-size:18px;line-height:25.2px}.pcard h3{font-size:22px;line-height:28px}
+ .pgrid,.bento,.where,.steps,.faqw{grid-template-columns:1fr;gap:16px}.pcard{padding:24px}.bc{padding:20px}.art{height:200px;margin-bottom:20px}.art.sm{height:170px}
+ .prob{grid-template-columns:1fr;padding:24px;gap:16px}.mess{height:220px}.flowar{flex-direction:row}.flowar .ic{transform:rotate(90deg);width:40px}
+ .cta-row{flex-direction:column;align-items:stretch;text-align:center}.cta-row .trust{justify-content:center}
+ .ya{grid-template-columns:1fr 1fr}.ya div{padding:16px;min-height:0;font-size:15px}
+ .final{margin:96px 12px 0;padding:72px 20px}.final h2{font-size:34px;line-height:38px}.fp{font-size:16px}
+ footer .wrap{flex-direction:column;align-items:flex-start}
 }
-</style></head>
-<body>
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head><body>
 
-<div class="navw"><nav><a class="logo" href="#">linkiu<i>.</i></a><a class="in" href="#" data-copy="nav-login">Ingresar</a><a class="btn sm" href="#registro" data-copy="cta">Crea tu tienda gratis</a></nav></div>
+<div class="navw"><nav><a class="logo" href="#">linkiu<i>.</i></a>
+ <div class="navpaths"><a href="/gastronomia" data-copy="nav-gastro">Gastronomía</a><a href="/ecommerce" data-copy="nav-ecom">Ecommerce</a></div>
+ <a class="in" href="#" data-copy="nav-login">Ingresar</a><a class="btn sm" href="#registro" data-copy="cta">Crea tu tienda gratis</a></nav></div>
 
-<!-- HERO centrado (titular A de Isabella; "link" resaltado en chip como "context" de Jam) -->
 <header class="hero"><div class="wrap">
- <a class="newpill" href="#kira" data-copy="hero-pill"><b>Nuevo</b> Kira IA arma tu carta <span>→</span></a>
- <h1 data-copy="hero-h1">Vende con tu propio <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>link</span>.<br class="dk"> Sin pedidos regados en el chat.</h1>
- <p class="sub" data-copy="hero-sub">Tu tienda o tu carta en línea, lista hoy<span class="pend">Pendiente</span>. Tus clientes piden solos desde el celular y tú ves todo ordenado en tu panel.</p>
- <div class="ctastack">
+ <a class="newpill rv" href="#kira" data-copy="hero-pill"><b>Nuevo</b> Kira IA arma tu tienda <span>→</span></a>
+ <h1 class="rv" style="--d:.06s" data-copy="hero-h1">Vende con tu propio <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>link</span>.<br class="dk"> Sin pedidos regados en el chat.</h1>
+ <p class="sub rv" style="--d:.12s" data-copy="hero-sub">Tu tienda en línea, con tu propio link. Tus clientes piden solos desde el celular y tú ves todo ordenado en tu panel.</p>
+ <div class="ctastack rv" style="--d:.18s">
   <a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a>
-  <a class="btn ghost" href="#" data-copy="cta-assisted">Que me la armen</a>
-  <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div>
-  <p class="anote" data-copy="cta-assisted-note">Gratis por ahora. Te la dejamos lista el mismo día.</p>
+  <a class="btn ghost" href="https://wa.me/573104594344?text=Hola%2C%20quiero%20que%20me%20armen%20mi%20tienda%20en%20Linkiu" data-copy="cta-assisted">Que me la armen</a>
+  <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div>
+  <p class="anote" data-copy="cta-assisted-note">Gratis por ahora. Pídela por WhatsApp o desde tu panel, y queda lista el mismo día.</p>
  </div>
 </div>
-
- <!-- Captura grande del panel sobre cuadrícula, con cintas -->
  <div class="stage" aria-hidden="true"><div class="wrap">
-  <div class="ribbon r1">Tu link</div><div class="ribbon r2">QR de mesa</div>
-  <div class="ribbon r3">Pedido #128</div><div class="ribbon r4">Domicilio</div>
-  <div class="win">
+  <div class="ribbon r1" data-drift="-1">Tus productos</div><div class="ribbon r2" data-drift="-1.4">Tu link</div>
+  <div class="ribbon r3" data-drift="1">Pedido #128</div><div class="ribbon r4" data-drift="1.4">Domicilio</div>
+  <div class="win" id="heroWin">
    <div class="bar"><i></i><i></i><i></i><span>panel.linkiu.bio/pedidos</span></div>
    <div class="app">
-    <div class="side"><div class="shop"><i></i>Asadero La Esquina</div><span class="on">Pedidos <em>3</em></span><span>Productos</span><span>Clientes</span><span>Pagos</span><span>Domicilios</span><span>Mi link</span><span>Kira IA</span></div>
+    <div class="side"><div class="shop"><i></i>Tu negocio</div><span class="on">Pedidos <em>3</em></span><span>Productos</span><span>Clientes</span><span>Pagos</span><span>Envíos</span><span>Mi link</span><span>Kira IA</span></div>
     <div class="main">
      <div class="mt"><b>Pedidos de hoy</b><div class="seg"><span class="on">Tablero</span><span>Lista</span></div></div>
      <div class="cols">
       <div class="col"><h5>Nuevos · 2</h5>
-       <div class="ord sel"><b>#128 <span class="tag">Nuevo</span></b><p>Pollo asado ×1, Limonada ×2</p><p>Domicilio · Nequi</p><b>$ 56.000</b></div>
-       <div class="ord"><b>#127 <span class="tag">Nuevo</span></b><p>Chicharrón ×2</p><p>Recoge en local</p><b>$ 28.000</b></div></div>
-      <div class="col"><h5>En preparación · 2</h5>
-       <div class="ord"><b>#126 <span class="tag s">Cocina</span></b><p>Corrientazo ×3</p><p>Mesa 4 · QR</p><b>$ 48.000</b></div>
-       <div class="ord"><b>#125 <span class="tag s">Cocina</span></b><p>Picada mixta ×1</p><p>Domicilio · Daviplata</p><b>$ 42.000</b></div></div>
+       <div class="ord sel"><b>#128 <span class="tag">Nuevo</span></b><p>3 productos</p><p>Domicilio · Transferencia</p><b>$ 56.000</b></div>
+       <div class="ord"><b>#127 <span class="tag">Nuevo</span></b><p>2 productos</p><p>Recoge · Efectivo</p><b>$ 28.000</b></div></div>
+      <div class="col"><h5>Preparando · 2</h5>
+       <div class="ord"><b>#126 <span class="tag p">Preparando</span></b><p>1 producto</p><p>Domicilio · QR</p><b>$ 48.000</b></div>
+       <div class="ord"><b>#125 <span class="tag p">Preparando</span></b><p>4 productos</p><p>Domicilio · Datáfono</p><b>$ 42.000</b></div></div>
       <div class="col"><h5>En camino · 1</h5>
-       <div class="ord"><b>#124 <span class="tag g">En camino</span></b><p>Pollo asado ×2</p><p>Domi: Carlos · 12 min</p><b>$ 76.000</b></div></div>
+       <div class="ord"><b>#124 <span class="tag g">En camino</span></b><p>2 productos</p><p>Domicilio · Efectivo</p><b>$ 76.000</b></div></div>
      </div>
-     <!-- Video/demo: debe mostrar el panel abierto en pantalla; si trae audio de pedido, es con el panel abierto. --><div class="play"></div>
+     <!-- Video/demo: debe mostrar el panel abierto en pantalla. --><div class="play"></div>
     </div>
     <div class="detail"><h6><span>Pedido #128</span><span class="tag">Nuevo</span></h6>
-     <dl class="kv"><dt>Cliente</dt><dd>Laura M.</dd><dt>Entrega</dt><dd>Domicilio · Cra 3 #12-40</dd><dt>Pago</dt><dd>Nequi · por confirmar</dd><dt>Hora</dt><dd>12:41 p. m.</dd></dl>
-     <div class="line"><span>Pollo asado entero ×1</span><b>$ 38.000</b></div><div class="line"><span>Limonada de coco ×2</span><b>$ 18.000</b></div><div class="line"><b>Total</b><b>$ 56.000</b></div>
+     <dl class="kv"><dt>Cliente</dt><dd>Laura M.</dd><dt>Entrega</dt><dd>Domicilio</dd><dt>Pago</dt><dd>Transferencia</dd><dt>Hora</dt><dd>12:41 p. m.</dd></dl>
+     <div class="line"><span>Producto A ×1</span><b>$ 38.000</b></div><div class="line"><span>Producto B ×2</span><b>$ 18.000</b></div><div class="line"><b>Total</b><b>$ 56.000</b></div>
      <div class="wa-btn"><span>Imprimir</span><span class="k">Aceptar</span></div>
     </div>
    </div>
   </div>
-  <p class="demo">Datos de demo</p>
+  <p class="demo">Video del panel · datos de demo</p>
  </div></div>
 </header>
 
-<!-- Franja de rubros (no son logos de clientes) -->
-<div class="rubros"><div class="wrap">
- <p data-copy="rubros-label">Para negocios que venden por chat <span class="pend">Pendiente: logos reales</span></p>
- <div class="rrow"><span>Restaurantes</span><span>Asaderos</span><span>Panaderías</span><span>Cafés</span><span>Tiendas de ropa</span><span>Calzado</span><span>Belleza</span></div>
-</div></div>
-
-<!-- El problema -->
-<section class="s"><div class="wrap">
- <div class="shead"><h2 data-copy="problem-h2">Si vendes por chat,<br>esto ya te pasó.</h2><p data-copy="problem-line">Sigues compartiendo en WhatsApp e Instagram. Pero cada pedido entra completo a tu panel: qué pidió, cómo paga y a dónde va.</p></div>
- <div class="gcard prob">
-  <div class="chat" aria-hidden="true"><span>precio?</span><span>la tienes en M?</span><span>▶ ▁▃▅▂▆▃▁ 0:24</span><span>me regalas la carta?</span><span class="me">ya va</span><span>ya salió?</span><span>ya salió??</span><span>hace 40 min pedí 😡</span></div>
-  <div class="arrowc"><svg width="40" height="20" viewBox="0 0 40 20" fill="none" stroke="#e7000b" stroke-width="2.4" stroke-linecap="round"><path d="M2 10h34M28 3l8 7-8 7"/></svg><span data-copy="problem-fix">Linkiu lo ordena.</span></div>
-  <div class="okcard"><h4>Pedido #128 <span class="tag">Nuevo</span></h4>
-   <dl class="kv"><dt>Qué pidió</dt><dd>Pollo asado ×1, Limonada ×2</dd><dt>Cómo paga</dt><dd>Nequi</dd><dt>A dónde va</dt><dd>Cra 3 #12-40</dd></dl>
-   <div class="line"><b>Total</b><b>$ 56.000</b></div></div>
+<!-- Dos caminos -->
+<section class="s paths" id="caminos"><div class="wrap">
+ <div class="shead rv"><h2 data-copy="paths-h2">¿Qué vendes tú?</h2><p data-copy="paths-p">Escoge y te mostramos cómo funciona para tu negocio.</p></div>
+ <div class="pgrid">
+  <a class="pcard rv" href="/gastronomia">
+   <div class="pic"><svg class="ic" width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6v14a4 4 0 0 0 8 0V6M18 6v36"/><path d="M34 6c-4 2-5 8-5 14h5v22"/></svg></div>
+   <h3 data-copy="path-gastro-h">Tu carta en un link y un QR en la mesa</h3>
+   <p data-copy="path-gastro-p">Domicilios, para recoger y en la mesa. Menú del día, reservas y tus propios domis, todo en tu panel.</p>
+   <span class="btn line" data-copy="path-gastro-cta">Ver Linkiu para restaurantes →</span>
+   <div class="rubros"><small data-copy="rubros-gastro-label">Para gastronomía</small><div class="rrow" data-copy="rubros-gastro"><span>Restaurantes</span><span>Asaderos</span><span>Corrientazos</span><span>Comidas rápidas</span><span>Cafés</span><span>Panaderías</span><span>Pizzerías</span><span>Hamburgueserías</span></div></div>
+  </a>
+  <a class="pcard rv" style="--d:.08s" href="/ecommerce">
+   <div class="pic"><svg class="ic" width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16h28l-2 24H12z"/><path d="M18 16a6 6 0 0 1 12 0"/></svg></div>
+   <h3 data-copy="path-ecom-h">Tu tienda con tallas, colores y envíos</h3>
+   <p data-copy="path-ecom-p">Cada talla y color con su stock, envíos con fecha de llegada y contraentrega solo donde tú digas.</p>
+   <span class="btn line" data-copy="path-ecom-cta">Ver Linkiu para tiendas →</span>
+   <div class="rubros"><small data-copy="rubros-ecom-label">Para ecommerce</small><div class="rrow" data-copy="rubros-ecom"><span>Ropa</span><span>Calzado</span><span>Belleza</span><span>Accesorios</span><span>Bolsos</span><span>Joyería y bisutería</span><span>Ropa deportiva</span><span>Perfumes</span></div></div>
+  </a>
  </div>
 </div></section>
 
-<!-- 4 protagonistas: bento 2x2 -->
+<!-- El problema: ilustración de línea (sin UI falsa) -->
+<section class="s"><div class="wrap">
+ <div class="shead rv"><h2 data-copy="problem-h2">Si vendes por chat,<br>esto ya te pasó.</h2><p data-copy="problem-line">Sigues compartiendo en WhatsApp e Instagram. Pero cada pedido entra completo a tu panel: qué pidió, cómo paga y a dónde va.</p></div>
+ <div class="gcard prob rv">
+  <div class="mess" aria-hidden="true">
+   <span class="bb" style="--r:-6deg;left:4%;top:6%"><i style="width:60%"></i></span>
+   <span class="bb" style="--r:4deg;left:38%;top:0"><i style="width:80%"></i><i style="width:40%"></i></span>
+   <span class="bb wave" style="--r:-2deg;left:12%;top:36%"><svg viewBox="0 0 80 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 10v0M14 6v8M22 3v14M30 7v6M38 4v12M46 8v4M54 5v10M62 9v2M70 6v8"/></svg></span>
+   <span class="bb" style="--r:7deg;left:50%;top:32%"><i style="width:50%"></i></span>
+   <span class="bb q" style="--r:-4deg;left:6%;top:66%">?</span>
+   <span class="bb q" style="--r:3deg;left:24%;top:70%">??</span>
+   <span class="bb" style="--r:-8deg;left:46%;top:64%"><i style="width:70%"></i><i style="width:30%"></i></span>
+  </div>
+  <div class="flowar" aria-hidden="true"><svg class="ic" width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h34M32 16l8 8-8 8"/></svg><span data-copy="problem-fix">Linkiu lo ordena.</span></div>
+  <div class="order" aria-hidden="true">
+   <div class="oh"><svg class="ic" width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="5"/><path d="M15 15h18M15 22h18M15 29h11"/><circle cx="35" cy="35" r="7" fill="#fff"/><path d="M32 35l2 2 4-4" stroke="#e7000b"/></svg><span>Pedido</span></div>
+   <div class="orow"><span>Qué pidió</span><i></i></div><div class="orow"><span>Cómo paga</span><i></i></div><div class="orow"><span>A dónde va</span><i></i></div>
+  </div>
+ </div>
+</div></section>
+
+<!-- 4 protagonistas: bento 2x2 con íconos de línea grandes -->
 <section class="s" id="kira"><div class="wrap">
- <div class="shead"><h2 data-copy="mods-h2">Lo del chat,<br>ahora en orden.</h2><p data-copy="mods-intro">Pedidos, link, carta y cobros. Lo que hoy haces a punta de chat, en un solo panel.</p></div>
+ <div class="shead rv"><h2 data-copy="mods-h2">Lo del chat,<br>ahora en orden.</h2><p data-copy="mods-intro">Pedidos, link, productos y cobros. Lo que hoy haces a punta de chat, en un solo panel.</p></div>
  <div class="bento">
-  <article class="bc"><div class="mini"><div class="ui"><div class="uih"><span>Pedidos</span><span class="tag">2 nuevos</span></div><div class="uib"><div class="ord sel"><b>#128 <span>$ 56.000</span></b><p>Domicilio · Nequi</p></div><div class="ord"><b>#127 <span>$ 28.000</span></b><p>Recoge en local</p></div><div class="ord"><b>#126 <span class="tag s">Cocina</span></b><p>Mesa 4 · QR</p></div></div></div></div>
+  <article class="bc rv"><div class="art"><svg class="ic" width="88" height="88" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="5"/><path d="M15 15h18M15 22h18M15 29h11"/><circle cx="35" cy="35" r="7" fill="#fff"/><path d="M32 35l2 2 4-4" stroke="#e7000b"/></svg><span class="cap">Captura real del panel — PENDIENTE</span></div>
    <h3><span class="num">01</span><span data-copy="m1-h3">Todos tus pedidos en un solo lugar</span></h3><p data-copy="m1-p">Se acabaron los audios y pantallazos. Cada pedido entra completo a tu panel y te suena si lo tienes abierto.</p></article>
-  <article class="bc"><div class="mini"><div class="ui"><div class="uih"><span>Mi link</span><span style="color:var(--mute);font-weight:500">Copiar</span></div><div class="uib"><div class="ord" style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600">linkiu.bio/<span style="color:var(--red)">tunegocio</span></span><span class="tag g">Activo</span></div></div><div class="pchips"><span style="border:0;background:none;box-shadow:none;color:var(--mute);font-weight:500;padding-left:0">Compártelo en:</span><span>WhatsApp</span><span>Instagram</span><span>QR de mesa</span><span>Historias</span></div></div></div>
+  <article class="bc rv" style="--d:.08s"><div class="art"><div class="biglink">linkiu.bio/<b>tunegocio</b></div><span class="cap">Captura real del panel — PENDIENTE</span></div>
    <h3><span class="num">02</span><span data-copy="m2-h3">Tu link, que se siente como app</span></h3><p data-copy="m2-p">linkiu.bio/tunegocio. Lo compartes en WhatsApp, Instagram o un QR. Tus clientes piden ahí, sin descargar nada.</p></article>
-  <article class="bc"><div class="mini"><div class="kirab"><div class="photo">MENÚ<br>Pollo asado .... 38<br>Corrientazo ..... 16<br>Chicharrón ...... 14<br>Limonada ........ 9</div><div class="ui"><div class="uih"><span class="kchip">Kira IA</span><span style="color:var(--mute);font-weight:500">Borrador</span></div><div class="uib"><div class="line" style="border:0"><span>Pollo asado</span><b>$ 38.000</b></div><div class="line"><span>Corrientazo</span><b>$ 16.000</b></div><div class="line"><span>Chicharrón</span><b>$ 14.000</b></div><div class="line"><span>Limonada</span><b>$ 9.000</b></div></div></div></div></div>
-   <h3><span class="num">03</span><span data-copy="m3-h3">Sube fotos, Kira IA arma tu tienda</span></h3><p data-copy="m3-p">Tómale fotos a tu carta o catálogo y Kira IA te arma el borrador. Sin diseñador: tú revisas y publicas.</p></article>
-  <article class="bc"><div class="mini"><div class="ui"><div class="uih"><span>Pago · #128</span><span class="tag s">Por confirmar</span></div><div class="pchips"><span>Nequi</span><span>Daviplata</span><span>Bre-B</span><span>Transferencia</span><span>Contraentrega</span></div><div class="uib" style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line)"><b>$ 56.000</b><span class="btn sm" style="height:32px;font-size:12px">Confirmar pago</span></div></div></div>
-   <h3><span class="num">04</span><span data-copy="m4-h3">Cobra como ya te pagan</span></h3><p data-copy="m4-p">Nequi, Daviplata, Bre-B, transferencia o contraentrega<span class="pend">Métodos pendientes</span>. Confirmas el pago en el panel, sin pantallazos.</p></article>
+  <article class="bc rv"><div class="art"><svg class="ic" width="88" height="88" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="24" height="22" rx="4"/><circle cx="18" cy="23" r="5"/><path d="M12 12l2-4h8l2 4"/><path d="M36 10l1.5 4 4 1.5-4 1.5L36 21l-1.5-4-4-1.5 4-1.5z" stroke="#e7000b"/><path d="M30 34h12M34 40h8"/></svg><span class="cap">Demo real de Kira IA — PENDIENTE</span></div>
+   <h3><span class="num">03</span><span data-copy="m3-h3">Sube fotos, Kira IA arma tu tienda</span></h3><p data-copy="m3-p">Tómale fotos a lo que vendes o a tu lista de precios y Kira IA te arma el borrador. Tú revisas y publicas.</p></article>
+  <article class="bc rv" style="--d:.08s"><div class="art"><svg class="ic" width="88" height="88" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="12" width="38" height="24" rx="5"/><path d="M5 19h38"/><path d="M11 29h8"/><path d="M33 26l3 3 5-6" stroke="#e7000b"/></svg><div class="paywords"><span>Efectivo</span><span>Datáfono</span><span>Transferencia</span><span>QR</span><span>Contraentrega</span></div></div>
+   <h3><span class="num">04</span><span data-copy="m4-h3">Cobra como ya te pagan</span></h3><p data-copy="m4-p">Efectivo, datáfono, transferencia o QR, y contraentrega si vendes con envío nacional. Confirmas cada pago en tu panel.</p></article>
  </div>
- <div class="cta-row"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust"><span>Gratis</span><span>Sin comisión por venta<i class="pend">Pendiente</i></span><span>Sin tarjeta<i class="pend">Pendiente</i></span></div></div>
+ <div class="cta-row rv"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div></div>
 </div></section>
 
-<!-- Recibe pedidos donde estés (copy: copy-home-v2-final-datos.md) -->
+<!-- Tus pedidos, donde estés -->
 <section class="s"><div class="wrap">
- <div class="shead"><h2 data-copy="where-h2">Tus pedidos,<br>donde estés.</h2><p data-copy="where-p">Cada pedido entra a tu panel. Lo abres en el computador del local o en el celular, y con el panel abierto te suena cada pedido nuevo.</p></div>
+ <div class="shead rv"><h2 data-copy="where-h2">Tus pedidos,<br>donde estés.</h2><p data-copy="where-p">Cada pedido entra a tu panel. Lo abres en el computador o en el celular, y con el panel abierto te suena cada pedido nuevo.</p></div>
  <div class="where">
-  <article class="bc"><div class="mini"><div style="width:100%;max-width:300px"><div class="lap"><div class="cols"><div><div class="ord sel"><b>#128</b><p>$ 56.000</p></div><div class="ord"><b>#127</b><p>$ 28.000</p></div></div><div><div class="ord"><b>#126</b><p>Cocina</p></div><div class="ord"><b>#124</b><p>En camino</p></div></div></div></div><div class="lapbase"></div></div></div>
-   <h3 data-copy="where-1-h">Computador</h3><p data-copy="where-1-p">Todo el tablero de pedidos, a la vista en el local.</p></article>
-  <article class="bc"><div class="mini"><div class="ph"><div><div class="pitem" style="font-size:10px;color:var(--mute);display:flex;justify-content:space-between;align-items:center">panel.linkiu.bio <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#e7000b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg></div><div class="pitem" style="box-shadow:0 0 0 1.5px var(--red)"><b>#128 · Nuevo</b>$ 56.000 · Domicilio</div><div class="pitem"><b>#127 · Nuevo</b>$ 28.000 · Local</div></div></div></div>
-   <h3 data-copy="where-2-h">Celular</h3><p data-copy="where-2-p">Te suena cada pedido nuevo con el panel abierto. Sin apps.</p></article>
-  <article class="bc"><div class="mini"><div style="width:100%;max-width:260px"><div class="wa"><span class="pl">Tu chat de WhatsApp</span><div class="m o" style="margin-bottom:0">Hola 👋 aquí puedes pedir: <b>linkiu.bio/asaderolaesquina</b></div></div><div class="flow">↓ tu cliente pide en tu link · el pedido entra a tu panel</div><div class="pcard"><span class="pl">Panel Linkiu</span><b>Nuevo pedido #128</b><span class="tag">Nuevo</span></div></div></div>
-   <h3 data-copy="where-3-h">WhatsApp</h3><p data-copy="where-3-p">Compartes tu link y de ahí llegan tus clientes.</p></article>
+  <article class="bc rv"><div class="art sm"><svg class="ic" width="80" height="80" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="10" width="30" height="20" rx="3"/><path d="M4 36h40l-3 4H7z"/><path d="M15 17h10M15 23h18"/></svg></div><h3 data-copy="where-1-h">Computador</h3><p data-copy="where-1-p">Todo el tablero de pedidos, a la vista en el local o en la casa.</p></article>
+  <article class="bc rv" style="--d:.06s"><div class="art sm"><svg class="ic" width="80" height="80" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="5" width="20" height="38" rx="5"/><path d="M21 9h6"/><path d="M19 18h10M19 24h10M19 30h6"/></svg></div><h3 data-copy="where-2-h">Celular</h3><p data-copy="where-2-p">Te suena cada pedido nuevo con el panel abierto. Sin apps.</p></article>
+  <article class="bc rv" style="--d:.12s"><div class="art sm flow3"><svg class="ic" width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10h22a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H17l-7 6v-6H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4z"/><path d="M12 19h14"/></svg><span class="fa">→</span><svg class="ic" width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 27a7 7 0 0 0 10 .6l5-5a7 7 0 0 0-9.9-9.9l-2.6 2.6"/><path d="M27 21a7 7 0 0 0-10-.6l-5 5a7 7 0 0 0 9.9 9.9l2.6-2.6"/></svg><span class="fa">→</span><svg class="ic" width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="5"/><path d="M15 15h18M15 22h18M15 29h11"/><circle cx="35" cy="35" r="7" fill="#fff"/><path d="M32 35l2 2 4-4" stroke="#e7000b"/></svg><small><span>WhatsApp</span><span>tu link</span><span>tu panel</span></small></div><h3 data-copy="where-3-h">WhatsApp</h3><p data-copy="where-3-p">Compartes tu link y de ahí llegan tus clientes.</p></article>
  </div>
 </div></section>
 
 <!-- Tres pasos -->
 <section class="s"><div class="wrap">
- <div class="shead"><h2 data-copy="steps-h2">Arrancas en<br>tres pasos.</h2><p></p></div>
+ <div class="shead rv"><h2 data-copy="steps-h2">Arrancas en<br>tres pasos.</h2><p></p></div>
  <div class="steps">
-  <div class="step"><span class="n">1</span><h4 data-copy="s1-h">Sube tu carta o catálogo.</h4><p data-copy="s1-p">Fotos, Excel o a mano.</p></div>
-  <div class="step"><span class="n">2</span><h4 data-copy="s2-h">Comparte tu link.</h4><p data-copy="s2-p">WhatsApp, Instagram o QR.</p></div>
-  <div class="step"><span class="n">3</span><h4 data-copy="s3-h">Recibe y despacha.</h4><p data-copy="s3-p">Lo ves en tu panel y sale.</p></div>
+  <div class="step rv"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18l3-10h30l3 10"/><path d="M6 18a6 6 0 0 0 12 0 6 6 0 0 0 12 0 6 6 0 0 0 12 0"/><path d="M9 24v16h30V24"/><path d="M20 40V30h8v10"/></svg><span class="n">1</span><h4 data-copy="s1-h">Sube lo que vendes.</h4><p data-copy="s1-p">Con fotos o a mano.</p><i class="pend">Pendiente: ¿Excel en gastronomía?</i></div>
+  <div class="step rv" style="--d:.06s"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="34" cy="12" r="5"/><circle cx="14" cy="24" r="5"/><circle cx="34" cy="36" r="5"/><path d="M18.5 21.5l11-6M18.5 26.5l11 6"/></svg><span class="n">2</span><h4 data-copy="s2-h">Comparte tu link.</h4><p data-copy="s2-p">WhatsApp, Instagram o QR.</p></div>
+  <div class="step rv" style="--d:.12s"><svg class="ic" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l18-9 18 9-18 9z"/><path d="M6 15v18l18 9 18-9V15M24 24v18"/></svg><span class="n">3</span><h4 data-copy="s3-h">Recibe y despacha.</h4><p data-copy="s3-p">Lo ves en tu panel y sale.</p></div>
  </div>
- <div class="cta-row"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div></div>
+ <div class="cta-row rv"><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a><div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div></div>
 </div></section>
 
-<!-- Y además -->
+<!-- Y además (solo funciones de los dos rubros) -->
 <section class="s"><div class="wrap">
- <div class="shead"><h2 data-copy="more-h2">Y además</h2><p></p></div>
- <div class="ya">
-  <div data-copy="ya-1"><small>Operación</small>Lo agotado se marca solo.</div>
-  <div data-copy="ya-2"><small>Operación</small>Tallas y colores, cada uno con su stock.</div>
-  <div data-copy="ya-3"><small>Operación</small>Domicilios con tus propios domis.</div>
-  <div data-copy="ya-4"><small>Operación</small>QR para la mesa o el mostrador.</div>
-  <div data-copy="ya-5"><small>Ventas</small>Menú del día listo para tus historias.</div>
-  <div data-copy="ya-6"><small>Ventas</small>Envíos a todo el país, con fecha de llegada.</div>
-  <div data-copy="ya-7"><small>Ventas</small>Cupones para compartir en tus historias.<i class="pend">Pendiente</i></div>
-  <div data-copy="ya-8"><small>Ventas</small>Contraentrega solo donde tú digas.</div>
-  <div data-copy="ya-9"><small>Clientes</small>Tu cliente ve su pedido avanzar.</div>
-  <div data-copy="ya-10"><small>Clientes</small>Reservas con recordatorio por WhatsApp.</div>
+ <div class="shead rv"><h2 data-copy="more-h2">Y además</h2><p></p></div>
+ <div class="ya rv">
+  <div data-copy="ya-1">Lo agotado se marca solo.</div>
+  <div data-copy="ya-3">Domicilios con tu propia gente.</div>
+  <div data-copy="ya-4">Tu QR, para el mostrador, la mesa o un volante.</div>
+  <div data-copy="ya-7">Cupones para compartir en tus historias.<i class="pend">Confirmar en gastronomía</i></div>
+  <div data-copy="ya-9">Tu cliente ve su pedido avanzar.</div>
+  <div data-copy="ya-11">Tus clientes, guardados en un solo lugar.</div>
+  <div data-copy="ya-12">Cobras en efectivo, datáfono, transferencia o QR.</div>
+  <div data-copy="ya-13">Lo que más se vende, adelante.</div>
  </div>
 </div></section>
 
 <!-- Clientes reales: OCULTA hasta tener datos reales (no usar tiendas demo como clientes)
 <section class="s"><div class="wrap"><h2 data-copy="clients-h2">Negocios de verdad, vendiendo con su link.</h2>
- 3 tarjetas: [PENDIENTE: foto, nombre, negocio, ciudad, frase real ≤20 palabras, enlace linkiu.bio/…]</div></section>
+ 3 tarjetas: foto, nombre, negocio, ciudad, frase real y enlace linkiu.bio/… (PENDIENTE)</div></section>
 -->
-
-<!-- Planes -->
-<section class="s"><div class="wrap">
- <div class="shead"><h2 data-copy="plans-h2">Empieza gratis.<br>Paga solo si lo necesitas.</h2><p><span class="pend">Planes y precios pendientes</span></p></div>
- <div class="plans">
-  <div class="plan free"><h4>Gratis</h4><div class="price">$ 0</div><div class="pendbox"><b>PENDIENTE:</b> qué incluye el plan gratis y sus límites.</div><a class="btn" href="#registro" data-copy="cta">Crea tu tienda gratis</a></div>
-  <div class="plan"><h4>Plan pago<span class="pend">Pendiente</span></h4><div class="price" style="color:#9aa6b6">$ — /mes</div><div class="pendbox"><b>PENDIENTE:</b> nombre, precio en COP/mes y qué incluye.</div></div>
- </div>
- <div class="cta-row" style="margin-top:20px"><div class="trust" data-copy="trust-full"><span>Gratis</span><span>Sin comisión por venta<i class="pend">Pendiente</i></span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div></div>
-</div></section>
 
 <!-- FAQ -->
 <section class="s"><div class="wrap faqw">
- <div><h2 data-copy="faq-h2">Preguntas<br>frecuentes.</h2><p class="help" data-copy="faq-help">¿Otra duda? <u>Escríbenos por WhatsApp ▸</u><span class="pend">Número pendiente</span></p></div>
- <div>
-  <details open><summary data-copy="faq1-q">¿De verdad es gratis?</summary><p data-copy="faq1-a">Sí. Creas tu tienda y recibes pedidos sin pagar.<span class="pend">Límites pendientes</span></p></details>
-  <details><summary data-copy="faq2-q">¿Me cobran comisión por pedido?</summary><p data-copy="faq2-a">No. Lo que vendes es tuyo.<span class="pend">Pendiente</span></p></details>
+ <div class="rv"><h2 data-copy="faq-h2">Preguntas<br>frecuentes.</h2><p class="help" data-copy="faq-help">¿Otra duda? <a href="https://wa.me/573104594344"><u>Escríbenos por WhatsApp ▸</u></a></p></div>
+ <div class="rv" style="--d:.06s">
+  <details open><summary data-copy="faq1-q">¿De verdad es gratis?</summary><p data-copy="faq1-a">Sí. Regístrate gratis, sin tarjeta, y pruébalo.</p></details>
+  <details><summary data-copy="faq2-q">¿Me cobran comisión por pedido?</summary><p data-copy="faq2-a">No. Lo que vendes es tuyo.</p></details>
   <details><summary data-copy="faq3-q">¿Tengo que descargar una app?</summary><p data-copy="faq3-a">No. Manejas tu tienda desde el navegador del celular o del computador. Con el panel abierto, te suena cada pedido nuevo.</p></details>
   <details><summary data-copy="faq4-q">¿Sigo usando WhatsApp e Instagram?</summary><p data-copy="faq4-a">Sí, para compartir tu link. Tus clientes piden ahí y el pedido te entra al panel, no al chat.</p></details>
-  <details><summary data-copy="faq5-q">¿Hay contrato? ¿Puedo cancelar?</summary><p data-copy="faq5-a">No hay contrato. Lo dejas cuando quieras.<span class="pend">Pendiente</span></p></details>
-  <details><summary data-copy="faq6-q">¿Y si no tengo tiempo de armarla?</summary><p data-copy="faq6-a">Te la armamos gratis por ahora. Queda lista el mismo día, máximo en 24 horas.</p></details>
+  <details><summary data-copy="faq5-q">¿Cómo me pagan mis clientes?</summary><p data-copy="faq5-a">En efectivo, datáfono, transferencia o QR. Si vendes con envío nacional, también contraentrega.</p></details>
+  <details><summary data-copy="faq6-q">¿Y si no tengo tiempo de armarla?</summary><p data-copy="faq6-a">Te la armamos gratis por ahora. Pídela por WhatsApp o desde tu panel y queda lista el mismo día, máximo en 24 horas.</p></details>
  </div>
 </div></section>
 
 <!-- CTA final -->
-<section class="final" id="registro"><div class="wrap">
- <h2 data-copy="final-h2">Tu link puede estar vendiendo hoy.</h2>
- <div class="ctastack"><a class="btn" href="#" data-copy="cta">Crea tu tienda gratis</a><a class="btn ghost" href="#" data-copy="cta-assisted">Que me la armen</a>
-  <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta<i class="pend">Pendiente</i></span><span>Sin contrato<i class="pend">Pendiente</i></span></div><p class="anote" data-copy="cta-assisted-note">Gratis por ahora. Te la dejamos lista el mismo día.</p></div>
+<section class="final" id="registro"><div class="wrap rv">
+ <h2 data-copy="final-h2">Regístrate gratis<br>y pruébalo.</h2>
+ <p class="fp" data-copy="final-p">Arma tu tienda, comparte tu link y mira cómo te entran los pedidos. Sin tarjeta.</p>
+ <div class="ctastack"><a class="btn" href="#" data-copy="cta">Crea tu tienda gratis</a><a class="btn ghost" href="https://wa.me/573104594344?text=Hola%2C%20quiero%20que%20me%20armen%20mi%20tienda%20en%20Linkiu" data-copy="cta-assisted">Que me la armen</a>
+  <div class="trust" data-copy="trust-short"><span>Gratis</span><span>Sin tarjeta</span><span>Sin comisión por pedido</span></div><p class="anote" data-copy="cta-assisted-note">Gratis por ahora. Pídela por WhatsApp o desde tu panel, y queda lista el mismo día.</p></div>
 </div></section>
-<footer><div class="wrap"><span class="logo">linkiu<i style="color:var(--red);font-style:normal">.</i></span><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Redes</a><span>WhatsApp<i class="pend">Pendiente</i></span><span>Razón social / NIT<i class="pend">Pendiente</i></span></div></footer>
+<footer><div class="wrap"><span class="logo">linkiu<i>.</i></span><a href="/gastronomia">Gastronomía</a><a href="/ecommerce">Ecommerce</a><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Redes</a>
+ <a href="https://wa.me/573104594344" data-copy="footer-sales">WhatsApp ventas: 310 459 4344</a><a href="https://wa.me/573233332112" data-copy="footer-support">Soporte para clientes: 323 333 2112</a></div></footer>
+<script>(function(){var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,d=document;
+var els=d.querySelectorAll('.rv');
+if(rm||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+els.forEach(function(e){io.observe(e)});
+var w=d.getElementById('heroWin'),rs=d.querySelectorAll('[data-drift]'),t=false;
+function f(){t=false;var y=scrollY,k=Math.min(1,y/420);
+ if(w)w.style.transform='rotateX('+(14*(1-k)).toFixed(2)+'deg) scale('+(.95+.05*k).toFixed(3)+')';
+ rs.forEach(function(r){var s=+r.dataset.drift;r.style.transform='translate('+(s*y*.06).toFixed(1)+'px,'+(-y*.12).toFixed(1)+'px) rotate(var(--rot))'})}
+addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{passive:true});f();})();
+</script>
 </body></html>
